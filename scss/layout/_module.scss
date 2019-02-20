@@ -1,0 +1,30 @@
+.wrapper, .container, .content, .section, .box{ position: relative; } 
+.fullScreen{ width: 100%; height: 100%; }
+.loading{
+	$color-gradient-1: #27acc4;
+	$color-gradient-2: #858cea;
+	$color-gradient-3: #cd88fc;
+	background: linear-gradient(to bottom, 
+                $color-gradient-1 0%,
+                $color-gradient-2 50%,
+				$color-gradient-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.form{
+	&_title{}
+	&_container{}
+	&_content{}
+	&_section{}
+	&_item{
+		&_title{}
+		&_text{}
+		&_box{}
+		&_errorText{}
+		&.on-error &{
+			&_title{}
+			&_box{}
+			&_errorText{}
+		}
+	}
+}
+
+

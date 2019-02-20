@@ -1,0 +1,120 @@
+$PI: 3.141592653589793;
+$precision: 10;
+
+@function str-replace( $string, $search, $replace: '' ){
+	$index: str-index( $string, $search );
+	@if $index {
+	@return str-slice( $string, 1, $index - 1 ) + 
+			$replace + 
+			str-replace( str-slice( $string, $index + str-length( $search ) ), 
+			$search, $replace );
+	}
+	@return $string;
+}
+
+@function pow ($base, $exp ){
+	$value: $base;
+	@if $exp > 1 {
+		@for $i from 2 through $exp {
+			$value: $value * $base;
+		}
+	}
+	@if $exp < 1{
+		@for $i from 0 through -$exp {
+			$value: $value / $base;
+		}
+	}
+	@return $value;
+}
+
+@function fact( $num ){
+	$fact: 1;
+	@if $num > 0{
+		@for $i from 1 through $num {
+			$fact: $fact * $i;
+		}
+	}
+	@return $fact;
+}
+
+@function convert-angle($angle, $to-unit)  {
+	$from-unit: unit($angle);
+	$from-value: strip-unit($angle);
+	$factors: ( rad: 1, deg: 180 / $PI, grad: 200 / $PI, turn: 0.5 / $PI );
+	@if not map-has-key($factors, $from-unit) {
+		@warn '`#{$angle}` is not an <angle>.';
+		@return false;
+	}
+	@if not map-has-key($factors, $to-unit) {
+		@warn '`#{$to-unit}` is not a valid <angle> unit.';
+		@return false;
+	}
+	$rad-value: $from-value / map-get($factors, $from-unit);
+	@return $rad-value * map-get($factors, $to-unit) + $to-unit;
+}
+
+@function sin( $angle ){
+	$a: _to_unitless_rad( $angle );
+	$sin: $a;
+	@for $n from 1 through $_precision {
+		$sin: $sin + (pow(-1, $n) / fact(2 * $n + 1) ) * pow($a, (2 * $n + 1));
+	}
+	@return $sin;
+}
+
+@function cos( $angle ){
+	$a: _to_unitless_rad( $angle );
+	$cos: 1;
+	@for $n from 1 through $_precision {
+		$cos: $cos + ( pow(-1,$n) / fact(2*$n) ) * pow($a,2*$n);
+	}
+	@return $cos;
+}
+
+@function tan( $angle ){
+	@return sin($angle) / cos($angle);
+}
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}

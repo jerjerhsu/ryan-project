@@ -1,0 +1,112 @@
+.header{
+	position: fixed;
+	width: 100%; height: 0;
+	// height: $header-height;
+	z-index: 180;
+	&_container{ @extend %center; }
+	&_container, &_content{ position: relative; }
+}
+.logo{
+	position: absolute;
+	// top: 50%;
+	left: 25px;
+	margin-top: 15px;
+	// transform: translateY(-50%);
+}
+.hamburger{
+	position: absolute;
+	// top: 50%;
+	right: 0;
+	padding: 1rem;
+	display: none;
+	// transform: translateY(-50%);
+	.burger{
+		&_text{ @extend %center; }
+		&_filling{
+			position: relative;
+			width: 1rem; height: 1rem;
+		}
+		&_piece{
+			position: absolute;
+			width: 80%; height: 1px;
+			&:before, &:after{
+				@extend %element;
+				width: 100%;
+				height: 100%;
+			}
+			&, &:before, &:after{
+				@extend %center_middle;
+				background: white;
+				border-radius: 5px;
+				transition: 
+					background .35s ease-in-out,
+					transform .35s ease-in-out;
+			}
+			&:before{
+				transform: translateY( -1rem *.5 ) rotate(0deg); 
+			}
+			&:after{
+				transform: translateY( 1rem *.5 ) rotate(0deg); 
+			}
+		}
+	}
+}
+.close_active{ display: none; }
+.menu{
+	$time: .45s;
+	@extend %center;
+	position: fixed;
+	z-index: 179;
+	&, &_bg{
+		top: -100vh; left: -100vw;
+		width: 100%; height: 100%;
+		transition: 
+			top 0s $time,
+			left 0s $time,
+			background .35s ease-in-out,
+			transform $time ease-in-out,
+			opacity $time ease-in-out;
+	}
+	&_active{
+		display: none;
+		&:checked{
+			&~.header .hamburger .burger_piece{
+				background: rgba( white, 0 );
+				&:before{ transform: translateY(0) rotate(45deg); }	
+				&:after{ transform: translateY(0) rotate(135deg); }			
+			}
+			&~.menu{
+				&, .menu_bg{
+					top: 0; left: 0;
+					transition-delay: 0s;
+				}
+				.menu_bg{ background: rgba( black, .85 ); } 
+			}
+		}
+	}
+	&_bg{
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		background: rgba( black, 0 );
+		z-index: 10;
+	}
+	&_list{
+		position: relative;
+		z-index: 15;
+	}
+	&_item{
+		&_text{ color: white; }
+		&:hover{ background: rgba( white, .65 ); }
+		&:hover &{
+			&_text{ color: black; }
+		}
+		&.on-active{ background: white; }
+		&.on-active &{
+			&_text{ color: black; }
+		}
+		@for $i from 0 through 5{
+			&:nth-child(#{$i}){ transition-delay: .05s * $i; }
+		}
+	}
+}

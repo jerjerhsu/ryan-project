@@ -1,0 +1,46 @@
+%element{
+	content: "";
+	display: inline-block;
+	box-sizing: border-box;
+}
+%center{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+%middle{
+	display: inline-block;
+	vertical-align: middle;
+}
+%center_middle{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+@mixin scale_fix_w( $w ){
+    width: percentage( $w / 1920 );  
+}
+@mixin scale_fix( $w, $h ){
+    width:  percentage( $w / 1920 );  
+    height: percentage( $h / 1080 );  
+}
+@mixin scale_fix_custom( $w, $h, $boxW, $boxH ){
+    width:  percentage( $w / $boxW );  
+    height: percentage( $h / $boxH );  
+}
+@mixin position_fix( $l, $t ){
+    left: percentage( $l / 1920 ); 
+    top:  percentage( $t / 1080 ); 
+}
+@mixin position_fix_custom( $l, $t, $boxW, $boxH ){
+    left: percentage( $l / $boxW ); 
+    top:  percentage( $t / $boxH ); 
+}
+@mixin position_fix_left_custom( $l, $boxW ){
+    left: percentage( $l / $boxW ); 
+}

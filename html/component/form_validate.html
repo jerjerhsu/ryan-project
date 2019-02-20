@@ -1,0 +1,87 @@
+<script>
+var form = new Vue({
+    el: '#form',
+    data: {
+        submit: false,
+        name: {
+            // 嗚嗚
+            value: '', error: true,
+            regex: /^[\u4e00-\u9fa5a-zA-Z-]+$/,
+            errorMessage: '請填寫姓名',
+        },
+        tel: {
+            // 0999090333
+            value: '', error: true,
+            regex: /^0[0-9]{9}$/,
+            errorMessage: '請填寫正確電話格式',
+        },
+        email: {
+            // gbaf@tew.com
+            value: '', error: true,
+            regex: /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/,
+            errorMessage: '請填寫正確E-mail格式',
+        },
+        msg: {
+            // 恩恩
+            value: '', error: true,
+            regex: /^[\u4e00-\u9fa5a-zA-Z-]+$/,
+            errorMessage: '請填寫您想跟我們說的話',
+        },
+    },
+    methods: {
+        vali: function( item ){
+            if( this[ item ].value.match( this[ item ].regex ) ){
+                this[ item ].error = false;
+                console.log( item, 'ok' );
+                return true;
+            }
+            else{
+                this[ item ].error = true;
+                console.log( item, 'error' );
+                return this[ item ].errorMessage;
+            }
+        },
+        submitData: function(){
+            this.submit = true; 
+            let formError = false,
+                formErrorMessage = false;
+            for( let item in this.$data ){
+                if( item !== 'submit' ){
+                    let valiResult = this.vali( item );
+                    if( valiResult !== true ){
+                        formError = true;
+                        formErrorMessage = !formErrorMessage ? valiResult : formErrorMessage+'，'+valiResult;
+                    }
+                }
+            }
+            if( !formError ){
+                console.log( $( this.$el ).serializeArray() );
+                // $( this.$el ).serialize();
+                // this.$el.submit();
+                $.ajax({
+                    url: '/Handler.ashx',
+                    type: 'POST',
+                    data: $( this.$el ).serializeArray(),
+                    success: function (data, textStatus, jqXHR) {
+                        console.log(data, textStatus, jqXHR);
+                        this.submit = false; 
+                        if (jqXHR.responseText != '') {
+                            alert(jqXHR.responseText);
+                            alert( '已成功送出囉！我們會盡快回覆您，謝謝' );
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        this.submit = false; 
+                        console.log(jqXHR, textStatus, errorThrown);
+                        alert( '送出失敗' );
+                    }
+                });
+            }
+            else{
+                alert( formErrorMessage+'，謝謝' );
+                this.submit = false; 
+            }
+        },
+    }    
+});
+</script>

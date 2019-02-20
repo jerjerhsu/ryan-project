@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <!-- <link rel="shortcut icon" href="./img/favicon.png" type="image/png"> -->
+    <!-- <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> -->
+    <meta name="viewport" content="width=640,user-scalable=0">
+    <!--<meta name="viewport" content="width=device-width, user-scalable=0, initial-scale=1.0, min-width=520"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script>
+    (function(){
+        var viewport = document.querySelector( 'meta[name=viewport]' );
+        if( viewport ){
+            var content = viewport.getAttribute( 'content' ),
+                parts = content.split( ',' );
+            for( var i = 0; i < parts.length; ++i ){
+                var part = parts[ i ].trim(),
+                    pair = part.split( '=' );
+                if( pair[ 0 ] === 'min-width' ){
+                    var minWidth = parseInt( pair[ 1 ] ) ;
+                    if( screen.width < minWidth ){
+                        var newViewport = document.createElement( 'meta' );
+                        document.head.removeChild( viewport );
+                        newViewport.setAttribute( 'name', 'viewport' );
+                        newViewport.setAttribute( 'content', 'width=' + minWidth + ', user-scalable=0, maximum-scale=1' );
+                        document.head.appendChild( newViewport );
+                        break;
+                    }
+                }
+            }
+        }
+    })();
+    </script>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- <link rel="apple-touch-icon-precomposed" href="./img/apple-touch-icon.jpg" /> -->
+    
+    <!-- FB -->
+    <meta property="og:locale" content="en_TW">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta name="twitter:title" content="">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:description" content="">
+        
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112003513-1"></script>-->
+    <script>
+    
+    /*
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-87352771-4');
+
+    // 新版 GA 說明
+    // https://developers.google.com/analytics/devguides/collection/gtagjs/sending-data#groups-and-properties
+    gtag( 'event', 'Click', {
+        'event_category': '選單',
+        'event_label': '回首頁'
+    });
+
+    // 這ㄍ要測測看，
+    // 用 Agenda GA 開新帳號
+    gtag( 'event', 'Submit', {
+        'event_category': '表單',
+        'event_label': '送出資料'
+        'event_callback': function(){
+            form.submit();
+        }
+    });
+
+    */
+
+    </script>

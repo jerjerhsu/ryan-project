@@ -1,0 +1,107 @@
+$time: .45s;
+.popup, .loading{
+	position: fixed;
+	top: -100vh; left: -100vw;
+	width: 100%; height: 100%;
+	transition: 
+	 	top .0s $time,
+		left .0s $time,
+        transform $time ease-in-out,
+		opacity $time ease-in-out;
+	&_active:checked+&, &.on-visible{ 
+		top: 0; left: 0; 
+		transition-delay: 0s;
+	}
+}
+.popup{
+	overflow: hidden;
+	overflow: auto;
+	&_X{ 
+		position: absolute; 
+		transform: scale(0);
+		transition: 
+			transform 0s $time ease-in-out;
+	}
+	&_active{ display: none; }
+	&_active:checked+&, &.on-visible{ 
+		opacity: 1;
+	}
+	&_active:checked+& &, &.on-visible &{ 
+		&_X{ 
+			transform: scale(1); 
+			transition: 
+			transform $time 0s ease-in-out;
+		}
+	}
+	&_background{
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+	}
+}
+.loading{
+	background: $color-loading; 
+	opacity: 0; 
+	z-index: 200; 
+	&_container{
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		text-align: center;
+		font-size: 0;
+		&:before{ 
+			@extend %element; 
+			width: 0; height: 100%;
+			vertical-align: middle;
+		}
+	}
+	&_content{
+		width: auto;
+		display: inline-block;
+		vertical-align: middle;
+		transform: translateY(-25%);
+		font-size: 1rem;
+	}	
+	&_visual{ 
+		position: relative; 
+		&::before{
+			@extend %element;
+			position: absolute;
+			top: -9999px;			
+			bottom: -9999px;
+			left: -9999px;
+			right: -9999px;
+			margin: auto;
+			width: 6rem;
+			height: 6rem;
+			border: 4px solid white;
+			// border-width: 1px 3px 5px 7px; 
+			// transform: translateX(-50%) translateY(-50%);
+			animation: loading 3s ease-in-out infinite;
+		}
+	}
+	&_percent{
+		@extend %center;
+		min-width: 1rem; min-height: 1rem;
+		letter-spacing: .15em;
+		font-weight: 100;
+	}
+	&.on-visible{
+		opacity: 1;
+	}
+}
+.please{
+	&Landscape, &Portrait{
+		position: fixed; top: 0; left: 0;
+		width: 100%; height: 100%; display: block;
+		@at-root .pc &{	display: none; }
+	}
+}
+// 是橫的
+@media screen and ( orientation: landscape ){
+	.pleaseLandscape{ top: -100vh; left: -100vw; }
+}
+// 是直的
+@media screen and ( orientation: portrait ){
+	.pleasePortrait{ top: -100vh; left: -100vw; }
+}

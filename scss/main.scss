@@ -1,0 +1,48 @@
+// @import "compass";
+@import 'variables';
+// mixin
+@import 'mixin/layout';
+@import 'mixin/function';
+
+@import url("https://use.fontawesome.com/releases/v5.7.0/css/all.css");
+//https://fonts.google.com/
+// @import url(https://fonts.googleapis.com/css?family=Sawarabi+Mincho); // 日本的明體
+// @import url(https://fonts.googleapis.com/earlyaccess/cwtexming.css); // 思源明體
+// @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css); // 思源圓體
+// @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css); // 思源宋體
+// @import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css); // 思源楷體
+// @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); // 思源黑體
+
+// sans-serif 沒有（法文） 襯線
+// serif 襯線
+
+// font-family: 'cwTeXYen', serif; // 思源明體
+// font-family: 'cwTeXMing', serif; // 思源圓體
+// font-family: 'Sawarabi Mincho', serif; // 日本的明體
+// font-family: 'cwTeXFangSong', serif; // 思源宋體
+// font-family: 'cwTeXKai', serif; // 思源楷體
+// font-family: ‘Noto Sans TC’, sans-serif;
+
+// plugin style
+@import '../../../../../../bower_components/slick-carousel/slick/slick.scss';
+
+
+// base
+@import 'base/layout';
+// @import 'base/grid'; //$point???
+@import 'base/module';
+@import 'base/button';
+
+// reset
+@import 'normalize';
+body{
+    transform: rotate(10deg);
+}
+@keyframes test {
+    0% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}

@@ -1,0 +1,41 @@
+$col: 12;
+$col-item: ( 0, 1, 2, 2.4, 3, 4, 4.8, 5, 6, 7, 8, 9, 10, 11, 12 );
+
+$device-point: ( 'mb', 'tb', 'pc' );
+
+$grid-point: (
+    (xs: 480px),
+    (sm: 640px),
+    (md: 768px),
+    (lg: 992px),
+    (xl: 1200px),
+    (xxl: 1440px)
+) !default;
+
+$font-size: 16px;
+$font-size-str: str-replace( inspect( $font-size ), 'px', '' );
+
+$color-grey:    rgba( 165, 165, 165, 1 );
+$color-grey_18: rgba( 127, 127, 127, 1 );
+$color-red:     rgba( 227, 60, 47, 1 );
+$color-golden:  rgba( 133, 105, 25, 1 );
+$color-sand:    rgba( 220, 158, 100, 1 );
+
+$ease-bounce: cubic-bezier( 0, 1.2, .8, 1.01 );
+
+$color-title: #e7c194;
+$color-loading: $color-grey;
+$color-sony: #987c5e;
+
+$color-gold: #c9b096;
+$color-sand: #987c5e;
+$color-mouth: #8ca174;
+
+
+
+$h1: 54px/ $font-size * 1rem;
+$h2: 48px/ $font-size * 1rem;
+$h3: 40px/ $font-size * 1rem;
+$h4: 32px/ $font-size * 1rem;
+$h5: 24px/ $font-size * 1rem;
+$h6: $font-size/ $font-size * 1rem;

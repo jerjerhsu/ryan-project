@@ -1,0 +1,147 @@
+// .scaleFix{
+// 	&-h{
+//         $percent: ( 25, 50, 37.5, 50, 56.25, 75, 100, 150, 200 );
+//         @for $i from 1 to length( $percent ) + 1 {
+//             $num: nth( $percent, $i );
+//             $str: str-replace( inspect( $num ), '.', '_' );
+//             &#{ inspect($str) }:before{
+//                 @extend %element;
+//                 padding-top: $num * 1%;
+// 				display: block;
+//             }
+//         }
+//     }
+// 	&_box{
+// 		position: absolute;
+// 		top: 0; left: 0;
+// 		width: 100%; height: 100%;
+// 	}
+// }
+.grid{
+	width: 100%; 
+	// display: table; 
+    // table-layout: fixed;
+	.row{ 
+		// display: table-row;
+	    // display: inline; 
+		.col{
+			float: none;
+			// display: inline-table;
+		}
+	}
+} 
+// Firefox Only
+@-moz-document url-prefix() {
+	.row{ 
+		.col{ margin-right: -1px; }
+	}
+}
+.row{ 
+	width: 100%; 
+	overflow: visible; 
+	font-size: 0; 
+	direction: ltr;
+	&-contour{
+		.col{
+			// margin-bottom: 100%;
+			// padding-bottom: -100%;  
+			padding-bottom: 100%;
+			margin-bottom: -100%;
+		}
+	}
+	&-rtl{ 
+		direction: rtl; 
+	}
+	&-ltr{ 
+		direction: ltr; 
+	}
+	&-rtl, &-ltr{ 
+		.col{ direction: ltr; } 
+	}
+
+}
+.col{
+	position: relative;
+	display: inline-block;
+	font-size: 1rem; 
+	overflow: hidden; 
+	// @at-root :root &{ 
+	// 	margin-right: -4px \0/IE9; 
+	// }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.col{ 
+		margin-right: -4px; 
+	}
+}
+@each $i in $col-item {
+	$percent: percentage($i / $col );
+	$str: str-replace( inspect( $i ), '.', '_' );
+	.col-#{$str}{ 
+		width: percentage($i / $col); 
+	}
+	.offset-#{$str}{ 
+		margin-left: percentage($i / $col); 
+	}
+}
+@each $size, $point in $grid-point {
+	@media ( max-width: $point - 1 ){
+		.show-#{$size}{ 
+			display: none !important; 
+		}
+	}
+	@media ( min-width: $point ){
+		html{ 
+			font-size: map-get( $font-size-point, #{$size} ); 
+		}
+		.row-#{$size}{
+			&-rtl{ 
+				direction: rtl; 
+			}
+			&-ltr{ 
+				direction: ltr; 
+			}
+			&-rtl, &-ltr{ 
+				.col{ 
+					direction: ltr; 
+				} 
+			}
+		}
+		.col-#{$size}-absolute{
+			position: absolute; top: 0;
+		}
+		.col-#{$size}-relative{
+			position: relative;
+		}
+		@each $i in $col-item {
+			$percent: percentage($i / $col );
+            $str: str-replace( inspect( $i ), '.', '_' );
+			.col-#{$size}-#{$str}{ 
+				width: percentage($i / $col); 
+			}
+			.offset-#{$size}-#{$str}{ 
+				margin-left: percentage($i / $col); 
+			}
+		}
+		// @for $i from 0 through $col {
+		// 	$percent: percentage($i / $col );
+		// 	.col-#{$size}-#{$i}{ 
+		// 		width: percentage($i / $col); 
+		// 	}
+		// 	.offset-#{$size}-#{$i}{ 
+		// 		margin-left: percentage($i / $col); 
+		// 	}
+		// }
+		.hide-#{$size}{ 
+			display: none !important; 
+		}
+	}
+}
+
+@each $point in $device-point {
+	.#{$point}{
+		.hide-#{$point}{
+			display: none;
+		}
+	}
+}
