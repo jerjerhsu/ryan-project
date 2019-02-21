@@ -59,7 +59,7 @@ var banner = [
 
 var src = '',
     libs = '../../../../../bower_components/',
-    dist = 'dist/', // 輸出位置
+    dist = 'docs/', // 輸出位置
     path = {
         src: {
             scss: src  + 'scss/**/*.scss', 
