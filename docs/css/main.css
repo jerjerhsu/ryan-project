@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Wed Feb 20 2019 19:07:32 
+* date:    Thu Feb 21 2019 15:56:52 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1615,7 +1615,6 @@ body {
 
 .word-box {
   position: relative;
-  float: left;
   left: 0;
   top: 0;
   -webkit-border-radius: 5px;
@@ -1671,13 +1670,11 @@ body {
 
 #ta {
   position: relative;
-  float: left;
   display: block;
 }
 
 #ta-list {
   position: relative;
-  float: left;
 }
 
 #ta-list li {
@@ -1706,13 +1703,11 @@ body {
 
 #syllabus {
   position: relative;
-  float: left;
   display: block;
 }
 
 #syllabus-list {
   position: relative;
-  float: left;
 }
 
 #syllabus-list li {
@@ -1750,13 +1745,11 @@ body {
 
 #course-time {
   position: relative;
-  float: left;
   display: block;
 }
 
 #course-box {
   position: relative;
-  float: left;
 }
 
 .course-title {
@@ -1776,18 +1769,17 @@ body {
 #teacher-box {
   position: relative;
   height: auto;
+  margin: 0 auto;
   background-color: #eee;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-  margin: 0 auto;
   overflow: hidden;
 }
 
 #teacher-0 {
   position: relative;
   width: auto;
-  margin: 76px 106px 31px 106px;
 }
 
 #teacher-0:after {
@@ -1803,7 +1795,6 @@ body {
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
-  float: left;
   border: 6px solid #fff;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -1831,7 +1822,6 @@ body {
 
 #teacher-1 {
   position: relative;
-  float: left;
 }
 
 #teacher-1 li {
@@ -1851,7 +1841,6 @@ body {
 
 .say-box {
   position: relative;
-  float: left;
   left: 0;
   top: 0;
   -webkit-border-radius: 5px;
@@ -1938,13 +1927,11 @@ body {
 
 #faq {
   position: relative;
-  float: left;
   display: block;
 }
 
 #faq-list {
   position: relative;
-  float: left;
 }
 
 #faq-list li {
@@ -2011,6 +1998,12 @@ body {
   overflow: hidden;
 }
 
+#smoke-box svg {
+  position: relative;
+  left: 50%;
+  margin-left: -600px;
+}
+
 #now-state {
   position: relative;
   font-family: ‘微軟正黑體’, Arial, sans-serif;
@@ -2022,7 +2015,6 @@ body {
 
 .future-class-box {
   position: relative;
-  float: left;
 }
 
 .future-class-box svg {
@@ -2052,7 +2044,6 @@ body {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
-  float: left;
   cursor: pointer;
 }
 
@@ -2073,7 +2064,6 @@ body {
 
 .content-list {
   position: relative;
-  float: right;
 }
 
 .content-list li {
@@ -2127,15 +2117,19 @@ body {
 
 #fanpage {
   position: relative;
-  float: left;
-  margin: 51px 0 0 65px;
+  display: block;
+}
+
+#fanpage:after {
+  content: "";
+  position: relative;
+  clear: both;
+  display: block;
 }
 
 #footer-word {
   position: relative;
   display: block;
-  float: left;
-  margin: 51px 0 0 59px;
   font-family: ‘微軟正黑體’, Arial, sans-serif;
   font-weight: normal;
   color: #797979;
@@ -2158,20 +2152,17 @@ body {
   width: 100%;
   left: 0;
   top: 0;
+  overflow: hidden;
 }
 
 #footer-logo {
-  position: absolute;
   width: 127px;
   height: auto;
-  left: 26px;
   top: 0px;
-  bottom: 0px;
-  margin: auto 0;
+  display: block;
 }
 
 #copyright-word {
-  position: absolute;
   width: 387px;
 }
 
@@ -2181,7 +2172,6 @@ body {
   color: #797979;
   line-height: 1.5;
   font-size: 14px;
-  text-align: right;
 }
 
 #go-top {
@@ -2303,10 +2293,14 @@ body {
     font-size: 31px;
     margin: 118px auto 118px auto;
   }
+  #main-title br {
+    display: none;
+  }
   .word-box {
     width: 372px;
     height: 609px;
     margin: 14px;
+    float: left;
   }
   .word-box h3 {
     height: 166px;
@@ -2322,13 +2316,18 @@ body {
   }
   #ta {
     margin-left: 24px;
+    float: left;
+  }
+  .hide-small {
+    display: none;
   }
   #ta-list {
     top: -9px;
+    float: left;
   }
   #ta-list li {
     font-size: 22px;
-    margin: auto auto 18px 65px;
+    margin: auto auto 18px 0px;
   }
   #dont-worry {
     font-size: 28px;
@@ -2336,9 +2335,11 @@ body {
   }
   #syllabus {
     margin-left: 99px;
+    float: left;
   }
   #syllabus-list {
     top: -9px;
+    float: left;
   }
   #syllabus-list li {
     font-size: 22px;
@@ -2346,10 +2347,12 @@ body {
   }
   #course-time {
     margin-left: 134px;
+    float: left;
   }
   #course-box {
     top: -9px;
     margin: auto auto 18px 96px;
+    float: left;
   }
   .course-item {
     margin-bottom: 26px;
@@ -2364,10 +2367,14 @@ body {
     width: 1170px;
     padding: 0 0 42px 0;
   }
+  #teacher-0 {
+    margin: 76px 106px 31px 106px;
+  }
   #ryan {
     width: 146px;
     height: 146px;
     margin: 0 56px 0 0;
+    float: left;
   }
   #ryan-info h3 {
     font-size: 35px;
@@ -2377,6 +2384,7 @@ body {
   }
   #teacher-1 {
     top: -9px;
+    float: left;
   }
   #teacher-1 li {
     font-size: 22px;
@@ -2386,6 +2394,7 @@ body {
     width: 372px;
     height: 815px;
     margin: 14px;
+    float: left;
   }
   .say-box h3 {
     height: 258px;
@@ -2396,10 +2405,12 @@ body {
   }
   #faq {
     margin-left: 32px;
+    float: left;
   }
   #faq-list {
     top: -9px;
     width: 757px;
+    float: left;
   }
   #faq-list li {
     font-size: 22px;
@@ -2416,13 +2427,16 @@ body {
   .future-class-box {
     width: 382px;
     margin: 0 0 0 32px;
+    float: left;
   }
   .interest-btn {
     margin: 28px 0 0 64px;
+    float: left;
   }
   .content-list {
     top: -9px;
     width: 738px;
+    float: right;
   }
   .content-list li {
     font-size: 22px;
@@ -2434,8 +2448,14 @@ body {
   .footer {
     height: 410px;
   }
+  #fanpage {
+    float: left;
+    margin: 51px 0 0 65px;
+  }
   #footer-word {
     width: 735px;
+    float: left;
+    margin: 51px 0 0 59px;
     padding: 0 15px 0 0;
   }
   #footer-line {
@@ -2444,9 +2464,19 @@ body {
   #copyright {
     height: 89px;
   }
+  #footer-logo {
+    position: absolute;
+    left: 26px;
+    bottom: 0px;
+    margin: auto 0;
+  }
   #copyright-word {
+    position: absolute;
     height: 89px;
     right: 26px;
+  }
+  #copyright-word p {
+    text-align: right;
   }
   #go-top {
     width: 84px;
@@ -2525,9 +2555,13 @@ body {
     font-size: 31px;
     margin: 118px auto 118px auto;
   }
+  #main-title br {
+    display: inline;
+  }
   .word-box {
     width: 372px;
     height: 609px;
+    margin: 0 auto 30px auto;
   }
   .word-box h3 {
     height: 166px;
@@ -2543,13 +2577,19 @@ body {
   }
   #ta {
     margin-left: 24px;
+    margin: 0 auto;
+  }
+  .hide-small {
+    display: inline;
   }
   #ta-list {
     top: -9px;
+    margin: 50px auto 0 auto;
+    width: 372px;
   }
   #ta-list li {
     font-size: 22px;
-    margin: auto auto 18px 65px;
+    margin: auto auto 18px 0px;
   }
   #dont-worry {
     font-size: 28px;
@@ -2557,20 +2597,24 @@ body {
   }
   #syllabus {
     margin-left: 99px;
+    margin: 0 auto;
   }
   #syllabus-list {
     top: -9px;
+    margin: 50px auto 0 auto;
+    width: 372px;
   }
   #syllabus-list li {
     font-size: 22px;
-    margin: auto auto 0px 72px;
+    margin: auto auto 18px 0;
   }
   #course-time {
-    margin-left: 134px;
+    margin: 0 auto;
   }
   #course-box {
     top: -9px;
-    margin: auto auto 18px 96px;
+    margin: 50px auto 18px auto;
+    width: 372px;
   }
   .course-item {
     margin-bottom: 26px;
@@ -2582,13 +2626,16 @@ body {
     font-size: 28px;
   }
   #teacher-box {
-    width: 1170px;
+    width: 372px;
     padding: 0 0 42px 0;
+  }
+  #teacher-0 {
+    margin: 76px 30px 31px 30px;
   }
   #ryan {
     width: 146px;
     height: 146px;
-    margin: 0 56px 0 0;
+    margin: 0 auto 30px auto;
   }
   #ryan-info h3 {
     font-size: 35px;
@@ -2598,14 +2645,16 @@ body {
   }
   #teacher-1 {
     top: -9px;
+    margin: 0 30px;
   }
   #teacher-1 li {
     font-size: 22px;
-    margin: auto auto 18px 120px;
+    margin: auto auto 18px 0px;
   }
   .say-box {
     width: 372px;
     height: 815px;
+    margin: 0 auto 30px auto;
   }
   .say-box h3 {
     height: 258px;
@@ -2615,15 +2664,16 @@ body {
     padding: 0 32px;
   }
   #faq {
-    margin-left: 32px;
+    margin: 0 auto;
   }
   #faq-list {
     top: -9px;
-    width: 757px;
+    width: 372px;
+    margin: 50px auto 0 auto;
   }
   #faq-list li {
     font-size: 22px;
-    margin: auto auto 18px 90px;
+    margin: auto auto 18px 0;
   }
   #more-q {
     font-size: 28px;
@@ -2635,38 +2685,51 @@ body {
   }
   .future-class-box {
     width: 382px;
-    margin: 0 0 0 32px;
+    margin: 0 auto;
   }
   .interest-btn {
-    margin: 28px 0 0 64px;
+    margin: 28px auto 0 auto;
   }
   .content-list {
     top: -9px;
-    width: 738px;
+    width: 372px;
+    margin: 50px auto 0 auto;
   }
   .content-list li {
     font-size: 22px;
-    margin: auto auto 0px 72px;
+    margin: auto auto 0px 0;
   }
   .future-box {
-    margin: 0 0 60px 0;
+    margin: 0 0 120px 0;
   }
   .footer {
-    height: 410px;
+    height: auto;
+  }
+  #fanpage {
+    margin: 51px auto 0 auto;
   }
   #footer-word {
-    width: 735px;
+    width: 372px;
+    margin: 31px auto 0 auto;
     padding: 0 15px 0 0;
   }
   #footer-line {
     margin: 56px 15px 0 15px;
   }
   #copyright {
-    height: 89px;
+    height: auto;
+  }
+  #footer-logo {
+    position: relative;
+    margin: 20px auto 0 auto;
   }
   #copyright-word {
-    height: 89px;
-    right: 26px;
+    position: relative;
+    height: 50px;
+    margin: 0 auto;
+  }
+  #copyright-word p {
+    text-align: center;
   }
   #go-top {
     width: 84px;
@@ -2745,9 +2808,13 @@ body {
     font-size: 31px;
     margin: 110px auto 110px auto;
   }
+  #main-title br {
+    display: inline;
+  }
   .word-box {
     width: 372px;
     height: 609px;
+    margin: 0 auto 30px auto;
   }
   .word-box h3 {
     height: 166px;
@@ -2763,13 +2830,19 @@ body {
   }
   #ta {
     margin-left: 24px;
+    margin: 0 auto;
+  }
+  .hide-small {
+    display: inline;
   }
   #ta-list {
     top: -9px;
+    margin: 50px auto 0 auto;
+    width: 372px;
   }
   #ta-list li {
     font-size: 22px;
-    margin: auto auto 18px 65px;
+    margin: auto auto 18px 0px;
   }
   #dont-worry {
     font-size: 28px;
@@ -2777,20 +2850,24 @@ body {
   }
   #syllabus {
     margin-left: 99px;
+    margin: 0 auto;
   }
   #syllabus-list {
     top: -9px;
+    margin: 50px auto 0 auto;
+    width: 372px;
   }
   #syllabus-list li {
     font-size: 22px;
-    margin: auto auto 0px 72px;
+    margin: auto auto 18px 0;
   }
   #course-time {
-    margin-left: 134px;
+    margin: 0 auto;
   }
   #course-box {
     top: -9px;
-    margin: auto auto 18px 96px;
+    margin: 50px auto 18px auto;
+    width: 372px;
   }
   .course-item {
     margin-bottom: 26px;
@@ -2802,13 +2879,16 @@ body {
     font-size: 28px;
   }
   #teacher-box {
-    width: 1170px;
+    width: 372px;
     padding: 0 0 42px 0;
+  }
+  #teacher-0 {
+    margin: 76px 30px 31px 30px;
   }
   #ryan {
     width: 146px;
     height: 146px;
-    margin: 0 56px 0 0;
+    margin: 0 auto 30px auto;
   }
   #ryan-info h3 {
     font-size: 35px;
@@ -2818,14 +2898,16 @@ body {
   }
   #teacher-1 {
     top: -9px;
+    margin: 0 30px;
   }
   #teacher-1 li {
     font-size: 22px;
-    margin: auto auto 18px 120px;
+    margin: auto auto 18px 0px;
   }
   .say-box {
     width: 372px;
     height: 815px;
+    margin: 0 auto 30px auto;
   }
   .say-box h3 {
     height: 258px;
@@ -2835,15 +2917,16 @@ body {
     padding: 0 32px;
   }
   #faq {
-    margin-left: 32px;
+    margin: 0 auto;
   }
   #faq-list {
     top: -9px;
-    width: 757px;
+    width: 372px;
+    margin: 50px auto 0 auto;
   }
   #faq-list li {
     font-size: 22px;
-    margin: auto auto 18px 90px;
+    margin: auto auto 18px 0;
   }
   #more-q {
     font-size: 28px;
@@ -2855,38 +2938,51 @@ body {
   }
   .future-class-box {
     width: 382px;
-    margin: 0 0 0 32px;
+    margin: 0 auto;
   }
   .interest-btn {
-    margin: 28px 0 0 64px;
+    margin: 28px auto 0 auto;
   }
   .content-list {
     top: -9px;
-    width: 738px;
+    width: 372px;
+    margin: 50px auto 0 auto;
   }
   .content-list li {
     font-size: 22px;
-    margin: auto auto 0px 72px;
+    margin: auto auto 0px 0;
   }
   .future-box {
-    margin: 0 0 60px 0;
+    margin: 0 0 120px 0;
   }
   .footer {
-    height: 410px;
+    height: auto;
+  }
+  #fanpage {
+    margin: 51px auto 0 auto;
   }
   #footer-word {
-    width: 735px;
+    width: 372px;
+    margin: 31px auto 0 auto;
     padding: 0 15px 0 0;
   }
   #footer-line {
     margin: 56px 15px 0 15px;
   }
   #copyright {
-    height: 89px;
+    height: auto;
+  }
+  #footer-logo {
+    position: relative;
+    margin: 20px auto 0 auto;
   }
   #copyright-word {
-    height: 89px;
-    right: 26px;
+    position: relative;
+    height: 50px;
+    margin: 0 auto;
+  }
+  #copyright-word p {
+    text-align: center;
   }
   #go-top {
     width: 84px;

@@ -591,6 +591,27 @@ body{
             )
 		)
 	)
+	@include L(
+		(
+			'#main-title br':(
+                display: none
+            )
+		)
+	)
+	@include M(
+		(
+			'#main-title br':(
+                display: inline
+            )
+		)
+	)
+	@include S(
+		(
+			'#main-title br':(
+                display: inline
+            )
+		)
+	)
 }
 .float-box{
     position: relative;
@@ -606,7 +627,6 @@ body{
 }
 .word-box{
     position: relative;
-    float: left;
     left: 0;
     top: 0;
     border-radius: 5px;
@@ -619,7 +639,8 @@ body{
 			'.word-box':(
                 width: 372px,
                 height: 609px,
-                margin: ( 1200px - 3 * 372px ) / 6
+                margin: ( 1200px - 3 * 372px ) / 6,
+                float: left
             )
 		)
 	)
@@ -627,7 +648,8 @@ body{
 		(
 			'.word-box':(
                 width: 372px,
-                height: 609px
+                height: 609px,
+                margin: 0 auto 30px auto
             )
 		)
 	)
@@ -635,7 +657,8 @@ body{
 		(
 			'.word-box':(
                 width: 372px,
-                height: 609px
+                height: 609px,
+                margin: 0 auto 30px auto
             )
 		)
     )
@@ -748,33 +771,57 @@ body{
 }
 #ta{
     position: relative;
-    float: left;
     display: block;
 	@include L(
 		(
 			'#ta':(
-                margin-left: 24px
+                margin-left: 24px,
+                float: left
             )
 		)
 	)
 	@include M(
 		(
 			'#ta':(
-                margin-left: 24px
+                margin-left: 24px,
+                margin: 0 auto
             )
 		)
 	)
 	@include S(
 		(
 			'#ta':(
-                margin-left: 24px
+                margin-left: 24px,
+                margin: 0 auto
+            )
+		)
+	)
+}
+.hide-small{
+	@include L(
+		(
+			'.hide-small':(
+                display: none
+            )
+		)
+	)
+	@include M(
+		(
+			'.hide-small':(
+                display: inline
+            )
+		)
+	)
+	@include S(
+		(
+			'.hide-small':(
+                display: inline
             )
 		)
 	)
 }
 #ta-list{
     position: relative;
-    float: left;
     li{
         font-family: $fontfamily;
         font-weight: normal;
@@ -783,21 +830,26 @@ body{
         @include L(
             (
                 '#ta-list':(
-                    top: -9px
+                    top: -9px,
+                    float: left
                 )
             )
         )
         @include M(
             (
                 '#ta-list':(
-                    top: -9px
+                    top: -9px,
+                    margin: 50px auto 0 auto,
+                    width: 372px
                 )
             )
         )
         @include S(
             (
                 '#ta-list':(
-                    top: -9px
+                    top: -9px,
+                    margin: 50px auto 0 auto,
+                    width: 372px
                 )
             )
         )
@@ -805,7 +857,7 @@ body{
             (
                 '#ta-list li':(
                     font-size: 22px,
-                    margin: auto auto 18px 65px
+                    margin: auto auto 18px 0px
                 )
             )
         )
@@ -813,7 +865,7 @@ body{
             (
                 '#ta-list li':(
                     font-size: 22px,
-                    margin: auto auto 18px 65px
+                    margin: auto auto 18px 0px
                 )
             )
         )
@@ -821,7 +873,7 @@ body{
             (
                 '#ta-list li':(
                     font-size: 22px,
-                    margin: auto auto 18px 65px
+                    margin: auto auto 18px 0px
                 )
             )
         )
@@ -869,26 +921,28 @@ body{
 
 #syllabus{
     position: relative;
-    float: left;
     display: block;
 	@include L(
 		(
 			'#syllabus':(
-                margin-left: 99px
+                margin-left: 99px,
+                float: left
             )
 		)
 	)
 	@include M(
 		(
 			'#syllabus':(
-                margin-left: 99px
+                margin-left: 99px,
+                margin: 0 auto
             )
 		)
 	)
 	@include S(
 		(
 			'#syllabus':(
-                margin-left: 99px
+                margin-left: 99px,
+                margin: 0 auto
             )
 		)
 	)
@@ -896,7 +950,6 @@ body{
 
 #syllabus-list{
     position: relative;
-    float: left;
     li{
         font-family: $fontfamily;
         font-weight: normal;
@@ -905,21 +958,26 @@ body{
         @include L(
             (
                 '#syllabus-list':(
-                    top: -9px
+                    top: -9px,
+                    float: left
                 )
             )
         )
         @include M(
             (
                 '#syllabus-list':(
-                    top: -9px
+                    top: -9px,
+                    margin: 50px auto 0 auto,
+                    width: 372px
                 )
             )
         )
         @include S(
             (
                 '#syllabus-list':(
-                    top: -9px
+                    top: -9px,
+                    margin: 50px auto 0 auto,
+                    width: 372px
                 )
             )
         )
@@ -935,7 +993,7 @@ body{
             (
                 '#syllabus-list li':(
                     font-size: 22px,
-                    margin: auto auto 0px 72px
+                    margin: auto auto 18px 0
                 )
             )
         )
@@ -943,7 +1001,7 @@ body{
             (
                 '#syllabus-list li':(
                     font-size: 22px,
-                    margin: auto auto 0px 72px
+                    margin: auto auto 18px 0
                 )
             )
         )
@@ -974,38 +1032,38 @@ body{
 }
 #course-time{
     position: relative;
-    float: left;
     display: block;
 	@include L(
 		(
 			'#course-time':(
-                margin-left: 134px
+                margin-left: 134px,
+                float: left
             )
 		)
 	)
 	@include M(
 		(
 			'#course-time':(
-                margin-left: 134px
+                margin: 0 auto
             )
 		)
 	)
 	@include S(
 		(
 			'#course-time':(
-                margin-left: 134px
+                margin: 0 auto
             )
 		)
 	)
 }
 #course-box{
     position: relative;
-    float: left;
     @include L(
         (
             '#course-box':(
                 top: -9px,
-                margin: auto auto 18px 96px
+                margin: auto auto 18px 96px,
+                float: left
             )
         )
     )
@@ -1013,7 +1071,8 @@ body{
         (
             '#course-box':(
                 top: -9px,
-                margin: auto auto 18px 96px
+                margin: 50px auto 18px auto,
+                width: 372px
             )
         )
     )
@@ -1021,7 +1080,8 @@ body{
         (
             '#course-box':(
                 top: -9px,
-                margin: auto auto 18px 96px
+                margin: 50px auto 18px auto,
+                width: 372px
             )
         )
     )
@@ -1106,9 +1166,9 @@ body{
 #teacher-box{
     position: relative;
     height: auto;
+    margin: 0 auto;
     background-color: #eee;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
-    margin: 0 auto;
     overflow: hidden;
     @include L(
         (
@@ -1121,7 +1181,7 @@ body{
     @include M(
         (
             '#teacher-box':(
-                width: 1170px,
+                width: 372px,
                 padding: 0 0 42px 0
             )
         )
@@ -1129,7 +1189,7 @@ body{
     @include S(
         (
             '#teacher-box':(
-                width: 1170px,
+                width: 372px,
                 padding: 0 0 42px 0
             )
         )
@@ -1138,7 +1198,27 @@ body{
 #teacher-0{
     position: relative;
     width: auto;
-    margin: 76px 106px 31px 106px;
+    @include L(
+        (
+            '#teacher-0':(
+                margin: 76px 106px 31px 106px
+            )
+        )
+    )
+    @include M(
+        (
+            '#teacher-0':(
+                margin: 76px 30px 31px 30px
+            )
+        )
+    )
+    @include S(
+        (
+            '#teacher-0':(
+                margin: 76px 30px 31px 30px
+            )
+        )
+    )
     &:after{
         content: "";
         position: relative;
@@ -1150,7 +1230,6 @@ body{
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    float: left;
     border: 6px solid #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
     @include L(
@@ -1158,7 +1237,8 @@ body{
             '#ryan':(
                 width: 146px,
                 height: 146px,
-                margin: 0 56px 0 0
+                margin: 0 56px 0 0,
+                float: left
             )
         )
     )
@@ -1167,7 +1247,7 @@ body{
             '#ryan':(
                 width: 146px,
                 height: 146px,
-                margin: 0 56px 0 0
+                margin: 0 auto 30px auto
             )
         )
     )
@@ -1176,7 +1256,7 @@ body{
             '#ryan':(
                 width: 146px,
                 height: 146px,
-                margin: 0 56px 0 0
+                margin: 0 auto 30px auto
             )
         )
     )
@@ -1184,30 +1264,6 @@ body{
 #ryan-info{
     position: relative;
     float: left;
-    // @include L(
-    //     (
-    //         '#ryan-info':(
-    //             width: 146px,
-    //             height: 146px
-    //         )
-    //     )
-    // )
-    // @include M(
-    //     (
-    //         '#ryan-info':(
-    //             width: 146px,
-    //             height: 146px
-    //         )
-    //     )
-    // )
-    // @include S(
-    //     (
-    //         '#ryan-info':(
-    //             width: 146px,
-    //             height: 146px
-    //         )
-    //     )
-    // )
     h3{
         font-family: $fontfamily;
         font-weight: 700;
@@ -1265,7 +1321,6 @@ body{
 }
 #teacher-1{
     position: relative;
-    float: left;
     li{
         font-family: $fontfamily;
         font-weight: 700;
@@ -1274,21 +1329,24 @@ body{
         @include L(
             (
                 '#teacher-1':(
-                    top: -9px
+                    top: -9px,
+                    float: left
                 )
             )
         )
         @include M(
             (
                 '#teacher-1':(
-                    top: -9px
+                    top: -9px,
+                    margin: 0 30px
                 )
             )
         )
         @include S(
             (
                 '#teacher-1':(
-                    top: -9px
+                    top: -9px,
+                    margin: 0 30px
                 )
             )
         )
@@ -1304,7 +1362,7 @@ body{
             (
                 '#teacher-1 li':(
                     font-size: 22px,
-                    margin: auto auto 18px 120px
+                    margin: auto auto 18px 0px
                 )
             )
         )
@@ -1312,7 +1370,7 @@ body{
             (
                 '#teacher-1 li':(
                     font-size: 22px,
-                    margin: auto auto 18px 120px
+                    margin: auto auto 18px 0px
                 )
             )
         )
@@ -1327,7 +1385,6 @@ body{
 }
 .say-box{
     position: relative;
-    float: left;
     left: 0;
     top: 0;
     border-radius: 5px;
@@ -1340,7 +1397,8 @@ body{
 			'.say-box':(
                 width: 372px,
                 height: 815px,
-                margin: ( 1200px - 3 * 372px ) / 6
+                margin: ( 1200px - 3 * 372px ) / 6,
+                float: left
             )
 		)
 	)
@@ -1348,7 +1406,8 @@ body{
 		(
 			'.say-box':(
                 width: 372px,
-                height: 815px
+                height: 815px,
+                margin: 0 auto 30px auto
             )
 		)
 	)
@@ -1356,7 +1415,8 @@ body{
 		(
 			'.say-box':(
                 width: 372px,
-                height: 815px
+                height: 815px,
+                margin: 0 auto 30px auto
             )
 		)
     )
@@ -1467,33 +1527,32 @@ body{
 
 #faq{
     position: relative;
-    float: left;
     display: block;
 	@include L(
 		(
 			'#faq':(
-                margin-left: 32px
+                margin-left: 32px,
+                float: left
             )
 		)
 	)
 	@include M(
 		(
 			'#faq':(
-                margin-left: 32px
+                margin: 0 auto
             )
 		)
 	)
 	@include S(
 		(
 			'#faq':(
-                margin-left: 32px
+                margin: 0 auto
             )
 		)
 	)
 }
 #faq-list{
     position: relative;
-    float: left;
     li{
         font-family: $fontfamily;
         font-weight: normal;
@@ -1508,7 +1567,8 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 757px
+                    width: 757px,
+                    float: left
                 )
             )
         )
@@ -1516,7 +1576,8 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 757px
+                    width: 372px,
+                    margin: 50px auto 0 auto
                 )
             )
         )
@@ -1524,7 +1585,8 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 757px
+                    width: 372px,
+                    margin: 50px auto 0 auto
                 )
             )
         )
@@ -1540,7 +1602,7 @@ body{
             (
                 '#faq-list li':(
                     font-size: 22px,
-                    margin: auto auto 18px 90px
+                    margin: auto auto 18px 0
                 )
             )
         )
@@ -1548,7 +1610,7 @@ body{
             (
                 '#faq-list li':(
                     font-size: 22px,
-                    margin: auto auto 18px 90px
+                    margin: auto auto 18px 0
                 )
             )
         )
@@ -1619,6 +1681,11 @@ body{
 }
 #smoke-box{
     overflow: hidden;
+    svg{
+        position: relative;
+        left: 50%;
+        margin-left: -0.5 * 1200px;
+    }
 }
 
 #now-state{
@@ -1655,12 +1722,12 @@ body{
 }
 .future-class-box{
     position: relative;
-    float: left;
 	@include L(
 		(
 			'.future-class-box':(
                 width: 382px,
-                margin: 0 0 0 32px
+                margin: 0 0 0 32px,
+                float: left
             )
 		)
 	)
@@ -1668,7 +1735,7 @@ body{
 		(
 			'.future-class-box':(
                 width: 382px,
-                margin: 0 0 0 32px
+                margin: 0 auto
             )
 		)
 	)
@@ -1676,7 +1743,7 @@ body{
 		(
 			'.future-class-box':(
                 width: 382px,
-                margin: 0 0 0 32px
+                margin: 0 auto
             )
 		)
     )
@@ -1704,7 +1771,6 @@ body{
     background-color: #1e8993;
     margin: 0 auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
-    float: left;
     cursor: pointer;
     p{
         position: relative;
@@ -1722,28 +1788,28 @@ body{
     @include L(
         (
             '.interest-btn':(
-                margin: 28px 0 0 64px
+                margin: 28px 0 0 64px,
+                float: left
             )
         )
     )
     @include M(
         (
             '.interest-btn':(
-                margin: 28px 0 0 64px
+                margin: 28px auto 0 auto
             )
         )
     )
     @include S(
         (
             '.interest-btn':(
-                margin: 28px 0 0 64px
+                margin: 28px auto 0 auto
             )
         )
     )
 }
 .content-list{
     position: relative;
-    float: right;
     li{
         font-family: $fontfamily;
         font-weight: normal;
@@ -1753,7 +1819,8 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 738px
+                    width: 738px,
+                    float: right
                 )
             )
         )
@@ -1761,7 +1828,8 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 738px
+                    width: 372px,
+                    margin: 50px auto 0 auto
                 )
             )
         )
@@ -1769,7 +1837,8 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 738px
+                    width: 372px,
+                    margin: 50px auto 0 auto
                 )
             )
         )
@@ -1785,7 +1854,7 @@ body{
             (
                 '.content-list li':(
                     font-size: 22px,
-                    margin: auto auto 0px 72px
+                    margin: auto auto 0px 0
                 )
             )
         )
@@ -1793,7 +1862,7 @@ body{
             (
                 '.content-list li':(
                     font-size: 22px,
-                    margin: auto auto 0px 72px
+                    margin: auto auto 0px 0
                 )
             )
         )
@@ -1833,14 +1902,14 @@ body{
     @include M(
         (
             '.future-box':(
-                margin: 0 0 60px 0
+                margin: 0 0 120px 0
             )
         )
     )
     @include S(
         (
             '.future-box':(
-                margin: 0 0 60px 0
+                margin: 0 0 120px 0
             )
         )
     )
@@ -1866,28 +1935,53 @@ body{
     @include M(
         (
             '.footer':(
-                height: 410px
+                height: auto
             )
         )
     )
     @include S(
         (
             '.footer':(
-                height: 410px
+                height: auto
             )
         )
     )
 }
 #fanpage{
     position: relative;
-    float: left;
-    margin: 51px 0 0 65px;
+    display: block;
+    @include L(
+        (
+            '#fanpage':(
+                float: left,
+                margin: 51px 0 0 65px
+            )
+        )
+    )
+    @include M(
+        (
+            '#fanpage':(
+                margin: 51px auto 0 auto
+            )
+        )
+    )
+    @include S(
+        (
+            '#fanpage':(
+                margin: 51px auto 0 auto
+            )
+        )
+    )
+    &:after{
+        content: "";
+        position: relative;
+        clear: both;
+        display: block;
+    }
 }
 #footer-word{
     position: relative;
     display: block;
-    float: left;
-    margin: 51px 0 0 59px;
     font-family: $fontfamily;
     font-weight: normal;
     color: #797979;
@@ -1898,6 +1992,8 @@ body{
         (
             '#footer-word':(
                 width: 735px,
+                float: left,
+                margin: 51px 0 0 59px,
                 padding: 0 15px 0 0 
             )
         )
@@ -1905,7 +2001,8 @@ body{
     @include M(
         (
             '#footer-word':(
-                width: 735px,
+                width: 372px,
+                margin: 31px auto 0 auto,
                 padding: 0 15px 0 0 
             )
         )
@@ -1913,7 +2010,8 @@ body{
     @include S(
         (
             '#footer-word':(
-                width: 735px,
+                width: 372px,
+                margin: 31px auto 0 auto,
                 padding: 0 15px 0 0 
             )
         )
@@ -1951,6 +2049,7 @@ body{
     width: 100%;
     left: 0;
     top: 0;
+    overflow: hidden;
     @include L(
         (
             '#copyright':(
@@ -1961,33 +2060,56 @@ body{
     @include M(
         (
             '#copyright':(
-                height: 89px
+                height: auto
             )
         )
     )
     @include S(
         (
             '#copyright':(
-                height: 89px
+                height: auto
             )
         )
     )
 }
 #footer-logo{
-    position: absolute;
     width: 127px;
     height: auto;
-    left: 26px;
     top: 0px;
-    bottom: 0px;
-    margin: auto 0;
+    display: block;
+    @include L(
+        (
+            '#footer-logo':(
+                position: absolute,
+                left: 26px,
+                bottom: 0px,
+                margin: auto 0
+            )
+        )
+    )
+    @include M(
+        (
+            '#footer-logo':(
+                position: relative,
+                margin: 20px auto 0 auto
+            )
+        )
+    )
+    @include S(
+        (
+            '#footer-logo':(
+                position: relative,
+                margin: 20px auto 0 auto
+            )
+        )
+    )
 }
 #copyright-word{
-    position: absolute;
     width: 387px;
     @include L(
         (
             '#copyright-word':(
+                position: absolute,
                 height: 89px,
                 right: 26px
             )
@@ -1996,16 +2118,18 @@ body{
     @include M(
         (
             '#copyright-word':(
-                height: 89px,
-                right: 26px
+                position: relative,
+                height: 50px,
+                margin: 0 auto
             )
         )
     )
     @include S(
         (
             '#copyright-word':(
-                height: 89px,
-                right: 26px
+                position: relative,
+                height: 50px,
+                margin: 0 auto
             )
         )
     )
@@ -2015,8 +2139,28 @@ body{
         color: #797979;
         line-height: 1.5;
         font-size: 14px;
-        text-align: right;
     }
+    @include L(
+        (
+            '#copyright-word p':(
+                text-align: right
+            )
+        )
+    )
+    @include M(
+        (
+            '#copyright-word p':(
+                text-align: center
+            )
+        )
+    )
+    @include S(
+        (
+            '#copyright-word p':(
+                text-align: center
+            )
+        )
+    )
 }
 #go-top{
     position: fixed;
