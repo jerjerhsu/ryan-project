@@ -22,6 +22,7 @@
 	top: 0px;
 	right: 0px;
 	background-color: #e60012;
+	z-index: 1;
 	label {
 		position: relative;
 		width: 100%;
@@ -57,7 +58,7 @@
 .burger_line {
 	position: absolute;
 	width: 64%;
-	height: 6.4%;
+	height: 2px;
 	left: 18%;
 	top: 0px;
 	margin: -3.2% 0% 0% 0%;
@@ -65,7 +66,7 @@
 }
 .burger_line{
 	&[index="0"] {
-		top: 30.4%;
+		top: 100% * ( 35 / 100);
 		transition: top .2s .2s*2, transform .2s .2s;
 	}
 	&[index="1"] {
@@ -73,7 +74,7 @@
 		transition: top .2s .2s*2, transform .2s .2s;
 	}
 	&[index="2"] {
-		top: 70.4%;
+		top: 100% * ( 65 / 100);
 		transition: top .2s .2s*2, transform .2s .2s;
 	}
 }
@@ -81,7 +82,7 @@
 .burger_x {
 	position: absolute;
 	width: 64%;
-	height: 6.4%;
+	height: 2px;
 	left: 18%;
 	top: 50%;
 	margin: -3.2% 0% 0% 0%;
@@ -94,6 +95,9 @@
 		transform: rotateZ(-45deg) scaleX(0);
 		transition: transform .2s 0s
 	}
+}
+#nav-list{
+	z-index: 0;
 }
 #burger_check {
 	display: none
@@ -128,6 +132,28 @@
 					transition: transform .2s .2s*2
 				}
 			}
+		}
+		~#header-main {
+			@include L(
+				(
+					'#burger_check:checked ~#header-main #nav-list':(
+					)
+				)
+			)
+			@include M(
+				(
+					'#burger_check:checked ~#header-main #nav-list':(
+						top: 67px + 30px
+					)
+				)
+			)
+			@include S(
+				(
+					'#burger_check:checked ~#header-main #nav-list':(
+						top: 67px + 30px
+					)
+				)
+			)
 		}
 	}
 }

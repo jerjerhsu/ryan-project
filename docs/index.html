@@ -93,7 +93,16 @@
         <div class="header_container">
             <div class="header_content">
                 <div id="header-top" class="full">
-                    <div id="mail-info" class="center-limit">Email us: hello@growth.school     Call us: 886-2-2855-9740</div>
+                    <div id="mail-info" class="center-limit">Email us: <a href="mailto:hello@growth.school ">hello@growth.school</a> <span></span> Call us:<a href="tel:886-2-2855-9740">886-2-2855-9740</a></div>
+                </div>
+                <input type="checkbox" id="burger_check" onchange="if(this.checked){document.body.setAttribute('nav','open');}else{document.body.setAttribute('nav','close');}">
+                <div id="burger">
+					<div class="burger_line" index="0"></div>
+					<div class="burger_line" index="1"></div>
+					<div class="burger_line" index="2"></div>
+					<div class="burger_x" index="0"></div>
+					<div class="burger_x" index="1"></div>
+					<label for="burger_check"></label>
                 </div>
                 <div id="header-main" class="full">
                     <div class="center-limit">
@@ -133,15 +142,6 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <input type="checkbox" id="burger_check" onchange="if(this.checked){document.body.setAttribute('nav','open');}else{document.body.setAttribute('nav','close');}">
-                <div id="burger">
-					<div class="burger_line" index="0"></div>
-					<div class="burger_line" index="1"></div>
-					<div class="burger_line" index="2"></div>
-					<div class="burger_x" index="0"></div>
-					<div class="burger_x" index="1"></div>
-					<label for="burger_check"></label>
                 </div>
                 <!-- <div class="hamburger btn">
                     <label for="menu_active">
