@@ -1,13 +1,17 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Mon Feb 11 2019 02:56:23 
+* date:    Wed Feb 20 2019 19:07:32 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 'use strict';
 
+var _$$slick;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 console.log("%cJERJER%c(\u2032\u309C\u03C9\u3002\u2035)...", 'color: rgba(5,137,62,1); font-size: 32px; vertical-align: baseline;' + 'font-family: "Luxia-Medium", Arial, "Noto Sans TC", "Microsoft JhengHei";' + 'margin: 10px 0px 5px 0; padding: 0px 5px;', 'font-size: 30px; color: rgba(5,137,62,1);');
-console.log('%cMercedes Benz FIFA campaign   ❙   2018-06   ❙   Copyright \xA9 2018 BBDO', 'color: rgba(5,137,62,1); font-size: 12px; margin: 5px 0; font-family:Arial; font-weight: 600;');
+console.log('%cryan-project   ❙   2019-01   ❙   Copyright \xA9 2019 ', 'color: rgba(5,137,62,1); font-size: 12px; margin: 5px 0; font-family:Arial; font-weight: 600;');
 var PI = Math.PI,
     rad = Math.PI / 180,
     cos = Math.cos,
@@ -276,7 +280,8 @@ var ua = parseUserAgent(),
     url = getUrlData();
 
 if (ua.Device.PC) {
-  console.log('是電腦'); // $body.addClass( 'pc' );
+  console.log('是電腦');
+  $body.addClass('pc');
 
   if (ua.IE8 || ua.IE9) {
     loop = false;
@@ -346,6 +351,28 @@ if ('scrollRestoration' in history) {
 /* slick */
 
 
+$('#banner').slick((_$$slick = {
+  centerMode: true,
+  slidesToShow: 3,
+  centerPadding: '0px',
+  respondTo: "slider"
+}, _defineProperty(_$$slick, "slidesToShow", 1), _defineProperty(_$$slick, "infinite", true), _defineProperty(_$$slick, "dots", true), _defineProperty(_$$slick, "autoplay", true), _defineProperty(_$$slick, "prevArrow", $('#ar_l')), _defineProperty(_$$slick, "nextArrow", $('#ar_r')), _defineProperty(_$$slick, "responsive", [{
+  breakpoint: 960,
+  settings: {
+    centerPadding: '0px'
+  }
+}, {
+  breakpoint: 480,
+  settings: {
+    centerPadding: '0px'
+  }
+}]), _$$slick)).on('beforeChange', function (event, slick, currentSlide, nextSlide) {}).on('afterChange', function (event, slick, currentSlide) {});
+$('#banner_preview').css({
+  'display': 'none'
+});
+$('#banner').css({
+  'display': 'block'
+}).addClass('show');
 $('.slides').each(function () {
   var $this = $(this),
       $slides = $this.children(' .slides_list'),

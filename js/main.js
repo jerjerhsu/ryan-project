@@ -3,7 +3,7 @@ let ua = parseUserAgent(),
 
 if( ua.Device.PC ){
 	console.log( '是電腦' );
-	// $body.addClass( 'pc' );
+	$body.addClass( 'pc' );
 	if( ua.IE8 || ua.IE9 ){
 		loop = false;
 		console.log( '請使用高級瀏覽器' );
@@ -77,8 +77,42 @@ if( 'scrollRestoration' in history ){
 }
   
 
-
 /* slick */
+
+
+$('#banner').slick(
+	{
+		centerMode: true,
+		slidesToShow: 3,
+		centerPadding: '0px',
+		respondTo: "slider",
+		slidesToShow: 1,
+		infinite: true,
+		dots: true,
+		autoplay: true,
+		prevArrow: $('#ar_l'),
+		nextArrow: $('#ar_r'),
+		responsive: [
+			{
+			  breakpoint: 960,
+			  settings: {
+				centerPadding: '0px'
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				centerPadding: '0px'
+			  }
+			}
+		]
+	}
+).on('beforeChange', function(event, slick, currentSlide, nextSlide){
+}).on('afterChange', function(event, slick, currentSlide){
+});
+$('#banner_preview').css({'display':'none'});
+$('#banner').css({'display':'block'}).addClass('show');
+
 $( '.slides' ).each(function () {
 	var $this = $(this),
 		$slides = $this.children(' .slides_list' ),

@@ -86,7 +86,7 @@ var src = '',
                     libs + 'jQuery-viewport-checker/dist/jquery.viewportchecker.min.js',
                     // libs + 'jquery-ui-touch-punch/jquery-ui-touch-punch.min.js',
                     // libs + 'Snap.svg/dist/snap.svg-min.js', // v0.5.1
-                    // libs + 'slick-carousel/slick/slick.min.js',
+                    libs + 'slick-carousel/slick/slick.min.js',
                     // libs + 'masonry.pkgd.js',
                     // libs + 'jquery.mCustomScrollbar.js',
                     // libs + 'greensock/TweenMax.min.js',

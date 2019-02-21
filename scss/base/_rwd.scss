@@ -1,0 +1,136 @@
+/*@import variables*/
+$point_pc: 1200;
+$point_mobile: 426;
+$L: ();
+$M: ();
+$S: ();
+$count: 0;
+/*@import mixin*/
+@mixin basic($position,$width,$height,$left,$top){
+	position: $position;
+	width: $width;
+	height: $height;
+	left: $left;
+	top: $top;
+}
+@mixin breakpoint($point){
+  @if $point == pc {
+    @media only screen and (min-width:($point_pc+1)+px){
+      @content;
+    }
+  }
+  @else if $point == pad {
+    @media only screen and (min-width:($point_mobile+1)+px) and (max-width:$point_pc+px) {
+			@content;
+    }
+  }
+  @else if $point == mobile {
+    @media only screen and (max-width:($point_mobile)+px) {
+			@content;
+    }
+  }
+}
+@mixin rwd {
+  @include breakpoint(pc) {
+    @if length($L) != 0 {
+      @for $i from 1 through length($L) {
+        @each $name, $content in nth($L,$i) {
+          #{$name} {
+            @each $attribute, $value in $content {
+              @if  $attribute != mixin {
+				#{$attribute}: $value;
+              }
+              @else {
+                @each $mixin-name, $mixin-content in $value {
+                  @if $mixin-name == basic {
+					@include basic(
+                      nth($mixin-content,1),
+                      nth($mixin-content,2),
+                      nth($mixin-content,3),
+                      nth($mixin-content,4),
+                      nth($mixin-content,5)
+                    )
+                  }
+				//   @else if $mixin-name == transform {
+				//     @include transform( $mixin-content );
+				//   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(pad) {
+    @if length($M) != 0 {
+      @for $i from 1 through length($M) {
+        @each $name, $content in nth($M,$i) {
+          #{$name} {
+            @each $attribute, $value in $content {
+              @if  $attribute != mixin {
+				#{$attribute}: $value;
+              }
+              @else {
+                @each $mixin-name, $mixin-content in $value {
+                  @if $mixin-name == basic {
+					@include basic(
+                      nth($mixin-content,1),
+                      nth($mixin-content,2),
+                      nth($mixin-content,3),
+                      nth($mixin-content,4),
+                      nth($mixin-content,5)
+                    )
+                  }
+				  //   @else if $mixin-name == transform {
+				  //     @include transform( $mixin-content );
+				  //   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(mobile) {
+    @if length($S) != 0 {
+      @for $i from 1 through length($S) {
+        @each $name, $content in nth($S,$i) {
+          #{$name} {
+            @each $attribute, $value in $content {
+              @if  $attribute != mixin {
+				#{$attribute}: $value;
+              }
+              @else {
+                @each $mixin-name, $mixin-content in $value {
+                  @if $mixin-name == basic {
+					@include basic(
+                      nth($mixin-content,1),
+                      nth($mixin-content,2),
+                      nth($mixin-content,3),
+                      nth($mixin-content,4),
+                      nth($mixin-content,5)
+                    )
+                  }
+				  //   @else if $mixin-name == transform {
+				  //     @include transform( $mixin-content );
+				  //   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@mixin L($content) {
+	$L: append($L , $content , comma ) !global;
+}
+@mixin M($content) {
+	$M: append($M , $content , comma ) !global;
+}
+@mixin S($content) {
+	$S: append($S , $content , comma ) !global;
+}

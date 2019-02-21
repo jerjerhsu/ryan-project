@@ -3,7 +3,7 @@ console.log('%cJERJER%c(\u2032\u309C\u03C9\u3002\u2035)...',
 'color: rgba(5,137,62,1); font-size: 32px; vertical-align: baseline;' + 
 'font-family: "Luxia-Medium", Arial, "Noto Sans TC", "Microsoft JhengHei";' + 
 'margin: 10px 0px 5px 0; padding: 0px 5px;', 'font-size: 30px; color: rgba(5,137,62,1);');
-console.log('%cMercedes Benz FIFA campaign   ❙   2018-06   ❙   Copyright \xA9 2018 BBDO', 
+console.log('%cryan-project   ❙   2019-01   ❙   Copyright \xA9 2019 ', 
 'color: rgba(5,137,62,1); font-size: 12px; margin: 5px 0; font-family:Arial; font-weight: 600;');
 
 const 

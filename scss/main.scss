@@ -11,7 +11,7 @@
 // @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css); // 思源圓體
 // @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css); // 思源宋體
 // @import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css); // 思源楷體
-// @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); // 思源黑體
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css); // 思源黑體
 
 // sans-serif 沒有（法文） 襯線
 // serif 襯線
@@ -28,21 +28,2174 @@
 
 
 // base
+@import 'base/rwd';
 @import 'base/layout';
 // @import 'base/grid'; //$point???
 @import 'base/module';
 @import 'base/button';
+@import 'layout/nav';
 
 // reset
 @import 'normalize';
+
+
+
+// $fontfamily: ‘Noto Sans TC’, sans-serif;
+$fontfamily: ‘微軟正黑體’, Arial, sans-serif;
+
+
+.vertical-center {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: table;
+}
+.vertical-center > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    word-break: break-all;
+}
+.full{
+    @include basic(
+        absolute,
+        100%,
+        100%,
+        0,
+        0
+    )
+}
+.full-x{
+    @include basic(
+        relative,
+        100%,
+        auto,
+        0,
+        0
+    )
+}
 body{
-    transform: rotate(10deg);
+    background-color: #f9f9f9;
 }
-@keyframes test {
-    0% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(10deg);
+.header{
+	@include L(
+		(
+			'.header':(
+				height: 147px
+			)
+		)
+	)
+	@include M(
+		(
+			'.header':(
+				height: 147px
+			)
+		)
+	)
+	@include S(
+		(
+			'.header':(
+				height: 147px
+			)
+		)
+	)
+}
+.center-limit{
+    position: relative;
+    height: auto;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    background-color: rgba( 2, 208, 255, 0.05);
+    box-sizing: border-box;
+    overflow: hidden;
+	@include L(
+		(
+			'.center-limit':(
+				width: 1200px,
+                padding: 0 15px
+            )
+		)
+	)
+	@include M(
+		(
+			'.center-limit':(
+				width: 100%,
+                padding: 0 15px
+            )
+		)
+	)
+	@include S(
+		(
+			'#header-top .center-limit':(
+				width: 100%,
+                padding: 0 46px
+            )
+		)
+	)
+	@include L(
+		(
+			'#header-top .center-limit':(
+				width: 1200px,
+                padding: 0 46px
+            )
+		)
+	)
+	@include M(
+		(
+			'#header-top .center-limit':(
+				width: 100%,
+                padding: 0 46px
+            )
+		)
+	)
+	@include S(
+		(
+			'#header-main .center-limit':(
+				width: 100%,
+                padding: 0 46px
+            )
+		)
+	)
+	@include L(
+		(
+			'#header-main .center-limit':(
+				width: 1200px,
+                padding: 0 46px
+            )
+		)
+	)
+	@include M(
+		(
+			'#header-main .center-limit':(
+				width: 100%,
+                padding: 0 46px
+            )
+		)
+	)
+	@include S(
+		(
+			'.center-limit':(
+				width: 100%,
+                padding: 0 15px
+            )
+		)
+	)
+}
+#mail-info{
+    text-align: right;
+    font-family: $fontfamily;
+    color: #a5a5a5;
+    white-space: pre;
+	@include L(
+		(
+			'#mail-info':(
+				height: 50px,
+                font-size: 18px,
+                line-height: 50px
+			)
+		)
+	)
+	@include M(
+		(
+			'#mail-info':(
+				height: 30px,
+                font-size: 18px,
+                line-height: 30px
+			)
+		)
+	)
+	@include S(
+		(
+			'#mail-info':(
+				height: 30px,
+                font-size: 18px,
+                line-height: 30px
+			)
+		)
+	)
+}
+#header-top{
+    position: relative;
+    background-color: #eee;
+    z-index: 1;
+}
+#header-main{
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+	@include L(
+		(
+			'#header-main':(
+				height: 97px
+			)
+		)
+	)
+	@include M(
+		(
+			'#header-main':(
+				height: 67px
+			)
+		)
+	)
+	@include S(
+		(
+			'#header-main':(
+				height: 67px
+			)
+		)
+    )
+    .center-limit{
+        height: 100%;
     }
 }
+#logo{
+    position: absolute;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+	@include L(
+		(
+			'#logo':(
+                width: 184px,
+                left: 32px
+			)
+		)
+	)
+	@include M(
+		(
+			'#logo':(
+                width: 184px,
+                left: 22px
+			)
+		)
+	)
+	@include S(
+		(
+			'#logo':(
+                width: 184px,
+                left: 22px
+			)
+		)
+	)
+}
+#nav-list{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    float: right;
+    .nav-item{
+        position: relative;
+        height: 100%;
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        cursor: pointer;
+        user-select: none;
+        &:last-child{
+            width: 34px;
+        }
+        @include L(
+            (
+                '.nav-item':(
+                    width: 70px,
+                    float: left,
+                    margin-left: 15px,
+                    font-size: 18px
+                )
+            )
+        )
+        @include M(
+            (
+                '.nav-item':(
+                    width: 70px,
+                    float: left,
+                    margin-left: 15px,
+                    font-size: 18px
+                )
+            )
+        )
+        @include S(
+            (
+                '.nav-item':(
+                    width: 70px,
+                    float: left,
+                    margin-left: 15px,
+                    font-size: 18px
+                )
+            )
+        )
+        p{
+            &:after{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 20px;
+                height: 3px;
+                left: 0px;
+                right: 0px;
+                top: auto;
+                margin: 18px auto 0 auto;
+                background-color: #1e8993;
+                opacity: 0;
+                transition: all 0.2s 0s;
+            }
+        }
+        &.active{
+            p{
+                &:after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.pc{
+    #nav-list .nav-item{
+        &:hover{
+            p{
+                &:after{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.slick-slide{
+    img{
+        &.banner {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+#banner {
+    position: relative;
+    top: 0px;
+    opacity: 0;
+    *{
+        outline: none !important;
+    }
+    @include L(
+        (
+            '#banner':(
+                margin-top: 147px,
+                margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
+                margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
+            )
+        )
+    )
+    @include M(
+        (
+            '#banner':(
+                margin-top: 147px,
+                margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
+                margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
+            )
+        )
+    )
+    @include S(
+        (
+            '#banner':(
+                margin-top: 147px,
+                margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
+                margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
+            )
+        )
+    )
+    &.show {
+        opacity: 1;
+        transition: opacity 0.3s 0s ease-out;
+    }
+}
+
+.anti-margin{
+    @include L(
+        (
+            '.anti-margin':(
+                margin-left: -15px,
+                margin-right: -15px
+            )
+        )
+    )
+    @include M(
+        (
+            '.anti-margin':(
+                margin-left: -15px,
+                margin-right: -15px
+            )
+        )
+    )
+    @include S(
+        (
+            '.anti-margin':(
+                margin-left: -15px,
+                margin-right: -15px
+            )
+        )
+    )
+}
+
+#banner_preview {
+    margin-left: -15px;
+    margin-right: -15px;
+    @include L(
+        (
+            '#banner_preview':(
+                margin-top: 147px
+            )
+        )
+    )
+    @include M(
+        (
+            '#banner_preview':(
+                margin-top: 147px
+            )
+        )
+    )
+    @include S(
+        (
+            '#banner_preview':(
+                margin-top: 147px
+            )
+        )
+    )
+    img {
+        position: relative;
+        display: block;
+        margin: 0px auto;
+        &.banner_preview_pc {
+            display: block;
+        }
+        &.banner_preview_m {
+            display: none;
+        }
+    }
+}
+.slick-dots {
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    bottom: 0px;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 17px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #1e8993;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    margin: 0 0px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+    text-shadow: 0px 0px 5px #ddd;
+}
+#main-title{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: 700;
+    color: #797979;
+    text-align: center;
+    line-height: 1.5;
+	@include L(
+		(
+			'#main-title':(
+                font-size: 31px,
+                margin: 118px auto 118px auto
+            )
+		)
+	)
+	@include M(
+		(
+			'#main-title':(
+                font-size: 31px,
+                margin: 118px auto 118px auto
+            )
+		)
+	)
+	@include S(
+		(
+			'#main-title':(
+                font-size: 31px,
+                margin: 110px auto 110px auto
+            )
+		)
+	)
+}
+.float-box{
+    position: relative;
+    width: auto;
+    left: 0;
+    top: 0;
+    &:after{
+        content: "";
+        position: relative;
+        clear: both;
+        display: block;
+    }
+}
+.word-box{
+    position: relative;
+    float: left;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    font-family: $fontfamily;
+    font-weight: 700;
+    background-color: #fff;
+	@include L(
+		(
+			'.word-box':(
+                width: 372px,
+                height: 609px,
+                margin: ( 1200px - 3 * 372px ) / 6
+            )
+		)
+	)
+	@include M(
+		(
+			'.word-box':(
+                width: 372px,
+                height: 609px
+            )
+		)
+	)
+	@include S(
+		(
+			'.word-box':(
+                width: 372px,
+                height: 609px
+            )
+		)
+    )
+    h3{
+        color: #1e8993;
+        font-size: 31px;
+        text-align: center;
+        line-height: (47/28);
+        box-sizing: border-box;
+        @include L(
+            (
+                '.word-box h3':(
+                    height: 166px,
+                    padding: 52px 0 24px 0
+                )
+            )
+        )
+        @include M(
+            (
+                '.word-box h3':(
+                    height: 166px,
+                    padding: 52px 0 24px 0
+                )
+            )
+        )
+        @include S(
+            (
+                '.word-box h3':(
+                    height: 166px,
+                    padding: 52px 0 24px 0
+                )
+            )
+        )
+    }
+    p{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        line-height: ( 34 / 20 );
+        text-align: justify;
+        @include L(
+            (
+                '.word-box p':(
+                    font-size: 20px,
+                    padding: 0 32px
+                )
+            )
+        )
+        @include M(
+            (
+                '.word-box p':(
+                    font-size: 20px,
+                    padding: 0 32px
+                )
+            )
+        )
+        @include S(
+            (
+                '.word-box p':(
+                    font-size: 20px,
+                    padding: 0 32px
+                )
+            )
+        )
+    }
+}
+.sub-title{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: 700;
+    color: #797979;
+    text-align: center;
+    line-height: 1.5;
+	@include L(
+		(
+			'.sub-title':(
+                font-size: 31px,
+                margin: 89px auto 79px auto
+            )
+		)
+	)
+	@include M(
+		(
+			'.sub-title':(
+                font-size: 31px,
+                margin: 89px auto 79px auto
+            )
+		)
+	)
+	@include S(
+		(
+			'.sub-title':(
+                font-size: 31px,
+                margin: 89px auto 79px auto
+            )
+		)
+	)
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 34px;
+        height: 5px;
+        left: 0px;
+        right: 0px;
+        top: auto;
+        margin: 13px auto 0 auto;
+        background-color: #1e8993;
+    }
+}
+#ta{
+    position: relative;
+    float: left;
+    display: block;
+	@include L(
+		(
+			'#ta':(
+                margin-left: 24px
+            )
+		)
+	)
+	@include M(
+		(
+			'#ta':(
+                margin-left: 24px
+            )
+		)
+	)
+	@include S(
+		(
+			'#ta':(
+                margin-left: 24px
+            )
+		)
+	)
+}
+#ta-list{
+    position: relative;
+    float: left;
+    li{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        line-height: 1.5;
+        @include L(
+            (
+                '#ta-list':(
+                    top: -9px
+                )
+            )
+        )
+        @include M(
+            (
+                '#ta-list':(
+                    top: -9px
+                )
+            )
+        )
+        @include S(
+            (
+                '#ta-list':(
+                    top: -9px
+                )
+            )
+        )
+        @include L(
+            (
+                '#ta-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 65px
+                )
+            )
+        )
+        @include M(
+            (
+                '#ta-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 65px
+                )
+            )
+        )
+        @include S(
+            (
+                '#ta-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 65px
+                )
+            )
+        )
+        span{
+            color: #1e8993;
+            display: inline-block;
+            width: 15px;
+            text-align: right;
+            margin: 0 6px 0 -21px;
+        }
+    }
+}
+#dont-worry{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: 700;
+    color: #1e8993;
+    text-align: center;
+    line-height: 1.5;
+	@include L(
+		(
+			'#dont-worry':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+	@include M(
+		(
+			'#dont-worry':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+	@include S(
+		(
+			'#dont-worry':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+}
+
+#syllabus{
+    position: relative;
+    float: left;
+    display: block;
+	@include L(
+		(
+			'#syllabus':(
+                margin-left: 99px
+            )
+		)
+	)
+	@include M(
+		(
+			'#syllabus':(
+                margin-left: 99px
+            )
+		)
+	)
+	@include S(
+		(
+			'#syllabus':(
+                margin-left: 99px
+            )
+		)
+	)
+}
+
+#syllabus-list{
+    position: relative;
+    float: left;
+    li{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        line-height: 1.5;
+        @include L(
+            (
+                '#syllabus-list':(
+                    top: -9px
+                )
+            )
+        )
+        @include M(
+            (
+                '#syllabus-list':(
+                    top: -9px
+                )
+            )
+        )
+        @include S(
+            (
+                '#syllabus-list':(
+                    top: -9px
+                )
+            )
+        )
+        @include L(
+            (
+                '#syllabus-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 72px
+                )
+            )
+        )
+        @include M(
+            (
+                '#syllabus-list li':(
+                    font-size: 22px,
+                    margin: auto auto 0px 72px
+                )
+            )
+        )
+        @include S(
+            (
+                '#syllabus-list li':(
+                    font-size: 22px,
+                    margin: auto auto 0px 72px
+                )
+            )
+        )
+        span{
+            color: #1e8993;
+        }
+    }
+    >li{
+        >span{
+            display: inline-block;
+            width: 34px;
+            text-align: right;
+            margin: 0 5px 0 -40px;
+        }
+        >ul{
+            padding-top: 18px;
+            >li{
+                margin-left: 24px;
+                >span{
+                    display: inline-block;
+                    width: 34px;
+                    text-align: right;
+                    margin: 0 5px 0 -40px;
+                }
+            }
+        }
+    }
+}
+#course-time{
+    position: relative;
+    float: left;
+    display: block;
+	@include L(
+		(
+			'#course-time':(
+                margin-left: 134px
+            )
+		)
+	)
+	@include M(
+		(
+			'#course-time':(
+                margin-left: 134px
+            )
+		)
+	)
+	@include S(
+		(
+			'#course-time':(
+                margin-left: 134px
+            )
+		)
+	)
+}
+#course-box{
+    position: relative;
+    float: left;
+    @include L(
+        (
+            '#course-box':(
+                top: -9px,
+                margin: auto auto 18px 96px
+            )
+        )
+    )
+    @include M(
+        (
+            '#course-box':(
+                top: -9px,
+                margin: auto auto 18px 96px
+            )
+        )
+    )
+    @include S(
+        (
+            '#course-box':(
+                top: -9px,
+                margin: auto auto 18px 96px
+            )
+        )
+    )
+}
+.course-item{
+    @include L(
+        (
+            '.course-item{':(
+                margin-bottom: 26px
+            )
+        )
+    )
+    @include M(
+        (
+            '.course-item{':(
+                margin-bottom: 26px
+            )
+        )
+    )
+    @include S(
+        (
+            '.course-item{':(
+                margin-bottom: 26px
+            )
+        )
+    )
+}
+.course-title{
+    font-family: $fontfamily;
+    font-weight: normal;
+    color: #797979;
+    line-height: 1.5;
+    @include L(
+        (
+            '.course-title':(
+                font-size: 22px
+            )
+        )
+    )
+    @include M(
+        (
+            '.course-title':(
+                font-size: 22px
+            )
+        )
+    )
+    @include S(
+        (
+            '.course-title':(
+                font-size: 22px
+            )
+        )
+    )
+}
+.course-content{
+    font-family: $fontfamily;
+    font-weight: normal;
+    color: #1e8993;
+    line-height: 1.5;
+    @include L(
+        (
+            '.course-content':(
+                font-size: 28px
+            )
+        )
+    )
+    @include M(
+        (
+            '.course-content':(
+                font-size: 28px
+            )
+        )
+    )
+    @include S(
+        (
+            '.course-content':(
+                font-size: 28px
+            )
+        )
+    )
+}
+#teacher-box{
+    position: relative;
+    height: auto;
+    background-color: #eee;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    margin: 0 auto;
+    overflow: hidden;
+    @include L(
+        (
+            '#teacher-box':(
+                width: 1170px,
+                padding: 0 0 42px 0
+            )
+        )
+    )
+    @include M(
+        (
+            '#teacher-box':(
+                width: 1170px,
+                padding: 0 0 42px 0
+            )
+        )
+    )
+    @include S(
+        (
+            '#teacher-box':(
+                width: 1170px,
+                padding: 0 0 42px 0
+            )
+        )
+    )
+}
+#teacher-0{
+    position: relative;
+    width: auto;
+    margin: 76px 106px 31px 106px;
+    &:after{
+        content: "";
+        position: relative;
+        clear: both;
+        display: block;
+    }
+}
+#ryan{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    border: 6px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    @include L(
+        (
+            '#ryan':(
+                width: 146px,
+                height: 146px,
+                margin: 0 56px 0 0
+            )
+        )
+    )
+    @include M(
+        (
+            '#ryan':(
+                width: 146px,
+                height: 146px,
+                margin: 0 56px 0 0
+            )
+        )
+    )
+    @include S(
+        (
+            '#ryan':(
+                width: 146px,
+                height: 146px,
+                margin: 0 56px 0 0
+            )
+        )
+    )
+}
+#ryan-info{
+    position: relative;
+    float: left;
+    // @include L(
+    //     (
+    //         '#ryan-info':(
+    //             width: 146px,
+    //             height: 146px
+    //         )
+    //     )
+    // )
+    // @include M(
+    //     (
+    //         '#ryan-info':(
+    //             width: 146px,
+    //             height: 146px
+    //         )
+    //     )
+    // )
+    // @include S(
+    //     (
+    //         '#ryan-info':(
+    //             width: 146px,
+    //             height: 146px
+    //         )
+    //     )
+    // )
+    h3{
+        font-family: $fontfamily;
+        font-weight: 700;
+        color: #1e8993;
+        line-height: 1.5;
+        @include L(
+            (
+                '#ryan-info h3':(
+                    font-size: 35px
+                )
+            )
+        )
+        @include M(
+            (
+                '#ryan-info h3':(
+                    font-size: 35px
+                )
+            )
+        )
+        @include S(
+            (
+                '#ryan-info h3':(
+                    font-size: 35px
+                )
+            )
+        )
+    }
+    p{
+        font-family: $fontfamily;
+        font-weight: 700;
+        color: #797979;
+        line-height: 1.5;
+        @include L(
+            (
+                '#ryan-info p':(
+                    font-size: 22px
+                )
+            )
+        )
+        @include M(
+            (
+                '#ryan-info p':(
+                    font-size: 22px
+                )
+            )
+        )
+        @include S(
+            (
+                '#ryan-info p':(
+                    font-size: 22px
+                )
+            )
+        )
+    }
+}
+#teacher-1{
+    position: relative;
+    float: left;
+    li{
+        font-family: $fontfamily;
+        font-weight: 700;
+        color: #797979;
+        line-height: 1.5;
+        @include L(
+            (
+                '#teacher-1':(
+                    top: -9px
+                )
+            )
+        )
+        @include M(
+            (
+                '#teacher-1':(
+                    top: -9px
+                )
+            )
+        )
+        @include S(
+            (
+                '#teacher-1':(
+                    top: -9px
+                )
+            )
+        )
+        @include L(
+            (
+                '#teacher-1 li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 120px
+                )
+            )
+        )
+        @include M(
+            (
+                '#teacher-1 li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 120px
+                )
+            )
+        )
+        @include S(
+            (
+                '#teacher-1 li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 120px
+                )
+            )
+        )
+        span{
+            color: #1e8993;
+            display: inline-block;
+            width: 15px;
+            text-align: right;
+            margin: 0 6px 0 -21px;
+        }
+    }
+}
+.say-box{
+    position: relative;
+    float: left;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    font-family: $fontfamily;
+    font-weight: 700;
+    background-color: #fff;
+	@include L(
+		(
+			'.say-box':(
+                width: 372px,
+                height: 815px,
+                margin: ( 1200px - 3 * 372px ) / 6
+            )
+		)
+	)
+	@include M(
+		(
+			'.say-box':(
+                width: 372px,
+                height: 815px
+            )
+		)
+	)
+	@include S(
+		(
+			'.say-box':(
+                width: 372px,
+                height: 815px
+            )
+		)
+    )
+    h3{
+        position: relative;
+        color: #1e8993;
+        font-size: 31px;
+        text-align: center;
+        line-height: (47/28);
+        box-sizing: border-box;
+        @include L(
+            (
+                '.say-box h3':(
+                    height: 258px
+                )
+            )
+        )
+        @include M(
+            (
+                '.say-box h3':(
+                    height: 258px
+                )
+            )
+        )
+        @include S(
+            (
+                '.say-box h3':(
+                    height: 258px
+                )
+            )
+        )
+        svg{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            display: block;
+        }
+    }
+    p{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        line-height: ( 34 / 20 );
+        text-align: justify;
+        @include L(
+            (
+                '.say-box p':(
+                    font-size: 20px,
+                    padding: 0 32px
+                )
+            )
+        )
+        @include M(
+            (
+                '.say-box p':(
+                    font-size: 20px,
+                    padding: 0 32px
+                )
+            )
+        )
+        @include S(
+            (
+                '.say-box p':(
+                    font-size: 20px,
+                    padding: 0 32px
+                )
+            )
+        )
+    }
+}
+.say-people{
+    position: absolute;
+    width: 100%;
+    height: 233px;
+    left: 0;
+    bottom: 0;
+}
+.say-photo{
+    position: absolute;
+    width: 88px;
+    height: 88px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+}
+.say-title{
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    left: 0px;
+    bottom: 0px;
+    p{
+        font-family: $fontfamily;
+        font-weight: 700;
+        color: #1e8993;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 22px;
+    }
+}
+
+#faq{
+    position: relative;
+    float: left;
+    display: block;
+	@include L(
+		(
+			'#faq':(
+                margin-left: 32px
+            )
+		)
+	)
+	@include M(
+		(
+			'#faq':(
+                margin-left: 32px
+            )
+		)
+	)
+	@include S(
+		(
+			'#faq':(
+                margin-left: 32px
+            )
+		)
+	)
+}
+#faq-list{
+    position: relative;
+    float: left;
+    li{
+        font-family: $fontfamily;
+        font-weight: normal;
+        line-height: 1.5;
+        &:nth-child(2n+1){
+            color: #797979;
+        }
+        &:nth-child(2n){
+            color: #1e8993;
+        }
+        @include L(
+            (
+                '#faq-list':(
+                    top: -9px,
+                    width: 757px
+                )
+            )
+        )
+        @include M(
+            (
+                '#faq-list':(
+                    top: -9px,
+                    width: 757px
+                )
+            )
+        )
+        @include S(
+            (
+                '#faq-list':(
+                    top: -9px,
+                    width: 757px
+                )
+            )
+        )
+        @include L(
+            (
+                '#faq-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 90px
+                )
+            )
+        )
+        @include M(
+            (
+                '#faq-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 90px
+                )
+            )
+        )
+        @include S(
+            (
+                '#faq-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 90px
+                )
+            )
+        )
+        span{
+            color: inherit;
+            display: inline-block;
+            width: 15px;
+            text-align: right;
+            margin: 0 6px 0 -21px;
+        }
+    }
+}
+#more-q{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: 700;
+    color: #1e8993;
+    text-align: center;
+    line-height: 1.5;
+	@include L(
+		(
+			'#more-q':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+	@include M(
+		(
+			'#more-q':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+	@include S(
+		(
+			'#more-q':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+}
+#cta-btn{
+    position: relative;
+    width: 314px;
+    height: 73px;
+    left: 0px;
+    top: 0px;
+    background-color: #1e8993;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    cursor: pointer;
+    p{
+        position: relative;
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 32px;
+    }
+    svg{
+        position: relative;
+        top: -3px;
+    }
+}
+#smoke-box{
+    overflow: hidden;
+}
+
+#now-state{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: 700;
+    color: #797979;
+    text-align: center;
+    line-height: 1.5;
+	@include L(
+		(
+			'#now-state':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+	@include M(
+		(
+			'#now-state':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+	@include S(
+		(
+			'#now-state':(
+                font-size: 28px,
+                margin: 67px auto 79px auto
+            )
+		)
+	)
+}
+.future-class-box{
+    position: relative;
+    float: left;
+	@include L(
+		(
+			'.future-class-box':(
+                width: 382px,
+                margin: 0 0 0 32px
+            )
+		)
+	)
+	@include M(
+		(
+			'.future-class-box':(
+                width: 382px,
+                margin: 0 0 0 32px
+            )
+		)
+	)
+	@include S(
+		(
+			'.future-class-box':(
+                width: 382px,
+                margin: 0 0 0 32px
+            )
+		)
+    )
+    svg{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+}
+.future-word{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: normal;
+    color: #1e8993;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 32px;
+}
+.interest-btn{
+    position: relative;
+    width: 314px;
+    height: 73px;
+    left: 0px;
+    top: 0px;
+    background-color: #1e8993;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    float: left;
+    cursor: pointer;
+    p{
+        position: relative;
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 32px;
+    }
+    svg{
+        position: relative;
+        top: -3px;
+    }
+    @include L(
+        (
+            '.interest-btn':(
+                margin: 28px 0 0 64px
+            )
+        )
+    )
+    @include M(
+        (
+            '.interest-btn':(
+                margin: 28px 0 0 64px
+            )
+        )
+    )
+    @include S(
+        (
+            '.interest-btn':(
+                margin: 28px 0 0 64px
+            )
+        )
+    )
+}
+.content-list{
+    position: relative;
+    float: right;
+    li{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        line-height: 1.5;
+        @include L(
+            (
+                '.content-list':(
+                    top: -9px,
+                    width: 738px
+                )
+            )
+        )
+        @include M(
+            (
+                '.content-list':(
+                    top: -9px,
+                    width: 738px
+                )
+            )
+        )
+        @include S(
+            (
+                '.content-list':(
+                    top: -9px,
+                    width: 738px
+                )
+            )
+        )
+        @include L(
+            (
+                '.content-list li':(
+                    font-size: 22px,
+                    margin: auto auto 18px 72px
+                )
+            )
+        )
+        @include M(
+            (
+                '.content-list li':(
+                    font-size: 22px,
+                    margin: auto auto 0px 72px
+                )
+            )
+        )
+        @include S(
+            (
+                '.content-list li':(
+                    font-size: 22px,
+                    margin: auto auto 0px 72px
+                )
+            )
+        )
+        span{
+            color: #1e8993;
+        }
+    }
+    >li{
+        >span{
+            display: inline-block;
+            width: 34px;
+            text-align: right;
+            margin: 0 5px 0 -40px;
+        }
+        >ul{
+            padding-top: 18px;
+            >li{
+                margin-left: 24px;
+                >span{
+                    display: inline-block;
+                    width: 34px;
+                    text-align: right;
+                    margin: 0 5px 0 -40px;
+                }
+            }
+        }
+    }
+}
+.future-box{
+    @include L(
+        (
+            '.future-box':(
+                margin: 0 0 60px 0
+            )
+        )
+    )
+    @include M(
+        (
+            '.future-box':(
+                margin: 0 0 60px 0
+            )
+        )
+    )
+    @include S(
+        (
+            '.future-box':(
+                margin: 0 0 60px 0
+            )
+        )
+    )
+    &:after{
+        content: "";
+        position: relative;
+        clear: both;
+        display: block;
+    }
+}
+.footer{
+    position: relative;
+    width: 100%;
+    background-color: #eee;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    @include L(
+        (
+            '.footer':(
+                height: 410px
+            )
+        )
+    )
+    @include M(
+        (
+            '.footer':(
+                height: 410px
+            )
+        )
+    )
+    @include S(
+        (
+            '.footer':(
+                height: 410px
+            )
+        )
+    )
+}
+#fanpage{
+    position: relative;
+    float: left;
+    margin: 51px 0 0 65px;
+}
+#footer-word{
+    position: relative;
+    display: block;
+    float: left;
+    margin: 51px 0 0 59px;
+    font-family: $fontfamily;
+    font-weight: normal;
+    color: #797979;
+    line-height: 1.5;
+    font-size: 20px;
+    box-sizing: border-box;
+    @include L(
+        (
+            '#footer-word':(
+                width: 735px,
+                padding: 0 15px 0 0 
+            )
+        )
+    )
+    @include M(
+        (
+            '#footer-word':(
+                width: 735px,
+                padding: 0 15px 0 0 
+            )
+        )
+    )
+    @include S(
+        (
+            '#footer-word':(
+                width: 735px,
+                padding: 0 15px 0 0 
+            )
+        )
+    )
+}
+#footer-line{
+    position: relative;
+    width: auto;
+    height: 1px;
+    background-color: #1e8993;
+    @include L(
+        (
+            '#footer-line':(
+                margin: 56px 15px 0 15px
+            )
+        )
+    )
+    @include M(
+        (
+            '#footer-line':(
+                margin: 56px 15px 0 15px
+            )
+        )
+    )
+    @include S(
+        (
+            '#footer-line':(
+                margin: 56px 15px 0 15px
+            )
+        )
+    )
+}
+#copyright{
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    @include L(
+        (
+            '#copyright':(
+                height: 89px
+            )
+        )
+    )
+    @include M(
+        (
+            '#copyright':(
+                height: 89px
+            )
+        )
+    )
+    @include S(
+        (
+            '#copyright':(
+                height: 89px
+            )
+        )
+    )
+}
+#footer-logo{
+    position: absolute;
+    width: 127px;
+    height: auto;
+    left: 26px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0;
+}
+#copyright-word{
+    position: absolute;
+    width: 387px;
+    @include L(
+        (
+            '#copyright-word':(
+                height: 89px,
+                right: 26px
+            )
+        )
+    )
+    @include M(
+        (
+            '#copyright-word':(
+                height: 89px,
+                right: 26px
+            )
+        )
+    )
+    @include S(
+        (
+            '#copyright-word':(
+                height: 89px,
+                right: 26px
+            )
+        )
+    )
+    p{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #797979;
+        line-height: 1.5;
+        font-size: 14px;
+        text-align: right;
+    }
+}
+#go-top{
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    background-color: #1e8993;
+    cursor: pointer;
+    z-index: 1;
+    @include L(
+        (
+            '#go-top':(
+                width: 84px,
+                height: 84px,
+                right: 26px,
+                bottom: 36px
+            )
+        )
+    )
+    @include M(
+        (
+            '#go-top':(
+                width: 84px,
+                height: 84px,
+                right: 26px,
+                bottom: 36px
+            )
+        )
+    )
+    @include S(
+        (
+            '#go-top':(
+                width: 84px,
+                height: 84px,
+                right: 26px,
+                bottom: 36px
+            )
+        )
+    )
+    span{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 22px;
+    }
+}
+#cta-side-btn-box{
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    background-color: #1e8993;
+    cursor: pointer;
+    z-index: 1;
+    @include L(
+        (
+            '#cta-side-btn-box':(
+                width: 84px,
+                height: 308px,
+                right: 26px,
+                top: 50%,
+                margin-top: -0.5 * 308px
+            )
+        )
+    )
+    @include M(
+        (
+            '#cta-side-btn-box':(
+                width: 84px,
+                height: 308px,
+                right: 26px,
+                top: 50%,
+                margin-top: -0.5 * 308px
+            )
+        )
+    )
+    @include S(
+        (
+            '#cta-side-btn-box':(
+                width: 84px,
+                height: 308px,
+                right: 26px,
+                top: 50%,
+                margin-top: -0.5 * 308px
+            )
+        )
+    )
+}
+.cta-side-btn{
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+    @include L(
+        (
+            '.cta-side-btn':(
+                width: 100%
+            )
+        )
+    )
+    &#cta-side-btn-box-0{
+        &:after{
+            content: "";
+            display: block;
+            width: 65px;
+            height: 1px;
+            background-color: #fff;
+            margin: 0 auto;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+    }
+    @include M(
+        (
+            '.cta-side-btn':(
+                width: 100%
+            )
+        )
+    )
+    @include S(
+        (
+            '.cta-side-btn':(
+                width: 100%
+            )
+        )
+    )
+    @include L(
+        (
+            '#cta-side-btn-box-0':(
+                height: 146px
+            )
+        )
+    )
+    @include M(
+        (
+            '#cta-side-btn-box-0':(
+                height: 146px
+            )
+        )
+    )
+    @include S(
+        (
+            '#cta-side-btn-box-0':(
+                height: 146px
+            )
+        )
+    )
+    @include L(
+        (
+            '#cta-side-btn-box-1':(
+                height: 158px
+            )
+        )
+    )
+    @include M(
+        (
+            '#cta-side-btn-box-1':(
+                height: 158px
+            )
+        )
+    )
+    @include S(
+        (
+            '#cta-side-btn-box-1':(
+                height: 158px
+            )
+        )
+    )
+    span{
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        line-height: 1.4;
+        font-size: 22px;
+        padding-top: 6px;
+        display: inline-block;
+    }
+}
+@include rwd;
