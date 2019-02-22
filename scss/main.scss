@@ -33,6 +33,12 @@
 // @import 'base/grid'; //$point???
 @import 'base/module';
 @import 'base/button';
+
+
+$header-top-0: 0px; //50px;
+$header-top-1: 0px; //30px;
+
+
 @import 'layout/nav';
 
 // reset
@@ -76,8 +82,6 @@ $fontfamily: ‘微軟正黑體’, Arial, sans-serif;
         0
     )
 }
-$header-top-0: 0px; //50px;
-$header-top-1: 0px; //30px;
 #header-top{
     display: none;
 }
@@ -2834,16 +2838,16 @@ body{
     @include L(
         (
             '#pay-way-0':(
-                width: 0.5 * 828px,
-                left: 101px,
-                top: 154px
+                width: 0.5 * 1108px,
+                left: 33px,
+                top: 140px
             )
         )
     )
     @include M(
         (
             '#pay-way-0':(
-                width: 273px,
+                width: 320px,
                 left: 0,
                 right: 0,
                 margin: 0 auto,
@@ -2854,7 +2858,7 @@ body{
     @include S(
         (
             '#pay-way-0':(
-                width: 273px,
+                width: 320px,
                 left: 0,
                 right: 0,
                 margin: 0 auto,
@@ -2869,16 +2873,16 @@ body{
     @include L(
         (
             '#pay-way-1':(
-                width: 0.5 * 828px,
-                left: 651px,
-                top: 154px
+                width: 0.5 * 1108px,
+                left: 586px,
+                top: 140px
             )
         )
     )
     @include M(
         (
             '#pay-way-1':(
-                width: 273px,
+                width: 320px,
                 left: 0,
                 right: 0,
                 margin: 0 auto,
@@ -2889,7 +2893,7 @@ body{
     @include S(
         (
             '#pay-way-1':(
-                width: 273px,
+                width: 320px,
                 left: 0,
                 right: 0,
                 margin: 0 auto,
@@ -3113,6 +3117,38 @@ body{
     }
     #burger{
         display: none;
+    }
+    #cta-side-btn-box{
+        display: none;
+    }
+    .footer{
+        position: relative;
+        width: 100%;
+        background-color: #eee;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+        @include L(
+            (
+                '.form-page .footer':(
+                    height: 410px
+                )
+            )
+        )
+        @include M(
+            (
+                '.form-page .footer':(
+                    height: auto,
+                    padding-bottom: 0
+                )
+            )
+        )
+        @include S(
+            (
+                '.form-page .footer':(
+                    height: auto,
+                    padding-bottom: 0
+                )
+            )
+        )
     }
 }
 #form-box{

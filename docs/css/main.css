@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 19:20:55 
+* date:    Fri Feb 22 2019 19:57:36 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2442,6 +2442,19 @@ body {
   display: none;
 }
 
+.form-page #cta-side-btn-box {
+  display: none;
+}
+
+.form-page .footer {
+  position: relative;
+  width: 100%;
+  background-color: #eee;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 #form-box {
   position: relative;
   background-color: #fff;
@@ -2872,14 +2885,14 @@ body {
     top: 77px;
   }
   #pay-way-0 {
-    width: 414px;
-    left: 101px;
-    top: 154px;
+    width: 554px;
+    left: 33px;
+    top: 140px;
   }
   #pay-way-1 {
-    width: 414px;
-    left: 651px;
-    top: 154px;
+    width: 554px;
+    left: 586px;
+    top: 140px;
   }
   #course-info {
     width: 485px;
@@ -2906,6 +2919,9 @@ body {
     height: 80px;
     right: 10px;
     top: 10px;
+  }
+  .form-page .footer {
+    height: 410px;
   }
   #form-box {
     width: 1170px;
@@ -2940,7 +2956,9 @@ body {
     display: block;
   }
   #burger-check:checked ~ #header-main #nav-list {
-    top: 97px;
+    top: -webkit-calc( 67px + 0px);
+    top: -moz-calc( 67px + 0px);
+    top: calc( 67px + 0px);
   }
   .header {
     height: auto;
@@ -3297,14 +3315,14 @@ body {
     top: 77px;
   }
   #pay-way-0 {
-    width: 273px;
+    width: 320px;
     left: 0;
     right: 0;
     margin: 0 auto;
     top: 130px;
   }
   #pay-way-1 {
-    width: 273px;
+    width: 320px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -3344,6 +3362,10 @@ body {
     right: 10px;
     top: 10px;
   }
+  .form-page .footer {
+    height: auto;
+    padding-bottom: 0;
+  }
   #form-box {
     width: 352px;
     height: auto;
@@ -3376,7 +3398,9 @@ body {
     display: block;
   }
   #burger-check:checked ~ #header-main #nav-list {
-    top: 97px;
+    top: -webkit-calc( 67px + 0px);
+    top: -moz-calc( 67px + 0px);
+    top: calc( 67px + 0px);
   }
   .header {
     height: auto;
@@ -3733,14 +3757,14 @@ body {
     top: 77px;
   }
   #pay-way-0 {
-    width: 273px;
+    width: 320px;
     left: 0;
     right: 0;
     margin: 0 auto;
     top: 130px;
   }
   #pay-way-1 {
-    width: 273px;
+    width: 320px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -3779,6 +3803,10 @@ body {
     height: 50px;
     right: 10px;
     top: 10px;
+  }
+  .form-page .footer {
+    height: auto;
+    padding-bottom: 0;
   }
   #form-box {
     width: 352px;

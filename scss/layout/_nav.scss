@@ -143,14 +143,14 @@
 			@include M(
 				(
 					'#burger-check:checked ~#header-main #nav-list':(
-						top: 67px + 30px
+						top: calc( 67px + #{$header-top-1} )
 					)
 				)
 			)
 			@include S(
 				(
 					'#burger-check:checked ~#header-main #nav-list':(
-						top: 67px + 30px
+						top: calc( 67px + #{$header-top-1} )
 					)
 				)
 			)
