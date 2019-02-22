@@ -1,6 +1,7 @@
 
 let _body      = document.body;
-let $body      = $( 'body' ),
+let $window    = $( window ),
+    $body      = $( 'body' ),
 	$html      = $( 'html' ),
     $htmlbody  = $( 'html, body' ),
 	$wrapper   = $( '.wrapper' ),
@@ -8,7 +9,10 @@ let $body      = $( 'body' ),
 	$footer    = $( '.footer' ),
     $loading_data = $( '.loading-data' ),
     $loading_page = $( '.loading-page' ),
-    $loading_percent = $( '.loading_percent' );
+    $loading_percent = $( '.loading_percent' ),
+    $go_top = $( '#go-top' ),
+    $burger_check = $( '#burger-check' ),
+    $nav_item = $( '.nav-item' );
 
 let W = window.innerWidth,
     H = window.innerHeight,
@@ -69,3 +73,67 @@ function getRandomColor(){
     }
     return color;
 }
+
+$.fn.EventInIt = function(){
+    $body.on('click','#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"]',function(e){
+        var _self = $(e.currentTarget);
+        switch(true){
+            case _self.is('#go-top'):
+                $htmlbody.animate(
+                    {
+                        scrollTop: 0
+                    },
+                    300
+                );
+            break;
+            case _self.is('.nav-item'):
+                $burger_check.get(0).checked = false;
+                $nav_item.removeClass('active');
+                _self.addClass('active');
+                $body.removeClass('show-light-box');
+                $htmlbody.animate(
+                    {
+                        scrollTop: $('[scroll-anchor="'+_self.attr('scroll-index')+'"').offset().top - parseInt($header.height()) - 30
+                    },
+                    300
+                );
+            break;
+            case _self.is('#cta-side-btn-box-0'):
+                $body.addClass('show-light-box');
+            break;
+            case _self.is('.light-box-close'):
+                $body.removeClass('show-light-box');
+            break;
+            case _self.is('[name="subscribe"]'):
+                window.location.href = './lesson.html';
+            break;
+        }
+    });
+}
+$.fn.ScrollInIt = function(){
+    var temp_scrolltop = 0,
+        scroll_pre = false,
+        scroll_cur = true;
+    function scrolling(){
+        temp_scrolltop = $window.scrollTop();
+        if(temp_scrolltop > 500){
+            scroll_cur = true;
+        } else {
+            scroll_cur = false;
+        }
+        if(scroll_cur !== scroll_pre){
+            scroll_pre = scroll_cur;
+            if(scroll_cur){
+                $body.addClass('show-go-top');
+                // console.log('add');
+            } else {
+                $body.removeClass('show-go-top');
+                // console.log('remove');
+            }
+            
+        }
+    }
+    $window.on('scroll',scrolling).trigger('scroll');
+}
+$body.EventInIt();
+$body.ScrollInIt();

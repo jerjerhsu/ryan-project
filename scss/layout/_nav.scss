@@ -99,10 +99,10 @@
 #nav-list{
 	z-index: 0;
 }
-#burger_check {
+#burger-check {
 	display: none
 }
-#burger_check{
+#burger-check{
 	&:checked{
 		+#burger {
 			.burger_line{
@@ -136,20 +136,20 @@
 		~#header-main {
 			@include L(
 				(
-					'#burger_check:checked ~#header-main #nav-list':(
+					'#burger-check:checked ~#header-main #nav-list':(
 					)
 				)
 			)
 			@include M(
 				(
-					'#burger_check:checked ~#header-main #nav-list':(
+					'#burger-check:checked ~#header-main #nav-list':(
 						top: 67px + 30px
 					)
 				)
 			)
 			@include S(
 				(
-					'#burger_check:checked ~#header-main #nav-list':(
+					'#burger-check:checked ~#header-main #nav-list':(
 						top: 67px + 30px
 					)
 				)

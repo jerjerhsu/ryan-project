@@ -78,6 +78,7 @@ $fontfamily: ‘微軟正黑體’, Arial, sans-serif;
 }
 body{
     background-color: #f9f9f9;
+    min-width: 372px;
 }
 .header{
 	@include L(
@@ -400,6 +401,15 @@ body{
         color: #797979;
         cursor: pointer;
         user-select: none;
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
         @include L(
             (
                 '.nav-item':(
@@ -407,7 +417,7 @@ body{
                     height: 100%,
                     float: left,
                     margin-left: 15px,
-                    font-size: 18px
+                    font-size: 16px
                 )
             )
         )
@@ -485,6 +495,7 @@ body{
     }
 }
 .slick-slide{
+    position: relative;
     img{
         &.banner {
             display: block;
@@ -503,7 +514,7 @@ body{
     @include L(
         (
             '#banner':(
-                margin-top: 147px,
+                margin-top: 97px + 50px,
                 margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
                 margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
             )
@@ -532,7 +543,56 @@ body{
         transition: opacity 0.3s 0s ease-out;
     }
 }
-
+.banner{
+    @include L(
+        (
+            '.slick-slide img.banner':(
+                opacity: 1
+            )
+        )
+    )
+    @include M(
+        (
+            '.slick-slide img.banner':(
+                opacity: 0
+            )
+        )
+    )
+    @include S(
+        (
+            '.slick-slide img.banner':(
+                opacity: 0
+            )
+        )
+    )
+}
+.banner-m{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    @include L(
+        (
+            '.slick-slide img.banner-m':(
+                opacity: 0
+            )
+        )
+    )
+    @include M(
+        (
+            '.slick-slide img.banner-m':(
+                opacity: 1
+            )
+        )
+    )
+    @include S(
+        (
+            '.banner-m':(
+                opacity: 1
+            )
+        )
+    )
+}
 .anti-margin{
     @include L(
         (
@@ -951,6 +1011,7 @@ body{
             (
                 '#ta-list':(
                     top: -9px,
+                    margin: 0 0 0 87px,
                     float: left
                 )
             )
@@ -1346,6 +1407,47 @@ body{
         display: block;
     }
 }
+#teacher-word{    
+    position: relative;
+    font-weight: normal;
+    color: #797979;
+    @include L(
+        (
+            '#teacher-word':(
+                float: left,
+                margin: 0 106px 31px 106px,
+                font-size: 22px,
+                line-height: 2.5
+            )
+        )
+    )
+    @include M(
+        (
+            '#teacher-word':(
+                margin: 76px 30px 31px 30px,
+                font-size: 22px,
+                line-height: 2,
+                padding-bottom: 80px
+            )
+        )
+    )
+    @include S(
+        (
+            '#teacher-word':(
+                margin: 76px 30px 31px 30px,
+                font-size: 22px,
+                line-height: 2,
+                padding-bottom: 80px
+            )
+        )
+    )
+}
+#sign{
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: 0;
+}
 #ryan{
     position: relative;
     overflow: hidden;
@@ -1443,14 +1545,14 @@ body{
     position: relative;
     li{
         font-family: $fontfamily;
-        font-weight: 700;
+        font-weight: normal;
         color: #797979;
-        line-height: 1.5;
         @include L(
             (
                 '#teacher-1':(
                     top: -9px,
-                    float: left
+                    float: left,
+                    line-height: 1.5
                 )
             )
         )
@@ -1458,7 +1560,8 @@ body{
             (
                 '#teacher-1':(
                     top: -9px,
-                    margin: 0 30px
+                    margin: 0 30px,
+                    line-height: 2
                 )
             )
         )
@@ -1466,7 +1569,8 @@ body{
             (
                 '#teacher-1':(
                     top: -9px,
-                    margin: 0 30px
+                    margin: 0 30px,
+                    line-height: 2
                 )
             )
         )
@@ -2107,7 +2211,6 @@ body{
     font-family: $fontfamily;
     font-weight: normal;
     color: #797979;
-    line-height: 1.5;
     font-size: 20px;
     box-sizing: border-box;
     text-align: justify;
@@ -2117,7 +2220,8 @@ body{
                 width: 735px,
                 float: left,
                 margin: 51px 0 0 59px,
-                padding: 0 15px 0 0 
+                padding: 0 15px 0 0,
+                line-height: 1.5
             )
         )
     )
@@ -2126,7 +2230,8 @@ body{
             '#footer-word':(
                 width: 372px,
                 margin: 31px auto 0 auto,
-                padding: 0 30px 
+                padding: 0 30px,
+                line-height: 2
             )
         )
     )
@@ -2135,7 +2240,8 @@ body{
             '#footer-word':(
                 width: 372px,
                 margin: 31px auto 0 auto,
-                padding: 0 30px 
+                padding: 0 30px,
+                line-height: 2 
             )
         )
     )
@@ -2285,12 +2391,22 @@ body{
         )
     )
 }
+.show-go-top{
+    #go-top{
+        opacity: 1;
+        visibility: initial;
+    }
+}
 #go-top{
     position: fixed;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
     background-color: #1e8993;
     cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s 0s;
     z-index: 1;
     @include L(
         (
@@ -2502,7 +2618,7 @@ body{
         @include M(
             (
                 '.cta-side-btn span':(
-                    vertical-align: top,
+                    vertical-align: middle,
                     padding-left: 5px,
                     font-size: 18px
                 )
@@ -2511,7 +2627,7 @@ body{
         @include S(
             (
                 '.cta-side-btn span':(
-                    vertical-align: top,
+                    vertical-align: middle,
                     padding-left: 5px,
                     font-size: 14px
                 )
@@ -2549,6 +2665,7 @@ body{
     @include M(
         (
             '#cart':(
+                vertical-align: middle,
                 width: 100% * ( 59 / 511 ) 
             )
         )
@@ -2556,6 +2673,7 @@ body{
     @include S(
         (
             '#cart':(
+                vertical-align: middle,
                 width: 100% * ( 59 / 511 ) 
             )
         )
@@ -2571,6 +2689,7 @@ body{
     @include M(
         (
             '#messenger':(
+                vertical-align: middle,
                 width: 100% * ( 59 / 250 ) 
             )
         )
@@ -2578,9 +2697,448 @@ body{
     @include S(
         (
             '#messenger':(
+                vertical-align: middle,
                 width: 100% * ( 59 / 250 ) 
             )
         )
     )
+}
+.light-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: rgba(0,0,0,0.66);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.2s 0s;
+    overflow: auto;
+    z-index: 2;
+    @include L(
+        (
+            '.light-box':(
+                top: 50px + 97px,
+                height: calc( 100% - 50px - 97px )
+            )
+        )
+    )
+    @include M(
+        (
+            '.light-box':(
+                top: 30px + 67px,
+                height: calc( 100% - 30px - 67px )
+            )
+        )
+    )
+    @include S(
+        (
+            '.light-box':(
+                top: 30px + 67px,
+                height: calc( 100% - 30px - 67px )
+            )
+        )
+    )
+}
+.show-light-box{
+    overflow-y: hidden;
+    .light-box{
+        left: 0%;
+        opacity: 1;
+    }
+}
+.light-frame{
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    @include L(
+        (
+            '.light-frame':(
+                width: 1170px,
+                height: 1325px,
+                margin: 18px auto 100px auto
+            )
+        )
+    )
+    @include M(
+        (
+            '.light-frame':(
+                width: 372px,
+                height: 1600px,
+                margin: 18px auto 100px auto
+            )
+        )
+    )
+    @include S(
+        (
+            '.light-frame':(
+                width: 372px,
+                height: 1600px,
+                margin: 18px auto 100px auto
+            )
+        )
+    )
+}
+#pay-title{
+    position: absolute;
+    @include L(
+        (
+            '#pay-title':(
+                width: 0.5 * 432px,
+                left: 477px,
+                top: 77px
+            )
+        )
+    )
+    @include M(
+        (
+            '#pay-title':(
+                width: 0.7 * 0.5 * 432px,
+                left: calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ) ),
+                top: 77px
+            )
+        )
+    )
+    @include S(
+        (
+            '#pay-title':(
+                width: 0.7 * 0.5 * 432px,
+                left: calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ) ),
+                top: 77px
+            )
+        )
+    )
+}
+#pay-way-0{
+    position: absolute;
+    cursor: pointer;
+    @include L(
+        (
+            '#pay-way-0':(
+                width: 0.5 * 828px,
+                left: 101px,
+                top: 154px
+            )
+        )
+    )
+    @include M(
+        (
+            '#pay-way-0':(
+                width: 273px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 130px
+            )
+        )
+    )
+    @include S(
+        (
+            '#pay-way-0':(
+                width: 273px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 130px
+            )
+        )
+    )
+}
+#pay-way-1{
+    position: absolute;
+    cursor: pointer;
+    @include L(
+        (
+            '#pay-way-1':(
+                width: 0.5 * 828px,
+                left: 651px,
+                top: 154px
+            )
+        )
+    )
+    @include M(
+        (
+            '#pay-way-1':(
+                width: 273px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 405px
+            )
+        )
+    )
+    @include S(
+        (
+            '#pay-way-1':(
+                width: 273px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 405px
+            )
+        )
+    )
+}
+.pay-way{
+    transition: transform 0.3s 0s;
+}
+.pc{
+    .pay-way{
+        &:hover{
+            transform: translateY(-5px)
+        }
+    }
+}
+#course-info{
+    position: absolute;
+    cursor: pointer;
+    @include L(
+        (
+            '#course-info':(
+                width: 0.5 * 970px,
+                left: 359px,
+                top: 592px
+            )
+        )
+    )
+    @include M(
+        (
+            '#course-info':(
+                width: 300px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 680px
+            )
+        )
+    )
+    @include S(
+        (
+            '#course-info':(
+                width: 300px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 680px
+            )
+        )
+    )
+}
+#money-0{
+    position: absolute;
+    cursor: pointer;
+    @include L(
+        (
+            '#money-0':(
+                width: 0.5 * 650px,
+                left: 73px,
+                top: 975px
+            )
+        )
+    )
+    @include M(
+        (
+            '#money-0':(
+                width: 208px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 950px
+            )
+        )
+    )
+    @include S(
+        (
+            '#money-0':(
+                width: 208px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 950px
+            )
+        )
+    )
+}
+#money-1{
+    position: absolute;
+    cursor: pointer;
+    @include L(
+        (
+            '#money-1':(
+                width: 0.5 * 650px,
+                left: 423px,
+                top: 975px
+            )
+        )
+    )
+    @include M(
+        (
+            '#money-1':(
+                width: 208px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 1162px
+            )
+        )
+    )
+    @include S(
+        (
+            '#money-1':(
+                width: 208px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 1162px
+            )
+        )
+    )
+}
+#money-2{
+    position: absolute;
+    cursor: pointer;
+    @include L(
+        (
+            '#money-2':(
+                width: 0.5 * 650px,
+                left: 771px,
+                top: 975px
+            )
+        )
+    )
+    @include M(
+        (
+            '#money-2':(
+                width: 208px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 1374px
+            )
+        )
+    )
+    @include S(
+        (
+            '#money-2':(
+                width: 208px,
+                left: 0,
+                right: 0,
+                margin: 0 auto,
+                top: 1374px
+            )
+        )
+    )
+}
+.light-box-close{
+    position: absolute;
+    cursor: pointer;
+    &:before{
+        position: absolute;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: #797979;
+        left: 50%;
+        top: 0;
+        margin: 0 0 0 -1px;
+        transform: rotateZ(45deg);
+    }
+    &:after{
+        position: absolute;
+        content: "";
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: #797979;
+        left: 50%;
+        top: 0;
+        margin: 0 0 0 -1px;
+        transform: rotateZ(-45deg);
+    }
+    @include L(
+        (
+            '.light-box-close':(
+                width: 80px,
+                height: 80px,
+                right: 10px,
+                top: 10px
+            )
+        )
+    )
+    @include M(
+        (
+            '.light-box-close':(
+                width: 50px,
+                height: 50px,
+                right: 10px,
+                top: 10px
+            )
+        )
+    )
+    @include S(
+        (
+            '.light-box-close':(
+                width: 50px,
+                height: 50px,
+                right: 10px,
+                top: 10px
+            )
+        )
+    )
+}
+/****** form-page *******/
+.form-page{
+    #nav-list{
+        display: none;
+    }
+    #burger{
+        display: none;
+    }
+}
+#form-box{
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    @include L(
+        (
+            '#form-box':(
+                width: 1170px,
+                height: auto,
+                left: 0,
+                right: 0,
+                margin: ( 97px + 50px + 121px ) auto 121px auto,
+                top: 0
+            )
+        )
+    )
+    @include M(
+        (
+            '#form-box':(
+                width: 372px,
+                height: auto,
+                left: 0,
+                right: 0,
+                margin: ( 67px + 30px + 121px ) auto 121px auto,
+                top: 0
+            )
+        )
+    )
+    @include S(
+        (
+            '#form-box':(
+                width: 372px,
+                height: auto,
+                left: 0,
+                right: 0,
+                margin: ( 67px + 30px + 121px ) auto 121px auto,
+                top: 0
+            )
+        )
+    )
+}
+#mc_embed_signup .button{
+    background-color: #1e8993 !important;
 }
 @include rwd;
