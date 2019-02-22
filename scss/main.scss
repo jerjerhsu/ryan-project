@@ -76,6 +76,14 @@ $fontfamily: ‘微軟正黑體’, Arial, sans-serif;
         0
     )
 }
+$header-top-0: 0px; //50px;
+$header-top-1: 0px; //30px;
+#header-top{
+    display: none;
+}
+.inherit{
+    color: inherit;
+}
 body{
     background-color: #f9f9f9;
     min-width: 372px;
@@ -84,7 +92,7 @@ body{
 	@include L(
 		(
 			'.header':(
-				height: 147px
+				height: auto
 			)
 		)
 	)
@@ -514,7 +522,7 @@ body{
     @include L(
         (
             '#banner':(
-                margin-top: 97px + 50px,
+                margin-top: 97px + $header-top-0,
                 margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
                 margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
             )
@@ -523,7 +531,7 @@ body{
     @include M(
         (
             '#banner':(
-                margin-top: 67px + 30px ,
+                margin-top: 67px + $header-top-1 ,
                 margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
                 margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
             )
@@ -532,7 +540,7 @@ body{
     @include S(
         (
             '#banner':(
-                margin-top: 67px + 30px ,
+                margin-top: 67px + $header-top-1 ,
                 margin-left: -15px + ( 0.5 * ( 1200px - 1172px ) ),
                 margin-right: -15px + ( 0.5 * ( 1200px - 1172px ) )
             )
@@ -2717,24 +2725,24 @@ body{
     @include L(
         (
             '.light-box':(
-                top: 50px + 97px,
-                height: calc( 100% - 50px - 97px )
+                top: $header-top-0 + 97px,
+                height: calc( 100% - #{$header-top-0} - 97px )
             )
         )
     )
     @include M(
         (
             '.light-box':(
-                top: 30px + 67px,
-                height: calc( 100% - 30px - 67px )
+                top: $header-top-1 + 67px,
+                height: calc( 100% - #{$header-top-1} - 67px )
             )
         )
     )
     @include S(
         (
             '.light-box':(
-                top: 30px + 67px,
-                height: calc( 100% - 30px - 67px )
+                top: $header-top-1 + 67px,
+                height: calc( 100% - #{$header-top-1} - 67px )
             )
         )
     )
@@ -3108,7 +3116,7 @@ body{
                 height: auto,
                 left: 0,
                 right: 0,
-                margin: ( 97px + 50px + 121px ) auto 121px auto,
+                margin: ( 97px + $header-top-0 + 121px ) auto 121px auto,
                 top: 0
             )
         )
@@ -3120,7 +3128,7 @@ body{
                 height: auto,
                 left: 0,
                 right: 0,
-                margin: ( 67px + 30px + 121px ) auto 121px auto,
+                margin: ( 67px + $header-top-1 + 121px ) auto 121px auto,
                 top: 0
             )
         )
@@ -3132,7 +3140,7 @@ body{
                 height: auto,
                 left: 0,
                 right: 0,
-                margin: ( 67px + 30px + 121px ) auto 121px auto,
+                margin: ( 67px + $header-top-1 + 121px ) auto 121px auto,
                 top: 0
             )
         )
@@ -3146,26 +3154,64 @@ body{
     .wrapper{
         overflow: hidden;
     }
+    #nav-list{
+        display: none;
+    }
+    #burger{
+        display: none;
+    }
+    #cta-side-btn-box{
+        display: none;
+    }
+    .footer{
+        position: relative;
+        width: 100%;
+        background-color: #eee;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+        @include L(
+            (
+                '.footer':(
+                    height: 410px
+                )
+            )
+        )
+        @include M(
+            (
+                '.footer':(
+                    height: auto,
+                    padding-bottom: 0
+                )
+            )
+        )
+        @include S(
+            (
+                '.footer':(
+                    height: auto,
+                    padding-bottom: 0
+                )
+            )
+        )
+    }
 }
 #lesson-content{
     @include L(
         (
             '#lesson-content':(
-                margin: ( 97px + 50px ) auto 121px auto
+                margin: ( 97px + $header-top-0 ) auto 121px auto
             )
         )
     )
     @include M(
         (
             '#lesson-content':(
-                margin: ( 67px + 30px ) auto 121px auto
+                margin: ( 67px + $header-top-1 ) auto 121px auto
             )
         )
     )
     @include S(
         (
             '#lesson-content':(
-                margin: ( 67px + 30px ) auto 121px auto
+                margin: ( 67px + $header-top-1 ) auto 121px auto
             )
         )
     )

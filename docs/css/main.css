@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 11:19:09 
+* date:    Fri Feb 22 2019 14:50:03 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1364,6 +1364,14 @@ template {
   top: 0;
 }
 
+#header-top {
+  display: none;
+}
+
+.inherit {
+  color: inherit;
+}
+
 body {
   background-color: #f9f9f9;
   min-width: 372px;
@@ -2449,6 +2457,27 @@ body {
   overflow: hidden;
 }
 
+.lesson-page #nav-list {
+  display: none;
+}
+
+.lesson-page #burger {
+  display: none;
+}
+
+.lesson-page #cta-side-btn-box {
+  display: none;
+}
+
+.lesson-page .footer {
+  position: relative;
+  width: 100%;
+  background-color: #eee;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
 .lesson-title {
   position: relative;
   font-family: ‘微軟正黑體’, Arial, sans-serif;
@@ -2524,7 +2553,7 @@ body {
     display: none;
   }
   .header {
-    height: 147px;
+    height: auto;
   }
   .center-limit {
     width: 1200px;
@@ -2571,7 +2600,7 @@ body {
     width: 34px;
   }
   #banner {
-    margin-top: 147px;
+    margin-top: 97px;
     margin-left: -1px;
     margin-right: -1px;
   }
@@ -2822,10 +2851,10 @@ body {
     padding-top: 6px;
   }
   .light-box {
-    top: 147px;
-    height: -webkit-calc( 100% - 50px - 97px);
-    height: -moz-calc( 100% - 50px - 97px);
-    height: calc( 100% - 50px - 97px);
+    top: 97px;
+    height: -webkit-calc( 100% - 0px - 97px);
+    height: -moz-calc( 100% - 0px - 97px);
+    height: calc( 100% - 0px - 97px);
   }
   .light-frame {
     width: 1170px;
@@ -2878,11 +2907,14 @@ body {
     height: auto;
     left: 0;
     right: 0;
-    margin: 268px auto 121px auto;
+    margin: 218px auto 121px auto;
     top: 0;
   }
+  .footer {
+    height: 410px;
+  }
   #lesson-content {
-    margin: 147px auto 121px auto;
+    margin: 97px auto 121px auto;
   }
   .lesson-title {
     font-size: 31px;
@@ -2962,7 +2994,7 @@ body {
     font-size: 21px;
   }
   #banner {
-    margin-top: 97px;
+    margin-top: 67px;
     margin-left: -1px;
     margin-right: -1px;
   }
@@ -3239,10 +3271,10 @@ body {
     width: 23.6%;
   }
   .light-box {
-    top: 97px;
-    height: -webkit-calc( 100% - 30px - 67px);
-    height: -moz-calc( 100% - 30px - 67px);
-    height: calc( 100% - 30px - 67px);
+    top: 67px;
+    height: -webkit-calc( 100% - 0px - 67px);
+    height: -moz-calc( 100% - 0px - 67px);
+    height: calc( 100% - 0px - 67px);
   }
   .light-frame {
     width: 372px;
@@ -3309,11 +3341,15 @@ body {
     height: auto;
     left: 0;
     right: 0;
-    margin: 218px auto 121px auto;
+    margin: 188px auto 121px auto;
     top: 0;
   }
+  .footer {
+    height: auto;
+    padding-bottom: 0;
+  }
   #lesson-content {
-    margin: 97px auto 121px auto;
+    margin: 67px auto 121px auto;
   }
   .lesson-title {
     font-size: 31px;
@@ -3391,7 +3427,7 @@ body {
     font-size: 21px;
   }
   #banner {
-    margin-top: 97px;
+    margin-top: 67px;
     margin-left: -1px;
     margin-right: -1px;
   }
@@ -3668,10 +3704,10 @@ body {
     width: 23.6%;
   }
   .light-box {
-    top: 97px;
-    height: -webkit-calc( 100% - 30px - 67px);
-    height: -moz-calc( 100% - 30px - 67px);
-    height: calc( 100% - 30px - 67px);
+    top: 67px;
+    height: -webkit-calc( 100% - 0px - 67px);
+    height: -moz-calc( 100% - 0px - 67px);
+    height: calc( 100% - 0px - 67px);
   }
   .light-frame {
     width: 372px;
@@ -3738,11 +3774,15 @@ body {
     height: auto;
     left: 0;
     right: 0;
-    margin: 218px auto 121px auto;
+    margin: 188px auto 121px auto;
     top: 0;
   }
+  .footer {
+    height: auto;
+    padding-bottom: 0;
+  }
   #lesson-content {
-    margin: 97px auto 121px auto;
+    margin: 67px auto 121px auto;
   }
   .lesson-title {
     font-size: 31px;
