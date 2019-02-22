@@ -86,7 +86,7 @@ $header-top-1: 0px; //30px;
 }
 body{
     background-color: #f9f9f9;
-    min-width: 372px;
+    min-width: 352px;
 }
 .loading_content{
     opacity: 0;
@@ -828,9 +828,9 @@ body{
 	@include L(
 		(
 			'.word-box':(
-                width: 372px,
+                width: 352px,
                 height: 609px,
-                margin: ( 1200px - 3 * 372px ) / 6,
+                margin: ( 1200px - 3 * 352px ) / 6,
                 float: left
             )
 		)
@@ -838,7 +838,7 @@ body{
 	@include M(
 		(
 			'.word-box':(
-                width: 372px,
+                width: 352px,
                 height: 609px,
                 margin: 0 auto 30px auto
             )
@@ -847,7 +847,7 @@ body{
 	@include S(
 		(
 			'.word-box':(
-                width: 372px,
+                width: 352px,
                 height: 609px,
                 margin: 0 auto 30px auto
             )
@@ -1032,7 +1032,7 @@ body{
                 '#ta-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 372px
+                    width: 352px
                 )
             )
         )
@@ -1041,7 +1041,7 @@ body{
                 '#ta-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 372px
+                    width: 352px
                 )
             )
         )
@@ -1160,7 +1160,7 @@ body{
                 '#syllabus-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 372px
+                    width: 352px
                 )
             )
         )
@@ -1169,7 +1169,7 @@ body{
                 '#syllabus-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 372px
+                    width: 352px
                 )
             )
         )
@@ -1264,7 +1264,7 @@ body{
             '#course-box':(
                 top: -9px,
                 margin: 50px auto 18px auto,
-                width: 372px
+                width: 352px
             )
         )
     )
@@ -1273,7 +1273,7 @@ body{
             '#course-box':(
                 top: -9px,
                 margin: 50px auto 18px auto,
-                width: 372px
+                width: 352px
             )
         )
     )
@@ -1373,7 +1373,7 @@ body{
     @include M(
         (
             '#teacher-box':(
-                width: 372px,
+                width: 352px,
                 padding: 0 0 42px 0
             )
         )
@@ -1381,7 +1381,7 @@ body{
     @include S(
         (
             '#teacher-box':(
-                width: 372px,
+                width: 352px,
                 padding: 0 0 42px 0
             )
         )
@@ -1630,9 +1630,9 @@ body{
 	@include L(
 		(
 			'.say-box':(
-                width: 372px,
+                width: 352px,
                 height: 815px,
-                margin: ( 1200px - 3 * 372px ) / 6,
+                margin: ( 1200px - 3 * 352px ) / 6,
                 float: left
             )
 		)
@@ -1640,7 +1640,7 @@ body{
 	@include M(
 		(
 			'.say-box':(
-                width: 372px,
+                width: 352px,
                 height: 815px,
                 margin: 0 auto 30px auto
             )
@@ -1649,7 +1649,7 @@ body{
 	@include S(
 		(
 			'.say-box':(
-                width: 372px,
+                width: 352px,
                 height: 815px,
                 margin: 0 auto 30px auto
             )
@@ -1811,7 +1811,7 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 372px,
+                    width: 352px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -1820,7 +1820,7 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 372px,
+                    width: 352px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -2063,7 +2063,7 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 372px,
+                    width: 352px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -2072,7 +2072,7 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 372px,
+                    width: 352px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -2239,7 +2239,7 @@ body{
     @include M(
         (
             '#footer-word':(
-                width: 372px,
+                width: 352px,
                 margin: 31px auto 0 auto,
                 padding: 0 30px,
                 line-height: 2
@@ -2249,7 +2249,7 @@ body{
     @include S(
         (
             '#footer-word':(
-                width: 372px,
+                width: 352px,
                 margin: 31px auto 0 auto,
                 padding: 0 30px,
                 line-height: 2 
@@ -2493,7 +2493,7 @@ body{
             )
         )
     )
-    /******372px******/
+    /******352px******/
     @include S(
         (
             '#cta-side-btn-box':(
@@ -2775,7 +2775,7 @@ body{
     @include M(
         (
             '.light-frame':(
-                width: 372px,
+                width: 352px,
                 height: 1600px,
                 margin: 18px auto 100px auto
             )
@@ -2784,7 +2784,7 @@ body{
     @include S(
         (
             '.light-frame':(
-                width: 372px,
+                width: 352px,
                 height: 1600px,
                 margin: 18px auto 100px auto
             )
@@ -2806,7 +2806,7 @@ body{
         (
             '#pay-title':(
                 width: 0.7 * 0.5 * 432px,
-                left: calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ) ),
+                left: calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ) ),
                 top: 77px
             )
         )
@@ -2815,7 +2815,7 @@ body{
         (
             '#pay-title':(
                 width: 0.7 * 0.5 * 432px,
-                left: calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ) ),
+                left: calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ) ),
                 top: 77px
             )
         )
@@ -3127,7 +3127,7 @@ body{
     @include M(
         (
             '#form-box':(
-                width: 372px,
+                width: 352px,
                 height: auto,
                 left: 0,
                 right: 0,
@@ -3139,7 +3139,7 @@ body{
     @include S(
         (
             '#form-box':(
-                width: 372px,
+                width: 352px,
                 height: auto,
                 left: 0,
                 right: 0,
