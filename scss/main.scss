@@ -311,7 +311,7 @@ body{
 			'#burger':(
                 display: block,
                 width: 67px,
-                top: 30px
+                top: $header-top-1
 			)
 		)
 	)
@@ -320,7 +320,7 @@ body{
 			'#burger':(
                 display: block,
                 width: 67px,
-                top: 30px
+                top: $header-top-1
 			)
 		)
 	)
@@ -383,7 +383,7 @@ body{
                 position: fixed,
                 background-color: #fff,
                 width: 100vw,
-                height: calc( 100vh - 67px - 30px ),
+                height: calc( 100vh - 67px - #{$header-top-1} ),
                 left: 50%,
                 top: -150vh,//67px,
                 margin-left: calc( -0.5 * 100vw),
@@ -397,7 +397,7 @@ body{
                 position: fixed,
                 background-color: #fff,
                 width: 100vw,
-                height: calc( 100vh - 67px - 30px ),
+                height: calc( 100vh - 67px - #{$header-top-1} ),
                 left: 50%,
                 top: -150vh,//67px,
                 margin-left: calc( -0.5 * 100vw),

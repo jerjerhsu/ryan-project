@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 18:46:51 
+* date:    Fri Feb 22 2019 19:15:04 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2972,7 +2972,7 @@ body {
   #burger {
     display: block;
     width: 67px;
-    top: 30px;
+    top: 0px;
   }
   #logo {
     width: 164px;
@@ -2982,9 +2982,9 @@ body {
     position: fixed;
     background-color: #fff;
     width: 100vw;
-    height: -webkit-calc( 100vh - 67px - 30px);
-    height: -moz-calc( 100vh - 67px - 30px);
-    height: calc( 100vh - 67px - 30px);
+    height: -webkit-calc( 100vh - 67px - 0px);
+    height: -moz-calc( 100vh - 67px - 0px);
+    height: calc( 100vh - 67px - 0px);
     left: 50%;
     top: -150vh;
     margin-left: -webkit-calc( -0.5 * 100vw);
@@ -3405,7 +3405,7 @@ body {
   #burger {
     display: block;
     width: 67px;
-    top: 30px;
+    top: 0px;
   }
   #logo {
     width: 164px;
@@ -3415,9 +3415,9 @@ body {
     position: fixed;
     background-color: #fff;
     width: 100vw;
-    height: -webkit-calc( 100vh - 67px - 30px);
-    height: -moz-calc( 100vh - 67px - 30px);
-    height: calc( 100vh - 67px - 30px);
+    height: -webkit-calc( 100vh - 67px - 0px);
+    height: -moz-calc( 100vh - 67px - 0px);
+    height: calc( 100vh - 67px - 0px);
     left: 50%;
     top: -150vh;
     margin-left: -webkit-calc( -0.5 * 100vw);
