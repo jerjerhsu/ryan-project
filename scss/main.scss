@@ -1134,7 +1134,7 @@ body{
 	@include L(
 		(
 			'#dont-worry':(
-                font-size: #{$font-0-pc},
+                font-size: #{$font-1-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1142,7 +1142,7 @@ body{
 	@include M(
 		(
 			'#dont-worry':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-1-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1150,7 +1150,7 @@ body{
 	@include S(
 		(
 			'#dont-worry':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-1-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1959,7 +1959,7 @@ body{
 	@include L(
 		(
 			'#more-q':(
-                font-size: #{$font-0-pc},
+                font-size: #{$font-1-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1967,7 +1967,7 @@ body{
 	@include M(
 		(
 			'#more-q':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-1-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1975,7 +1975,7 @@ body{
 	@include S(
 		(
 			'#more-q':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-1-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -2024,7 +2024,7 @@ body{
 	@include L(
 		(
 			'#now-state':(
-                font-size: #{$font-0-pc},
+                font-size: #{$font-1-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -2032,7 +2032,7 @@ body{
 	@include M(
 		(
 			'#now-state':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-1-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -2040,7 +2040,7 @@ body{
 	@include S(
 		(
 			'#now-state':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-1-m},
                 margin: 67px auto 79px auto
             )
 		)
