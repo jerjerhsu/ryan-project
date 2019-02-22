@@ -3141,4 +3141,173 @@ body{
 #mc_embed_signup .button{
     background-color: #1e8993 !important;
 }
+/****** lesson-page *******/
+.lesson-page{
+    .wrapper{
+        overflow: hidden;
+    }
+}
+#lesson-content{
+    @include L(
+        (
+            '#lesson-content':(
+                margin: ( 97px + 50px ) auto 121px auto
+            )
+        )
+    )
+    @include M(
+        (
+            '#lesson-content':(
+                margin: ( 67px + 30px ) auto 121px auto
+            )
+        )
+    )
+    @include S(
+        (
+            '#lesson-content':(
+                margin: ( 67px + 30px ) auto 121px auto
+            )
+        )
+    )
+}
+.lesson-title{
+    position: relative;
+    font-family: $fontfamily;
+    font-weight: 700;
+    color: #797979;
+    text-align: center;
+    line-height: 1.5;
+	@include L(
+		(
+			'.lesson-title':(
+                font-size: 31px,
+                margin: 89px auto 79px auto
+            )
+		)
+	)
+	@include M(
+		(
+			'.lesson-title':(
+                font-size: 31px,
+                margin: 89px auto 79px auto
+            )
+		)
+	)
+	@include S(
+		(
+			'.lesson-title':(
+                font-size: 31px,
+                margin: 89px auto 79px auto
+            )
+		)
+	)
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 34px;
+        height: 5px;
+        left: 0px;
+        right: 0px;
+        top: auto;
+        margin: 13px auto 0 auto;
+        background-color: #1e8993;
+    }
+}
+
+
+.lesson-word{    
+    position: relative;
+    font-weight: normal;
+    color: #797979;
+    text-align: justify;
+    @include L(
+        (
+            '.lesson-word':(
+                margin: 0 15px 31px 15px,
+                font-size: 22px,
+                line-height: 2.5
+            )
+        )
+    )
+    @include M(
+        (
+            '.lesson-word':(
+                margin: 76px 30px 31px 30px,
+                font-size: 22px,
+                line-height: 2,
+                padding-bottom: 80px
+            )
+        )
+    )
+    @include S(
+        (
+            '.lesson-word':(
+                margin: 76px 30px 31px 30px,
+                font-size: 22px,
+                line-height: 2,
+                padding-bottom: 80px
+            )
+        )
+    )
+    img{
+        position: relative;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto 29px auto;
+    }
+    .full-x{
+        img{
+            @include L(
+                (
+                    '.lesson-word .full-x img':(
+                        float: left
+                    )
+                )
+            )
+            @include M(
+                (
+                    '.lesson-word .full-x img':(
+                    )
+                )
+            )
+            @include S(
+                (
+                    '.lesson-word .full-x img':(
+                    )
+                )
+            )
+        }
+    }
+}
+.blue{
+    color: #1e8993;
+    font-size: 28px;
+}
+
+#lesson-cta-btn{
+    position: relative;
+    width: 314px;
+    height: 73px;
+    left: 0px;
+    top: 0px;
+    background-color: #1e8993;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.45);
+    cursor: pointer;
+    p{
+        position: relative;
+        font-family: $fontfamily;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5;
+        font-size: 32px;
+    }
+    svg{
+        position: relative;
+        top: -3px;
+    }
+}
+
 @include rwd;

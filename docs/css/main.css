@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 10:19:20 
+* date:    Fri Feb 22 2019 11:19:09 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2444,6 +2444,81 @@ body {
   background-color: #1e8993 !important;
 }
 
+/****** lesson-page *******/
+.lesson-page .wrapper {
+  overflow: hidden;
+}
+
+.lesson-title {
+  position: relative;
+  font-family: ‘微軟正黑體’, Arial, sans-serif;
+  font-weight: 700;
+  color: #797979;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.lesson-title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 34px;
+  height: 5px;
+  left: 0px;
+  right: 0px;
+  top: auto;
+  margin: 13px auto 0 auto;
+  background-color: #1e8993;
+}
+
+.lesson-word {
+  position: relative;
+  font-weight: normal;
+  color: #797979;
+  text-align: justify;
+}
+
+.lesson-word img {
+  position: relative;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 29px auto;
+}
+
+.blue {
+  color: #1e8993;
+  font-size: 28px;
+}
+
+#lesson-cta-btn {
+  position: relative;
+  width: 314px;
+  height: 73px;
+  left: 0px;
+  top: 0px;
+  background-color: #1e8993;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+#lesson-cta-btn p {
+  position: relative;
+  font-family: ‘微軟正黑體’, Arial, sans-serif;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 32px;
+}
+
+#lesson-cta-btn svg {
+  position: relative;
+  top: -3px;
+}
+
 @media only screen and (min-width: 1201px) {
   #burger {
     display: none;
@@ -2805,6 +2880,21 @@ body {
     right: 0;
     margin: 268px auto 121px auto;
     top: 0;
+  }
+  #lesson-content {
+    margin: 147px auto 121px auto;
+  }
+  .lesson-title {
+    font-size: 31px;
+    margin: 89px auto 79px auto;
+  }
+  .lesson-word {
+    margin: 0 15px 31px 15px;
+    font-size: 22px;
+    line-height: 2.5;
+  }
+  .lesson-word .full-x img {
+    float: left;
   }
 }
 
@@ -3222,6 +3312,19 @@ body {
     margin: 218px auto 121px auto;
     top: 0;
   }
+  #lesson-content {
+    margin: 97px auto 121px auto;
+  }
+  .lesson-title {
+    font-size: 31px;
+    margin: 89px auto 79px auto;
+  }
+  .lesson-word {
+    margin: 76px 30px 31px 30px;
+    font-size: 22px;
+    line-height: 2;
+    padding-bottom: 80px;
+  }
 }
 
 @media only screen and (max-width: 426px) {
@@ -3637,5 +3740,18 @@ body {
     right: 0;
     margin: 218px auto 121px auto;
     top: 0;
+  }
+  #lesson-content {
+    margin: 97px auto 121px auto;
+  }
+  .lesson-title {
+    font-size: 31px;
+    margin: 89px auto 79px auto;
+  }
+  .lesson-word {
+    margin: 76px 30px 31px 30px;
+    font-size: 22px;
+    line-height: 2;
+    padding-bottom: 80px;
   }
 }
