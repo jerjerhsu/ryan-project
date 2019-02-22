@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 14:50:03 
+* date:    Fri Feb 22 2019 18:46:51 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 'use strict';
@@ -281,7 +281,7 @@ function getRandomColor() {
 }
 
 $.fn.EventInIt = function () {
-  $body.on('click', '#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"]', function (e) {
+  $body.on('click', '#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"],#cta-btn', function (e) {
     var _self = $(e.currentTarget);
 
     switch (true) {
@@ -303,7 +303,7 @@ $.fn.EventInIt = function () {
         }, 300);
         break;
 
-      case _self.is('#cta-side-btn-box-0'):
+      case _self.is('#cta-side-btn-box-0') || _self.is('#cta-btn'):
         $body.addClass('show-light-box');
         break;
 

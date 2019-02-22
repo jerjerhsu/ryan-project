@@ -75,7 +75,7 @@ function getRandomColor(){
 }
 
 $.fn.EventInIt = function(){
-    $body.on('click','#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"]',function(e){
+    $body.on('click','#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"],#cta-btn',function(e){
         var _self = $(e.currentTarget);
         switch(true){
             case _self.is('#go-top'):
@@ -98,7 +98,7 @@ $.fn.EventInIt = function(){
                     300
                 );
             break;
-            case _self.is('#cta-side-btn-box-0'):
+            case _self.is('#cta-side-btn-box-0') || _self.is('#cta-btn'):
                 $body.addClass('show-light-box');
             break;
             case _self.is('.light-box-close'):

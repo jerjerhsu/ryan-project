@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 14:50:03 
+* date:    Fri Feb 22 2019 18:46:51 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1375,6 +1375,10 @@ template {
 body {
   background-color: #f9f9f9;
   min-width: 372px;
+}
+
+.loading_content {
+  opacity: 0;
 }
 
 .header .center-limit {
