@@ -558,6 +558,7 @@ body{
     @include L(
         (
             '.slick-slide img.banner':(
+                position: relative,
                 opacity: 1
             )
         )
@@ -565,6 +566,7 @@ body{
     @include M(
         (
             '.slick-slide img.banner':(
+                position: absolute,
                 opacity: 0
             )
         )
@@ -572,19 +574,20 @@ body{
     @include S(
         (
             '.slick-slide img.banner':(
+                position: absolute,
                 opacity: 0
             )
         )
     )
 }
 .banner-m{
-    position: absolute;
     width: 100%;
     left: 0;
     top: 0;
     @include L(
         (
             '.slick-slide img.banner-m':(
+                position: absolute,
                 opacity: 0
             )
         )
@@ -592,6 +595,7 @@ body{
     @include M(
         (
             '.slick-slide img.banner-m':(
+                position: relative,
                 opacity: 1
             )
         )
@@ -599,6 +603,7 @@ body{
     @include S(
         (
             '.banner-m':(
+                position: relative,
                 opacity: 1
             )
         )
@@ -769,16 +774,16 @@ body{
 	@include M(
 		(
 			'#main-title':(
-                font-size: 31px,
-                margin: 118px auto 118px auto
+                font-size: 25px,
+                margin: 60px auto 60px auto
             )
 		)
 	)
 	@include S(
 		(
 			'#main-title':(
-                font-size: 31px,
-                margin: 110px auto 110px auto
+                font-size: 25px,
+                margin: 60px auto 60px auto
             )
 		)
 	)
@@ -855,13 +860,13 @@ body{
     )
     h3{
         color: #1e8993;
-        font-size: 31px;
         text-align: center;
         line-height: (47/28);
         box-sizing: border-box;
         @include L(
             (
                 '.word-box h3':(
+                    font-size: 31px,
                     height: 166px,
                     padding: 52px 0 24px 0
                 )
@@ -870,6 +875,7 @@ body{
         @include M(
             (
                 '.word-box h3':(
+                    font-size: 25px,
                     height: 166px,
                     padding: 52px 0 24px 0
                 )
@@ -878,6 +884,7 @@ body{
         @include S(
             (
                 '.word-box h3':(
+                    font-size: 25px,
                     height: 166px,
                     padding: 52px 0 24px 0
                 )
@@ -1032,7 +1039,7 @@ body{
                 '#ta-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 352px
+                    width: 285px
                 )
             )
         )
@@ -1041,7 +1048,7 @@ body{
                 '#ta-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 352px
+                    width: 285px
                 )
             )
         )
@@ -1160,7 +1167,7 @@ body{
                 '#syllabus-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 352px
+                    width: 285px
                 )
             )
         )
@@ -1169,7 +1176,7 @@ body{
                 '#syllabus-list':(
                     top: -9px,
                     margin: 50px auto 0 auto,
-                    width: 352px
+                    width: 285px
                 )
             )
         )
@@ -1264,7 +1271,7 @@ body{
             '#course-box':(
                 top: -9px,
                 margin: 50px auto 18px auto,
-                width: 352px
+                width: 340px
             )
         )
     )
@@ -1273,7 +1280,7 @@ body{
             '#course-box':(
                 top: -9px,
                 margin: 50px auto 18px auto,
-                width: 352px
+                width: 340px
             )
         )
     )
@@ -1811,7 +1818,7 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 352px,
+                    width: 285px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -1820,7 +1827,7 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 352px,
+                    width: 285px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -2063,7 +2070,7 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 352px,
+                    width: 285px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -2072,7 +2079,7 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 352px,
+                    width: 285px,
                     margin: 50px auto 0 auto
                 )
             )
@@ -3173,14 +3180,14 @@ body{
         box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
         @include L(
             (
-                '.footer':(
+                '.lesson-page .footer':(
                     height: 410px
                 )
             )
         )
         @include M(
             (
-                '.footer':(
+                '.lesson-page .footer':(
                     height: auto,
                     padding-bottom: 0
                 )
@@ -3188,7 +3195,7 @@ body{
         )
         @include S(
             (
-                '.footer':(
+                '.lesson-page .footer':(
                     height: auto,
                     padding-bottom: 0
                 )

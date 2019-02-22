@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 19:15:04 
+* date:    Fri Feb 22 2019 19:20:55 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1374,7 +1374,7 @@ template {
 
 body {
   background-color: #f9f9f9;
-  min-width: 372px;
+  min-width: 352px;
 }
 
 .loading_content {
@@ -1532,7 +1532,6 @@ body {
 }
 
 .banner-m {
-  position: absolute;
   width: 100%;
   left: 0;
   top: 0;
@@ -1685,7 +1684,6 @@ body {
 
 .word-box h3 {
   color: #1e8993;
-  font-size: 31px;
   text-align: center;
   line-height: 1.67857;
   -webkit-box-sizing: border-box;
@@ -2279,7 +2277,7 @@ body {
   cursor: pointer;
   z-index: 1;
   /******460px******/
-  /******372px******/
+  /******352px******/
 }
 
 .cta-side-btn {
@@ -2609,9 +2607,11 @@ body {
     margin-right: -1px;
   }
   .slick-slide img.banner {
+    position: relative;
     opacity: 1;
   }
   .slick-slide img.banner-m {
+    position: absolute;
     opacity: 0;
   }
   .anti-margin {
@@ -2629,12 +2629,13 @@ body {
     display: none;
   }
   .word-box {
-    width: 372px;
+    width: 352px;
     height: 609px;
-    margin: 14px;
+    margin: 24px;
     float: left;
   }
   .word-box h3 {
+    font-size: 31px;
     height: 166px;
     padding: 52px 0 24px 0;
   }
@@ -2731,9 +2732,9 @@ body {
     margin: auto auto 18px 120px;
   }
   .say-box {
-    width: 372px;
+    width: 352px;
     height: 815px;
-    margin: 14px;
+    margin: 24px;
     float: left;
   }
   .say-box h3 {
@@ -2914,7 +2915,7 @@ body {
     margin: 218px auto 121px auto;
     top: 0;
   }
-  .footer {
+  .lesson-page .footer {
     height: 410px;
   }
   #lesson-content {
@@ -3003,9 +3004,11 @@ body {
     margin-right: -1px;
   }
   .slick-slide img.banner {
+    position: absolute;
     opacity: 0;
   }
   .slick-slide img.banner-m {
+    position: relative;
     opacity: 1;
   }
   .anti-margin {
@@ -3016,18 +3019,19 @@ body {
     margin-top: 147px;
   }
   #main-title {
-    font-size: 31px;
-    margin: 118px auto 118px auto;
+    font-size: 25px;
+    margin: 60px auto 60px auto;
   }
   #main-title br {
     display: inline;
   }
   .word-box {
-    width: 372px;
+    width: 352px;
     height: 609px;
     margin: 0 auto 30px auto;
   }
   .word-box h3 {
+    font-size: 25px;
     height: 166px;
     padding: 52px 0 24px 0;
   }
@@ -3049,7 +3053,7 @@ body {
   #ta-list {
     top: -9px;
     margin: 50px auto 0 auto;
-    width: 372px;
+    width: 285px;
   }
   #ta-list li {
     font-size: 22px;
@@ -3066,7 +3070,7 @@ body {
   #syllabus-list {
     top: -9px;
     margin: 50px auto 0 auto;
-    width: 372px;
+    width: 285px;
   }
   #syllabus-list li {
     font-size: 22px;
@@ -3078,7 +3082,7 @@ body {
   #course-box {
     top: -9px;
     margin: 50px auto 18px auto;
-    width: 372px;
+    width: 340px;
   }
   .course-item {
     margin-bottom: 26px;
@@ -3090,7 +3094,7 @@ body {
     font-size: 28px;
   }
   #teacher-box {
-    width: 372px;
+    width: 352px;
     padding: 0 0 42px 0;
   }
   #teacher-0 {
@@ -3123,7 +3127,7 @@ body {
     margin: auto auto 18px 0px;
   }
   .say-box {
-    width: 372px;
+    width: 352px;
     height: 815px;
     margin: 0 auto 30px auto;
   }
@@ -3139,7 +3143,7 @@ body {
   }
   #faq-list {
     top: -9px;
-    width: 372px;
+    width: 285px;
     margin: 50px auto 0 auto;
   }
   #faq-list li {
@@ -3163,7 +3167,7 @@ body {
   }
   .content-list {
     top: -9px;
-    width: 372px;
+    width: 285px;
     margin: 50px auto 0 auto;
   }
   .content-list li {
@@ -3181,7 +3185,7 @@ body {
     margin: 51px auto 0 auto;
   }
   #footer-word {
-    width: 372px;
+    width: 352px;
     margin: 31px auto 0 auto;
     padding: 0 30px;
     line-height: 2;
@@ -3281,15 +3285,15 @@ body {
     height: calc( 100% - 0px - 67px);
   }
   .light-frame {
-    width: 372px;
+    width: 352px;
     height: 1600px;
     margin: 18px auto 100px auto;
   }
   #pay-title {
     width: 151.2px;
-    left: -webkit-calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ));
-    left: -moz-calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ));
-    left: calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ));
+    left: -webkit-calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ));
+    left: -moz-calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ));
+    left: calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ));
     top: 77px;
   }
   #pay-way-0 {
@@ -3341,14 +3345,14 @@ body {
     top: 10px;
   }
   #form-box {
-    width: 372px;
+    width: 352px;
     height: auto;
     left: 0;
     right: 0;
     margin: 188px auto 121px auto;
     top: 0;
   }
-  .footer {
+  .lesson-page .footer {
     height: auto;
     padding-bottom: 0;
   }
@@ -3436,9 +3440,11 @@ body {
     margin-right: -1px;
   }
   .slick-slide img.banner {
+    position: absolute;
     opacity: 0;
   }
   .banner-m {
+    position: relative;
     opacity: 1;
   }
   .anti-margin {
@@ -3449,18 +3455,19 @@ body {
     margin-top: 147px;
   }
   #main-title {
-    font-size: 31px;
-    margin: 110px auto 110px auto;
+    font-size: 25px;
+    margin: 60px auto 60px auto;
   }
   #main-title br {
     display: inline;
   }
   .word-box {
-    width: 372px;
+    width: 352px;
     height: 609px;
     margin: 0 auto 30px auto;
   }
   .word-box h3 {
+    font-size: 25px;
     height: 166px;
     padding: 52px 0 24px 0;
   }
@@ -3482,7 +3489,7 @@ body {
   #ta-list {
     top: -9px;
     margin: 50px auto 0 auto;
-    width: 372px;
+    width: 285px;
   }
   #ta-list li {
     font-size: 22px;
@@ -3499,7 +3506,7 @@ body {
   #syllabus-list {
     top: -9px;
     margin: 50px auto 0 auto;
-    width: 372px;
+    width: 285px;
   }
   #syllabus-list li {
     font-size: 22px;
@@ -3511,7 +3518,7 @@ body {
   #course-box {
     top: -9px;
     margin: 50px auto 18px auto;
-    width: 372px;
+    width: 340px;
   }
   .course-item {
     margin-bottom: 26px;
@@ -3523,7 +3530,7 @@ body {
     font-size: 28px;
   }
   #teacher-box {
-    width: 372px;
+    width: 352px;
     padding: 0 0 42px 0;
   }
   #teacher-0 {
@@ -3556,7 +3563,7 @@ body {
     margin: auto auto 18px 0px;
   }
   .say-box {
-    width: 372px;
+    width: 352px;
     height: 815px;
     margin: 0 auto 30px auto;
   }
@@ -3572,7 +3579,7 @@ body {
   }
   #faq-list {
     top: -9px;
-    width: 372px;
+    width: 285px;
     margin: 50px auto 0 auto;
   }
   #faq-list li {
@@ -3596,7 +3603,7 @@ body {
   }
   .content-list {
     top: -9px;
-    width: 372px;
+    width: 285px;
     margin: 50px auto 0 auto;
   }
   .content-list li {
@@ -3614,7 +3621,7 @@ body {
     margin: 51px auto 0 auto;
   }
   #footer-word {
-    width: 372px;
+    width: 352px;
     margin: 31px auto 0 auto;
     padding: 0 30px;
     line-height: 2;
@@ -3714,15 +3721,15 @@ body {
     height: calc( 100% - 0px - 67px);
   }
   .light-frame {
-    width: 372px;
+    width: 352px;
     height: 1600px;
     margin: 18px auto 100px auto;
   }
   #pay-title {
     width: 151.2px;
-    left: -webkit-calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ));
-    left: -moz-calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ));
-    left: calc( 0.5 * ( 372px - 0.7 * 0.5 * 432px ));
+    left: -webkit-calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ));
+    left: -moz-calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ));
+    left: calc( 0.5 * ( 352px - 0.7 * 0.5 * 432px ));
     top: 77px;
   }
   #pay-way-0 {
@@ -3774,14 +3781,14 @@ body {
     top: 10px;
   }
   #form-box {
-    width: 372px;
+    width: 352px;
     height: auto;
     left: 0;
     right: 0;
     margin: 188px auto 121px auto;
     top: 0;
   }
-  .footer {
+  .lesson-page .footer {
     height: auto;
     padding-bottom: 0;
   }
