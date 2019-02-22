@@ -3341,21 +3341,21 @@ body{
     @include L(
         (
             '#lesson-content':(
-                margin: ( 97px + $header-top-0 ) auto 121px auto
+                padding: ( 97px + $header-top-0 ) 0 121px 0
             )
         )
     )
     @include M(
         (
             '#lesson-content':(
-                margin: ( 67px + $header-top-1 ) auto 121px auto
+                padding: ( 67px + $header-top-1 ) 0 121px 0
             )
         )
     )
     @include S(
         (
             '#lesson-content':(
-                margin: ( 67px + $header-top-1 ) auto 121px auto
+                padding: ( 67px + $header-top-1 ) 0 121px 0
             )
         )
     )
