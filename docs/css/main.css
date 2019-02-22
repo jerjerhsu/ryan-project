@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 20:51:40 
+* date:    Sat Feb 23 2019 00:05:11 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1387,6 +1387,7 @@ body {
 
 .center-limit {
   position: relative;
+  width: auto;
   height: auto;
   left: 0;
   top: 0;
@@ -1655,9 +1656,9 @@ body {
 
 .float-box {
   position: relative;
-  width: auto;
   left: 0;
   top: 0;
+  margin: 0 auto;
 }
 
 .float-box:after {
@@ -1665,6 +1666,13 @@ body {
   position: relative;
   clear: both;
   display: block;
+}
+
+.center-limit-in {
+  position: relative;
+  left: 0;
+  top: 0;
+  margin: 0 -15px;
 }
 
 .word-box {
@@ -1842,7 +1850,7 @@ body {
   display: block;
 }
 
-#teacher-word {
+.teacher-word {
   position: relative;
   font-weight: normal;
   color: #797979;
@@ -1852,7 +1860,6 @@ body {
   position: absolute;
   display: block;
   right: 0;
-  bottom: 0;
 }
 
 #ryan {
@@ -2149,10 +2156,6 @@ body {
   margin: 0 5px 0 -40px;
 }
 
-.content-list > li > ul {
-  padding-top: 18px;
-}
-
 .content-list > li > ul > li {
   margin-left: 24px;
 }
@@ -2178,6 +2181,7 @@ body {
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
      -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  height: auto;
 }
 
 #fanpage {
@@ -2198,7 +2202,6 @@ body {
   font-family: ‘微軟正黑體’, Arial, sans-serif;
   font-weight: normal;
   color: #797979;
-  font-size: 20px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -2571,7 +2574,6 @@ body {
     height: auto;
   }
   .center-limit {
-    width: 1200px;
     padding: 0 15px;
   }
   #header-top .center-limit {
@@ -2635,11 +2637,14 @@ body {
     margin-top: 147px;
   }
   #main-title {
-    font-size: 31px;
+    font-size: 28px;
     margin: 118px auto 118px auto;
   }
   #main-title br {
     display: none;
+  }
+  .float-box {
+    width: 1200px;
   }
   .word-box {
     width: 352px;
@@ -2648,7 +2653,7 @@ body {
     float: left;
   }
   .word-box h3 {
-    font-size: 31px;
+    font-size: 28px;
     height: 166px;
     padding: 52px 0 24px 0;
   }
@@ -2657,7 +2662,7 @@ body {
     padding: 0 32px;
   }
   .sub-title {
-    font-size: 31px;
+    font-size: 28px;
     margin: 89px auto 79px auto;
   }
   #ta {
@@ -2673,7 +2678,7 @@ body {
     float: left;
   }
   #ta-list li {
-    font-size: 22px;
+    font-size: 20px;
     margin: auto auto 18px 0px;
   }
   #dont-worry {
@@ -2689,7 +2694,7 @@ body {
     float: left;
   }
   #syllabus-list li {
-    font-size: 22px;
+    font-size: 20px;
     margin: auto auto 18px 72px;
   }
   #course-time {
@@ -2705,10 +2710,10 @@ body {
     margin-bottom: 26px;
   }
   .course-title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .course-content {
-    font-size: 28px;
+    font-size: 20px;
   }
   #teacher-box {
     width: 1170px;
@@ -2717,11 +2722,19 @@ body {
   #teacher-0 {
     margin: 76px 106px 31px 106px;
   }
-  #teacher-word {
+  .teacher-word {
     float: left;
     margin: 0 106px 31px 106px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 2.5;
+  }
+  .teacher-word:last-child {
+    width: -webkit-calc( 100% - 106px * 2);
+    width: -moz-calc( 100% - 106px * 2);
+    width: calc( 100% - 106px * 2);
+  }
+  #sign {
+    bottom: 0;
   }
   #ryan {
     width: 146px;
@@ -2730,10 +2743,10 @@ body {
     float: left;
   }
   #ryan-info h3 {
-    font-size: 35px;
+    font-size: 28px;
   }
   #ryan-info p {
-    font-size: 22px;
+    font-size: 28px;
   }
   #teacher-1 {
     top: -9px;
@@ -2741,7 +2754,7 @@ body {
     line-height: 1.5;
   }
   #teacher-1 li {
-    font-size: 22px;
+    font-size: 20px;
     margin: auto auto 18px 120px;
   }
   .say-box {
@@ -2767,7 +2780,7 @@ body {
     float: left;
   }
   #faq-list li {
-    font-size: 22px;
+    font-size: 20px;
     margin: auto auto 18px 90px;
   }
   #more-q {
@@ -2793,14 +2806,14 @@ body {
     float: right;
   }
   .content-list li {
-    font-size: 22px;
+    font-size: 20px;
     margin: auto auto 18px 72px;
+  }
+  .content-list > li > ul {
+    padding-top: 18px;
   }
   .future-box {
     margin: 0 0 60px 0;
-  }
-  .footer {
-    height: 410px;
   }
   #fanpage {
     float: left;
@@ -2812,6 +2825,7 @@ body {
     margin: 51px 0 0 59px;
     padding: 0 15px 0 0;
     line-height: 1.5;
+    font-size: 20px;
   }
   #footer-line {
     margin: 56px 15px 0 15px;
@@ -2838,7 +2852,17 @@ body {
     width: 84px;
     height: 84px;
     right: 26px;
-    bottom: 36px;
+    bottom: 60px;
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+    -webkit-transform: scale(0.7);
+       -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+         -o-transform: scale(0.7);
+            transform: scale(0.7);
   }
   #cta-side-btn-box {
     width: 84px;
@@ -2853,6 +2877,16 @@ body {
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
        -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    -webkit-transform-origin: 100% 50%;
+       -moz-transform-origin: 100% 50%;
+        -ms-transform-origin: 100% 50%;
+         -o-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transform: scale(0.7);
+       -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+         -o-transform: scale(0.7);
+            transform: scale(0.7);
   }
   .cta-side-btn {
     position: relative;
@@ -2920,9 +2954,6 @@ body {
     right: 10px;
     top: 10px;
   }
-  .form-page .footer {
-    height: 410px;
-  }
   #form-box {
     width: 1170px;
     height: auto;
@@ -2930,9 +2961,6 @@ body {
     right: 0;
     margin: 218px auto 121px auto;
     top: 0;
-  }
-  .lesson-page .footer {
-    height: 410px;
   }
   #lesson-content {
     margin: 97px auto 121px auto;
@@ -2951,7 +2979,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 427px) and (max-width: 1200px) {
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
   #burger {
     display: block;
   }
@@ -2964,7 +2992,6 @@ body {
     height: auto;
   }
   .center-limit {
-    width: 100%;
     padding: 0 15px;
   }
   #header-top .center-limit {
@@ -3022,12 +3049,12 @@ body {
     margin-right: -1px;
   }
   .slick-slide img.banner {
-    position: absolute;
-    opacity: 0;
-  }
-  .slick-slide img.banner-m {
     position: relative;
     opacity: 1;
+  }
+  .slick-slide img.banner-m {
+    position: absolute;
+    opacity: 0;
   }
   .anti-margin {
     margin-left: -15px;
@@ -3037,32 +3064,36 @@ body {
     margin-top: 147px;
   }
   #main-title {
-    font-size: 25px;
+    font-size: 20px;
     margin: 60px auto 60px auto;
   }
   #main-title br {
     display: inline;
   }
+  .float-box {
+    width: auto;
+  }
   .word-box {
     width: 352px;
-    height: 609px;
+    height: auto;
     margin: 0 auto 30px auto;
+    padding: 24px 0;
   }
   .word-box h3 {
-    font-size: 25px;
-    height: 166px;
-    padding: 52px 0 24px 0;
+    font-size: 20px;
+    height: auto;
+    padding: 0 0 24px 0;
   }
   .word-box p {
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 32px;
   }
   .sub-title {
-    font-size: 31px;
+    font-size: 20px;
     margin: 89px auto 79px auto;
   }
   #ta {
-    margin-left: 24px;
+    width: 285px;
     margin: 0 auto;
   }
   .hide-small {
@@ -3074,15 +3105,15 @@ body {
     width: 285px;
   }
   #ta-list li {
-    font-size: 22px;
-    margin: auto auto 18px 0px;
+    font-size: 16px;
+    margin: auto auto 10px 0px;
   }
   #dont-worry {
-    font-size: 28px;
+    font-size: 20px;
     margin: 67px auto 79px auto;
   }
   #syllabus {
-    margin-left: 99px;
+    width: 285px;
     margin: 0 auto;
   }
   #syllabus-list {
@@ -3091,8 +3122,8 @@ body {
     width: 285px;
   }
   #syllabus-list li {
-    font-size: 22px;
-    margin: auto auto 18px 0;
+    font-size: 16px;
+    margin: auto auto 10px 0;
   }
   #course-time {
     margin: 0 auto;
@@ -3106,10 +3137,10 @@ body {
     margin-bottom: 26px;
   }
   .course-title {
-    font-size: 22px;
+    font-size: 16px;
   }
   .course-content {
-    font-size: 28px;
+    font-size: 16px;
   }
   #teacher-box {
     width: 352px;
@@ -3118,11 +3149,18 @@ body {
   #teacher-0 {
     margin: 76px 30px 31px 30px;
   }
-  #teacher-word {
-    margin: 76px 30px 31px 30px;
-    font-size: 22px;
+  .teacher-word {
+    margin: 0 30px 15px 30px;
+    font-size: 16px;
     line-height: 2;
-    padding-bottom: 80px;
+  }
+  .teacher-word:last-child {
+    width: -webkit-calc( 100% - 30px * 2);
+    width: -moz-calc( 100% - 30px * 2);
+    width: calc( 100% - 30px * 2);
+  }
+  #sign {
+    bottom: -23px;
   }
   #ryan {
     width: 146px;
@@ -3130,10 +3168,10 @@ body {
     margin: 0 auto 30px auto;
   }
   #ryan-info h3 {
-    font-size: 35px;
+    font-size: 20px;
   }
   #ryan-info p {
-    font-size: 22px;
+    font-size: 20px;
   }
   #teacher-1 {
     top: -9px;
@@ -3141,22 +3179,24 @@ body {
     line-height: 2;
   }
   #teacher-1 li {
-    font-size: 22px;
-    margin: auto auto 18px 0px;
+    font-size: 16px;
+    margin: auto auto 10px 0px;
   }
   .say-box {
     width: 352px;
-    height: 815px;
+    height: 655px;
     margin: 0 auto 30px auto;
   }
   .say-box h3 {
     height: 258px;
   }
   .say-box p {
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 32px;
   }
   #faq {
+    display: none;
+    width: 285px;
     margin: 0 auto;
   }
   #faq-list {
@@ -3165,15 +3205,15 @@ body {
     margin: 50px auto 0 auto;
   }
   #faq-list li {
-    font-size: 22px;
+    font-size: 16px;
     margin: auto auto 18px 0;
   }
   #more-q {
-    font-size: 28px;
+    font-size: 20px;
     margin: 67px auto 79px auto;
   }
   #now-state {
-    font-size: 28px;
+    font-size: 20px;
     margin: 67px auto 79px auto;
   }
   .future-class-box {
@@ -3189,15 +3229,17 @@ body {
     margin: 50px auto 0 auto;
   }
   .content-list li {
-    font-size: 22px;
+    font-size: 16px;
     margin: auto auto 0px 0;
+  }
+  .content-list > li > ul {
+    padding-top: 10px;
   }
   .future-box {
     margin: 0 0 120px 0;
   }
   .footer {
-    height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 63px;
   }
   #fanpage {
     margin: 51px auto 0 auto;
@@ -3207,6 +3249,7 @@ body {
     margin: 31px auto 0 auto;
     padding: 0 30px;
     line-height: 2;
+    font-size: 16px;
   }
   #footer-line {
     margin: 56px 15px 0 15px;
@@ -3243,10 +3286,10 @@ body {
             transform: scale(0.7);
   }
   #cta-side-btn-box {
-    width: 460px;
-    padding-bottom: -webkit-calc( 460px * ( 122 / 767 ));
-    padding-bottom: -moz-calc( 460px * ( 122 / 767 ));
-    padding-bottom: calc( 460px * ( 122 / 767 ));
+    width: 375px;
+    padding-bottom: -webkit-calc( 375px * ( 122 / 767 ));
+    padding-bottom: -moz-calc( 375px * ( 122 / 767 ));
+    padding-bottom: calc( 375px * ( 122 / 767 ));
     left: 0;
     right: 0;
     bottom: 0;
@@ -3283,7 +3326,7 @@ body {
   .cta-side-btn span {
     vertical-align: middle;
     padding-left: 5px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .cta-side-btn svg + br {
     display: none;
@@ -3363,7 +3406,6 @@ body {
     top: 10px;
   }
   .form-page .footer {
-    height: auto;
     padding-bottom: 0;
   }
   #form-box {
@@ -3375,7 +3417,6 @@ body {
     top: 1px;
   }
   .lesson-page .footer {
-    height: auto;
     padding-bottom: 0;
   }
   #lesson-content {
@@ -3393,7 +3434,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 768px) {
   #burger {
     display: block;
   }
@@ -3406,7 +3447,6 @@ body {
     height: auto;
   }
   #header-top .center-limit {
-    width: 100%;
     padding: 0 46px;
   }
   #header-main .center-limit {
@@ -3479,32 +3519,36 @@ body {
     margin-top: 147px;
   }
   #main-title {
-    font-size: 25px;
+    font-size: 20px;
     margin: 60px auto 60px auto;
   }
   #main-title br {
     display: inline;
   }
+  .float-box {
+    width: auto;
+  }
   .word-box {
     width: 352px;
-    height: 609px;
+    height: auto;
     margin: 0 auto 30px auto;
+    padding: 24px 0;
   }
   .word-box h3 {
-    font-size: 25px;
-    height: 166px;
-    padding: 52px 0 24px 0;
+    font-size: 20px;
+    height: auto;
+    padding: 0 0 24px 0;
   }
   .word-box p {
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 32px;
   }
   .sub-title {
-    font-size: 31px;
+    font-size: 20px;
     margin: 89px auto 79px auto;
   }
   #ta {
-    margin-left: 24px;
+    width: 285px;
     margin: 0 auto;
   }
   .hide-small {
@@ -3516,15 +3560,15 @@ body {
     width: 285px;
   }
   #ta-list li {
-    font-size: 22px;
-    margin: auto auto 18px 0px;
+    font-size: 16px;
+    margin: auto auto 10px 0px;
   }
   #dont-worry {
-    font-size: 28px;
+    font-size: 20px;
     margin: 67px auto 79px auto;
   }
   #syllabus {
-    margin-left: 99px;
+    width: 285px;
     margin: 0 auto;
   }
   #syllabus-list {
@@ -3533,8 +3577,8 @@ body {
     width: 285px;
   }
   #syllabus-list li {
-    font-size: 22px;
-    margin: auto auto 18px 0;
+    font-size: 16px;
+    margin: auto auto 10px 0;
   }
   #course-time {
     margin: 0 auto;
@@ -3548,10 +3592,10 @@ body {
     margin-bottom: 26px;
   }
   .course-title {
-    font-size: 22px;
+    font-size: 16px;
   }
   .course-content {
-    font-size: 28px;
+    font-size: 16px;
   }
   #teacher-box {
     width: 352px;
@@ -3560,11 +3604,18 @@ body {
   #teacher-0 {
     margin: 76px 30px 31px 30px;
   }
-  #teacher-word {
-    margin: 76px 30px 31px 30px;
-    font-size: 22px;
+  .teacher-word {
+    margin: 0 30px 15px 30px;
+    font-size: 16px;
     line-height: 2;
-    padding-bottom: 80px;
+  }
+  .teacher-word:last-child {
+    width: -webkit-calc( 100% - 30px * 2);
+    width: -moz-calc( 100% - 30px * 2);
+    width: calc( 100% - 30px * 2);
+  }
+  #sign {
+    bottom: -23px;
   }
   #ryan {
     width: 146px;
@@ -3572,10 +3623,10 @@ body {
     margin: 0 auto 30px auto;
   }
   #ryan-info h3 {
-    font-size: 35px;
+    font-size: 20px;
   }
   #ryan-info p {
-    font-size: 22px;
+    font-size: 20px;
   }
   #teacher-1 {
     top: -9px;
@@ -3583,22 +3634,24 @@ body {
     line-height: 2;
   }
   #teacher-1 li {
-    font-size: 22px;
-    margin: auto auto 18px 0px;
+    font-size: 16px;
+    margin: auto auto 10px 0px;
   }
   .say-box {
     width: 352px;
-    height: 815px;
+    height: 655px;
     margin: 0 auto 30px auto;
   }
   .say-box h3 {
     height: 258px;
   }
   .say-box p {
-    font-size: 20px;
+    font-size: 16px;
     padding: 0 32px;
   }
   #faq {
+    display: none;
+    width: 285px;
     margin: 0 auto;
   }
   #faq-list {
@@ -3607,15 +3660,15 @@ body {
     margin: 50px auto 0 auto;
   }
   #faq-list li {
-    font-size: 22px;
+    font-size: 16px;
     margin: auto auto 18px 0;
   }
   #more-q {
-    font-size: 28px;
+    font-size: 20px;
     margin: 67px auto 79px auto;
   }
   #now-state {
-    font-size: 28px;
+    font-size: 20px;
     margin: 67px auto 79px auto;
   }
   .future-class-box {
@@ -3631,15 +3684,17 @@ body {
     margin: 50px auto 0 auto;
   }
   .content-list li {
-    font-size: 22px;
+    font-size: 16px;
     margin: auto auto 0px 0;
+  }
+  .content-list > li > ul {
+    padding-top: 10px;
   }
   .future-box {
     margin: 0 0 120px 0;
   }
   .footer {
-    height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 63px;
   }
   #fanpage {
     margin: 51px auto 0 auto;
@@ -3649,6 +3704,7 @@ body {
     margin: 31px auto 0 auto;
     padding: 0 30px;
     line-height: 2;
+    font-size: 16px;
   }
   #footer-line {
     margin: 56px 15px 0 15px;
@@ -3685,10 +3741,10 @@ body {
             transform: scale(0.7);
   }
   #cta-side-btn-box {
-    width: 100%;
-    padding-bottom: -webkit-calc( 100% * ( 122 / 767 ));
-    padding-bottom: -moz-calc( 100% * ( 122 / 767 ));
-    padding-bottom: calc( 100% * ( 122 / 767 ));
+    width: 375px;
+    padding-bottom: -webkit-calc( 375px * ( 122 / 767 ));
+    padding-bottom: -moz-calc( 375px * ( 122 / 767 ));
+    padding-bottom: calc( 375px * ( 122 / 767 ));
     left: 0;
     right: 0;
     bottom: 0;
@@ -3725,7 +3781,7 @@ body {
   .cta-side-btn span {
     vertical-align: middle;
     padding-left: 5px;
-    font-size: 14px;
+    font-size: 16px;
   }
   .cta-side-btn svg + br {
     display: none;
@@ -3805,7 +3861,6 @@ body {
     top: 10px;
   }
   .form-page .footer {
-    height: auto;
     padding-bottom: 0;
   }
   #form-box {
@@ -3817,7 +3872,6 @@ body {
     top: 0;
   }
   .lesson-page .footer {
-    height: auto;
     padding-bottom: 0;
   }
   #lesson-content {

@@ -38,6 +38,14 @@
 $header-top-0: 0px; //50px;
 $header-top-1: 0px; //30px;
 
+$font-0-pc: 28px; //大標
+$font-1-pc: 24px; //副標
+$font-2-pc: 20px; //內文
+
+$font-0-m: 20px; //大標
+$font-1-m: 18px; //副標
+$font-2-m: 16px; //內文
+
 
 @import 'layout/nav';
 
@@ -125,6 +133,7 @@ body{
 }
 .center-limit{
     position: relative;
+    width: auto;
     height: auto;
     left: 0;
     top: 0;
@@ -135,7 +144,6 @@ body{
 	@include L(
 		(
 			'.center-limit':(
-				width: 1200px,
                 padding: 0 15px
             )
 		)
@@ -143,7 +151,6 @@ body{
 	@include M(
 		(
 			'.center-limit':(
-				width: 100%,
                 padding: 0 15px
             )
 		)
@@ -151,7 +158,6 @@ body{
 	@include S(
 		(
 			'#header-top .center-limit':(
-				width: 100%,
                 padding: 0 46px
             )
 		)
@@ -570,8 +576,8 @@ body{
     @include M(
         (
             '.slick-slide img.banner':(
-                position: absolute,
-                opacity: 0
+                position: relative,
+                opacity: 1
             )
         )
     )
@@ -599,8 +605,8 @@ body{
     @include M(
         (
             '.slick-slide img.banner-m':(
-                position: relative,
-                opacity: 1
+                position: absolute,
+                opacity: 0
             )
         )
     )
@@ -770,7 +776,7 @@ body{
 	@include L(
 		(
 			'#main-title':(
-                font-size: 31px,
+                font-size: #{$font-0-pc},
                 margin: 118px auto 118px auto
             )
 		)
@@ -778,7 +784,7 @@ body{
 	@include M(
 		(
 			'#main-title':(
-                font-size: 25px,
+                font-size: #{$font-0-m},
                 margin: 60px auto 60px auto
             )
 		)
@@ -786,7 +792,7 @@ body{
 	@include S(
 		(
 			'#main-title':(
-                font-size: 25px,
+                font-size: #{$font-0-m},
                 margin: 60px auto 60px auto
             )
 		)
@@ -815,15 +821,42 @@ body{
 }
 .float-box{
     position: relative;
-    width: auto;
     left: 0;
     top: 0;
+    margin: 0 auto;
     &:after{
         content: "";
         position: relative;
         clear: both;
         display: block;
     }
+	@include L(
+		(
+			'.float-box':(
+                width: 1200px
+            )
+		)
+	)
+	@include M(
+		(
+			'.float-box':(
+                width: auto
+            )
+		)
+	)
+	@include S(
+		(
+			'.float-box':(
+                width: auto
+            )
+		)
+	)
+}
+.center-limit-in{
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 -15px;
 }
 .word-box{
     position: relative;
@@ -848,8 +881,9 @@ body{
 		(
 			'.word-box':(
                 width: 352px,
-                height: 609px,
-                margin: 0 auto 30px auto
+                height: auto,
+                margin: 0 auto 30px auto,
+                padding: 24px 0
             )
 		)
 	)
@@ -857,8 +891,9 @@ body{
 		(
 			'.word-box':(
                 width: 352px,
-                height: 609px,
-                margin: 0 auto 30px auto
+                height: auto,
+                margin: 0 auto 30px auto,
+                padding: 24px 0
             )
 		)
     )
@@ -870,7 +905,7 @@ body{
         @include L(
             (
                 '.word-box h3':(
-                    font-size: 31px,
+                    font-size: #{$font-0-pc},
                     height: 166px,
                     padding: 52px 0 24px 0
                 )
@@ -879,18 +914,18 @@ body{
         @include M(
             (
                 '.word-box h3':(
-                    font-size: 25px,
-                    height: 166px,
-                    padding: 52px 0 24px 0
+                    font-size: #{$font-0-m},
+                    height: auto,
+                    padding: 0 0 24px 0
                 )
             )
         )
         @include S(
             (
                 '.word-box h3':(
-                    font-size: 25px,
-                    height: 166px,
-                    padding: 52px 0 24px 0
+                    font-size: #{$font-0-m},
+                    height: auto,
+                    padding: 0 0 24px 0
                 )
             )
         )
@@ -904,7 +939,7 @@ body{
         @include L(
             (
                 '.word-box p':(
-                    font-size: 20px,
+                    font-size: #{$font-2-pc},
                     padding: 0 32px
                 )
             )
@@ -912,7 +947,7 @@ body{
         @include M(
             (
                 '.word-box p':(
-                    font-size: 20px,
+                    font-size: #{$font-2-m},
                     padding: 0 32px
                 )
             )
@@ -920,7 +955,7 @@ body{
         @include S(
             (
                 '.word-box p':(
-                    font-size: 20px,
+                    font-size: #{$font-2-m},
                     padding: 0 32px
                 )
             )
@@ -937,7 +972,7 @@ body{
 	@include L(
 		(
 			'.sub-title':(
-                font-size: 31px,
+                font-size: #{$font-0-pc},
                 margin: 89px auto 79px auto
             )
 		)
@@ -945,7 +980,7 @@ body{
 	@include M(
 		(
 			'.sub-title':(
-                font-size: 31px,
+                font-size: #{$font-0-m},
                 margin: 89px auto 79px auto
             )
 		)
@@ -953,7 +988,7 @@ body{
 	@include S(
 		(
 			'.sub-title':(
-                font-size: 31px,
+                font-size: #{$font-0-m},
                 margin: 89px auto 79px auto
             )
 		)
@@ -985,7 +1020,7 @@ body{
 	@include M(
 		(
 			'#ta':(
-                margin-left: 24px,
+                width: 285px,
                 margin: 0 auto
             )
 		)
@@ -993,7 +1028,7 @@ body{
 	@include S(
 		(
 			'#ta':(
-                margin-left: 24px,
+                width: 285px,
                 margin: 0 auto
             )
 		)
@@ -1059,7 +1094,7 @@ body{
         @include L(
             (
                 '#ta-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-pc},
                     margin: auto auto 18px 0px
                 )
             )
@@ -1067,16 +1102,16 @@ body{
         @include M(
             (
                 '#ta-list li':(
-                    font-size: 22px,
-                    margin: auto auto 18px 0px
+                    font-size: #{$font-2-m},
+                    margin: auto auto 10px 0px
                 )
             )
         )
         @include S(
             (
                 '#ta-list li':(
-                    font-size: 22px,
-                    margin: auto auto 18px 0px
+                    font-size: #{$font-2-m},
+                    margin: auto auto 10px 0px
                 )
             )
         )
@@ -1099,7 +1134,7 @@ body{
 	@include L(
 		(
 			'#dont-worry':(
-                font-size: 28px,
+                font-size: #{$font-0-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1107,7 +1142,7 @@ body{
 	@include M(
 		(
 			'#dont-worry':(
-                font-size: 28px,
+                font-size: #{$font-0-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1115,7 +1150,7 @@ body{
 	@include S(
 		(
 			'#dont-worry':(
-                font-size: 28px,
+                font-size: #{$font-0-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1136,7 +1171,7 @@ body{
 	@include M(
 		(
 			'#syllabus':(
-                margin-left: 99px,
+                width: 285px,
                 margin: 0 auto
             )
 		)
@@ -1144,7 +1179,7 @@ body{
 	@include S(
 		(
 			'#syllabus':(
-                margin-left: 99px,
+                width: 285px,
                 margin: 0 auto
             )
 		)
@@ -1187,7 +1222,7 @@ body{
         @include L(
             (
                 '#syllabus-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-pc},
                     margin: auto auto 18px 72px
                 )
             )
@@ -1195,16 +1230,16 @@ body{
         @include M(
             (
                 '#syllabus-list li':(
-                    font-size: 22px,
-                    margin: auto auto 18px 0
+                    font-size: #{$font-2-m},
+                    margin: auto auto 10px 0
                 )
             )
         )
         @include S(
             (
                 '#syllabus-list li':(
-                    font-size: 22px,
-                    margin: auto auto 18px 0
+                    font-size: #{$font-2-m},
+                    margin: auto auto 10px 0
                 )
             )
         )
@@ -1320,21 +1355,21 @@ body{
     @include L(
         (
             '.course-title':(
-                font-size: 22px
+                font-size: #{$font-2-pc}
             )
         )
     )
     @include M(
         (
             '.course-title':(
-                font-size: 22px
+                font-size: #{$font-2-m}
             )
         )
     )
     @include S(
         (
             '.course-title':(
-                font-size: 22px
+                font-size: #{$font-2-m}
             )
         )
     )
@@ -1347,21 +1382,21 @@ body{
     @include L(
         (
             '.course-content':(
-                font-size: 28px
+                font-size: #{$font-2-pc}
             )
         )
     )
     @include M(
         (
             '.course-content':(
-                font-size: 28px
+                font-size: #{$font-2-m}
             )
         )
     )
     @include S(
         (
             '.course-content':(
-                font-size: 28px
+                font-size: #{$font-2-m}
             )
         )
     )
@@ -1429,46 +1464,87 @@ body{
         display: block;
     }
 }
-#teacher-word{    
+.teacher-word{    
     position: relative;
     font-weight: normal;
     color: #797979;
     @include L(
         (
-            '#teacher-word':(
+            '.teacher-word':(
                 float: left,
                 margin: 0 106px 31px 106px,
-                font-size: 22px,
+                font-size: #{$font-2-pc},
                 line-height: 2.5
             )
         )
     )
     @include M(
         (
-            '#teacher-word':(
-                margin: 76px 30px 31px 30px,
-                font-size: 22px,
-                line-height: 2,
-                padding-bottom: 80px
+            '.teacher-word':(
+                margin: 0 30px 15px 30px,
+                font-size: #{$font-2-m},
+                line-height: 2
             )
         )
     )
     @include S(
         (
-            '#teacher-word':(
-                margin: 76px 30px 31px 30px,
-                font-size: 22px,
-                line-height: 2,
-                padding-bottom: 80px
+            '.teacher-word':(
+                margin: 0 30px 15px 30px,
+                font-size: #{$font-2-m},
+                line-height: 2
             )
         )
     )
+    &:last-child{
+        @include L(
+            (
+                '.teacher-word:last-child':(
+                    width: calc( 100% - 106px * 2 )
+                )
+            )
+        )
+        @include M(
+            (
+                '.teacher-word:last-child':(
+                    width: calc( 100% - 30px * 2 )
+                )
+            )
+        )
+        @include S(
+            (
+                '.teacher-word:last-child':(
+                    width: calc( 100% - 30px * 2 )
+                )
+            )
+        )
+    }
 }
 #sign{
     position: absolute;
     display: block;
     right: 0;
-    bottom: 0;
+    @include L(
+        (
+            '#sign':(
+                bottom: 0
+            )
+        )
+    )
+    @include M(
+        (
+            '#sign':(
+                bottom: -23px
+            )
+        )
+    )
+    @include S(
+        (
+            '#sign':(
+                bottom: -23px
+            )
+        )
+    )
 }
 #ryan{
     position: relative;
@@ -1516,21 +1592,21 @@ body{
         @include L(
             (
                 '#ryan-info h3':(
-                    font-size: 35px
+                    font-size: #{$font-0-pc}
                 )
             )
         )
         @include M(
             (
                 '#ryan-info h3':(
-                    font-size: 35px
+                    font-size: #{$font-0-m}
                 )
             )
         )
         @include S(
             (
                 '#ryan-info h3':(
-                    font-size: 35px
+                    font-size: #{$font-0-m}
                 )
             )
         )
@@ -1543,21 +1619,21 @@ body{
         @include L(
             (
                 '#ryan-info p':(
-                    font-size: 22px
+                    font-size: #{$font-0-pc}
                 )
             )
         )
         @include M(
             (
                 '#ryan-info p':(
-                    font-size: 22px
+                    font-size: #{$font-0-m}
                 )
             )
         )
         @include S(
             (
                 '#ryan-info p':(
-                    font-size: 22px
+                    font-size: #{$font-0-m}
                 )
             )
         )
@@ -1599,7 +1675,7 @@ body{
         @include L(
             (
                 '#teacher-1 li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-pc},
                     margin: auto auto 18px 120px
                 )
             )
@@ -1607,16 +1683,16 @@ body{
         @include M(
             (
                 '#teacher-1 li':(
-                    font-size: 22px,
-                    margin: auto auto 18px 0px
+                    font-size: #{$font-2-m},
+                    margin: auto auto 10px 0px
                 )
             )
         )
         @include S(
             (
                 '#teacher-1 li':(
-                    font-size: 22px,
-                    margin: auto auto 18px 0px
+                    font-size: #{$font-2-m},
+                    margin: auto auto 10px 0px
                 )
             )
         )
@@ -1652,7 +1728,7 @@ body{
 		(
 			'.say-box':(
                 width: 352px,
-                height: 815px,
+                height: 655px,
                 margin: 0 auto 30px auto
             )
 		)
@@ -1661,7 +1737,7 @@ body{
 		(
 			'.say-box':(
                 width: 352px,
-                height: 815px,
+                height: 655px,
                 margin: 0 auto 30px auto
             )
 		)
@@ -1713,7 +1789,7 @@ body{
         @include L(
             (
                 '.say-box p':(
-                    font-size: 20px,
+                    font-size: #{$font-2-pc},
                     padding: 0 32px
                 )
             )
@@ -1721,7 +1797,7 @@ body{
         @include M(
             (
                 '.say-box p':(
-                    font-size: 20px,
+                    font-size: #{$font-2-m},
                     padding: 0 32px
                 )
             )
@@ -1729,7 +1805,7 @@ body{
         @include S(
             (
                 '.say-box p':(
-                    font-size: 20px,
+                    font-size: #{$font-2-m},
                     padding: 0 32px
                 )
             )
@@ -1785,6 +1861,8 @@ body{
 	@include M(
 		(
 			'#faq':(
+                display: none,
+                width: 285px,
                 margin: 0 auto
             )
 		)
@@ -1792,6 +1870,8 @@ body{
 	@include S(
 		(
 			'#faq':(
+                display: none,
+                width: 285px,
                 margin: 0 auto
             )
 		)
@@ -1839,7 +1919,7 @@ body{
         @include L(
             (
                 '#faq-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-pc},
                     margin: auto auto 18px 90px
                 )
             )
@@ -1847,7 +1927,7 @@ body{
         @include M(
             (
                 '#faq-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-m},
                     margin: auto auto 18px 0
                 )
             )
@@ -1855,7 +1935,7 @@ body{
         @include S(
             (
                 '#faq-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-m},
                     margin: auto auto 18px 0
                 )
             )
@@ -1879,7 +1959,7 @@ body{
 	@include L(
 		(
 			'#more-q':(
-                font-size: 28px,
+                font-size: #{$font-0-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1887,7 +1967,7 @@ body{
 	@include M(
 		(
 			'#more-q':(
-                font-size: 28px,
+                font-size: #{$font-0-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1895,7 +1975,7 @@ body{
 	@include S(
 		(
 			'#more-q':(
-                font-size: 28px,
+                font-size: #{$font-0-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1944,7 +2024,7 @@ body{
 	@include L(
 		(
 			'#now-state':(
-                font-size: 28px,
+                font-size: #{$font-0-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1952,7 +2032,7 @@ body{
 	@include M(
 		(
 			'#now-state':(
-                font-size: 28px,
+                font-size: #{$font-0-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1960,7 +2040,7 @@ body{
 	@include S(
 		(
 			'#now-state':(
-                font-size: 28px,
+                font-size: #{$font-0-m},
                 margin: 67px auto 79px auto
             )
 		)
@@ -2091,7 +2171,7 @@ body{
         @include L(
             (
                 '.content-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-pc},
                     margin: auto auto 18px 72px
                 )
             )
@@ -2099,7 +2179,7 @@ body{
         @include M(
             (
                 '.content-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-m},
                     margin: auto auto 0px 0
                 )
             )
@@ -2107,7 +2187,7 @@ body{
         @include S(
             (
                 '.content-list li':(
-                    font-size: 22px,
+                    font-size: #{$font-2-m},
                     margin: auto auto 0px 0
                 )
             )
@@ -2124,7 +2204,27 @@ body{
             margin: 0 5px 0 -40px;
         }
         >ul{
-            padding-top: 18px;
+            @include L(
+                (
+                    '.content-list > li > ul':(
+                        padding-top: 18px
+                    )
+                )
+            )
+            @include M(
+                (
+                    '.content-list > li > ul':(
+                        padding-top: 10px
+                    )
+                )
+            )
+            @include S(
+                (
+                    '.content-list > li > ul':(
+                        padding-top: 10px
+                    )
+                )
+            )
             >li{
                 margin-left: 24px;
                 >span{
@@ -2171,26 +2271,24 @@ body{
     width: 100%;
     background-color: #eee;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+    height: auto;
     @include L(
         (
             '.footer':(
-                height: 410px
             )
         )
     )
     @include M(
         (
             '.footer':(
-                height: auto,
-                padding-bottom: 100px
+                padding-bottom: 63px
             )
         )
     )
     @include S(
         (
             '.footer':(
-                height: auto,
-                padding-bottom: 100px
+                padding-bottom: 63px
             )
         )
     )
@@ -2233,7 +2331,6 @@ body{
     font-family: $fontfamily;
     font-weight: normal;
     color: #797979;
-    font-size: 20px;
     box-sizing: border-box;
     text-align: justify;
     @include L(
@@ -2243,7 +2340,8 @@ body{
                 float: left,
                 margin: 51px 0 0 59px,
                 padding: 0 15px 0 0,
-                line-height: 1.5
+                line-height: 1.5,
+                font-size: #{$font-2-pc}
             )
         )
     )
@@ -2253,7 +2351,8 @@ body{
                 width: 352px,
                 margin: 31px auto 0 auto,
                 padding: 0 30px,
-                line-height: 2
+                line-height: 2,
+                font-size: #{$font-2-m}
             )
         )
     )
@@ -2263,7 +2362,8 @@ body{
                 width: 352px,
                 margin: 31px auto 0 auto,
                 padding: 0 30px,
-                line-height: 2 
+                line-height: 2,
+                font-size: #{$font-2-m} 
             )
         )
     )
@@ -2436,7 +2536,9 @@ body{
                 width: 84px,
                 height: 84px,
                 right: 26px,
-                bottom: 36px
+                bottom: 60px,
+                transform-origin: 100% 100%,
+                transform: scale(0.7)
             )
         )
     )
@@ -2487,7 +2589,9 @@ body{
                 margin-top: -0.5 * 308px,
                 background-color: #1e8993,
                 border-radius: 10px,
-                box-shadow: 0px 0px 10px rgba(0,0,0,0.45)
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.45),
+                transform-origin: 100% 50%,
+                transform: scale(0.7)
             )
         )
     )
@@ -2495,8 +2599,8 @@ body{
     @include M(
         (
             '#cta-side-btn-box':(
-                width: 460px,
-                padding-bottom: calc( 460px * ( 122 / 767 ) ),
+                width: 375px,
+                padding-bottom: calc( 375px * ( 122 / 767 ) ),
                 left: 0,
                 right: 0,
                 bottom: 0,
@@ -2508,8 +2612,8 @@ body{
     @include S(
         (
             '#cta-side-btn-box':(
-                width: 100%,
-                padding-bottom: calc( 100% * ( 122 / 767 ) ),
+                width: 375px,
+                padding-bottom: calc( 375px * ( 122 / 767 ) ),
                 left: 0,
                 right: 0,
                 bottom: 0,
@@ -2642,7 +2746,7 @@ body{
                 '.cta-side-btn span':(
                     vertical-align: middle,
                     padding-left: 5px,
-                    font-size: 18px
+                    font-size: #{$font-2-m}
                 )
             )
         )
@@ -2651,7 +2755,7 @@ body{
                 '.cta-side-btn span':(
                     vertical-align: middle,
                     padding-left: 5px,
-                    font-size: 14px
+                    font-size: #{$font-2-m}
                 )
             )
         )
@@ -3129,14 +3233,12 @@ body{
         @include L(
             (
                 '.form-page .footer':(
-                    height: 410px
                 )
             )
         )
         @include M(
             (
                 '.form-page .footer':(
-                    height: auto,
                     padding-bottom: 0
                 )
             )
@@ -3144,7 +3246,6 @@ body{
         @include S(
             (
                 '.form-page .footer':(
-                    height: auto,
                     padding-bottom: 0
                 )
             )
@@ -3217,14 +3318,12 @@ body{
         @include L(
             (
                 '.lesson-page .footer':(
-                    height: 410px
                 )
             )
         )
         @include M(
             (
                 '.lesson-page .footer':(
-                    height: auto,
                     padding-bottom: 0
                 )
             )
@@ -3232,7 +3331,6 @@ body{
         @include S(
             (
                 '.lesson-page .footer':(
-                    height: auto,
                     padding-bottom: 0
                 )
             )
