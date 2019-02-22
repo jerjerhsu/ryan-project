@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Fri Feb 22 2019 19:57:36 
+* date:    Fri Feb 22 2019 20:51:40 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 'use strict';
@@ -299,7 +299,7 @@ $.fn.EventInIt = function () {
 
         $body.removeClass('show-light-box');
         $htmlbody.animate({
-          scrollTop: $('[scroll-anchor="' + _self.attr('scroll-index') + '"').offset().top - parseInt($header.height()) - 30
+          scrollTop: $('[scroll-anchor="' + _self.attr('scroll-index') + '"]').offset().top - parseInt($header.height()) - 30
         }, 300);
         break;
 

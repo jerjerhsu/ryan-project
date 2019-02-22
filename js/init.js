@@ -93,7 +93,7 @@ $.fn.EventInIt = function(){
                 $body.removeClass('show-light-box');
                 $htmlbody.animate(
                     {
-                        scrollTop: $('[scroll-anchor="'+_self.attr('scroll-index')+'"').offset().top - parseInt($header.height()) - 30
+                        scrollTop: $('[scroll-anchor="'+_self.attr('scroll-index')+'"]').offset().top - parseInt($header.height()) - 30
                     },
                     300
                 );
