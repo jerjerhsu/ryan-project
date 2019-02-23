@@ -3425,7 +3425,7 @@ body{
     @include M(
         (
             '.lesson-word':(
-                margin: 76px 30px 31px 30px,
+                margin: 76px 50px 31px 50px,
                 font-size: #{$font-2-m},
                 line-height: 2,
                 padding-bottom: 80px
@@ -3435,7 +3435,7 @@ body{
     @include S(
         (
             '.lesson-word':(
-                margin: 76px 30px 31px 30px,
+                margin: 76px 50px 31px 50px,
                 font-size: #{$font-2-m},
                 line-height: 2,
                 padding-bottom: 80px
