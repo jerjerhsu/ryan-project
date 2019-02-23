@@ -116,7 +116,7 @@ $.fn.ScrollInIt = function(){
         scroll_cur = true;
     function scrolling(){
         temp_scrolltop = $window.scrollTop();
-        if(temp_scrolltop > 500){
+        if(temp_scrolltop > 200){
             scroll_cur = true;
         } else {
             scroll_cur = false;

@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 17:30:50 
+* date:    Sat Feb 23 2019 17:34:50 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 'use strict';
@@ -331,7 +331,7 @@ $.fn.ScrollInIt = function () {
   function scrolling() {
     temp_scrolltop = $window.scrollTop();
 
-    if (temp_scrolltop > 500) {
+    if (temp_scrolltop > 200) {
       scroll_cur = true;
     } else {
       scroll_cur = false;
