@@ -1745,13 +1745,13 @@ body{
     h3{
         position: relative;
         color: #1e8993;
-        font-size: 31px;
         text-align: center;
         line-height: (47/28);
         box-sizing: border-box;
         @include L(
             (
                 '.say-box h3':(
+                    font-size: #{$font-0-pc},
                     height: 258px
                 )
             )
@@ -1759,6 +1759,7 @@ body{
         @include M(
             (
                 '.say-box h3':(
+                    font-size: #{$font-0-m},
                     height: 258px
                 )
             )
@@ -1766,6 +1767,7 @@ body{
         @include S(
             (
                 '.say-box h3':(
+                    font-size: #{$font-0-m},
                     height: 258px
                 )
             )
@@ -3370,7 +3372,7 @@ body{
 	@include L(
 		(
 			'.lesson-title':(
-                font-size: 31px,
+                font-size: #{$font-0-pc},
                 margin: 89px auto 79px auto
             )
 		)
@@ -3378,7 +3380,7 @@ body{
 	@include M(
 		(
 			'.lesson-title':(
-                font-size: 31px,
+                font-size: #{$font-0-m},
                 margin: 89px auto 79px auto
             )
 		)
@@ -3386,7 +3388,7 @@ body{
 	@include S(
 		(
 			'.lesson-title':(
-                font-size: 31px,
+                font-size: #{$font-0-m},
                 margin: 89px auto 79px auto
             )
 		)
@@ -3415,7 +3417,7 @@ body{
         (
             '.lesson-word':(
                 margin: 0 15px 31px 15px,
-                font-size: 22px,
+                font-size: #{$font-0-pc},
                 line-height: 2.5
             )
         )
@@ -3424,7 +3426,7 @@ body{
         (
             '.lesson-word':(
                 margin: 76px 30px 31px 30px,
-                font-size: 22px,
+                font-size: #{$font-0-m},
                 line-height: 2,
                 padding-bottom: 80px
             )
@@ -3434,7 +3436,7 @@ body{
         (
             '.lesson-word':(
                 margin: 76px 30px 31px 30px,
-                font-size: 22px,
+                font-size: #{$font-0-m},
                 line-height: 2,
                 padding-bottom: 80px
             )

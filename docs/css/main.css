@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 02:34:20 
+* date:    Sat Feb 23 2019 11:30:21 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1929,7 +1929,6 @@ body {
 .say-box h3 {
   position: relative;
   color: #1e8993;
-  font-size: 31px;
   text-align: center;
   line-height: 1.67857;
   -webkit-box-sizing: border-box;
@@ -2764,6 +2763,7 @@ body {
     float: left;
   }
   .say-box h3 {
+    font-size: 28px;
     height: 258px;
   }
   .say-box p {
@@ -2966,12 +2966,12 @@ body {
     padding: 97px 0 121px 0;
   }
   .lesson-title {
-    font-size: 31px;
+    font-size: 28px;
     margin: 89px auto 79px auto;
   }
   .lesson-word {
     margin: 0 15px 31px 15px;
-    font-size: 22px;
+    font-size: 28px;
     line-height: 2.5;
   }
   .lesson-word .full-x img {
@@ -3188,6 +3188,7 @@ body {
     margin: 0 auto 30px auto;
   }
   .say-box h3 {
+    font-size: 20px;
     height: 258px;
   }
   .say-box p {
@@ -3423,12 +3424,12 @@ body {
     padding: 67px 0 121px 0;
   }
   .lesson-title {
-    font-size: 31px;
+    font-size: 20px;
     margin: 89px auto 79px auto;
   }
   .lesson-word {
     margin: 76px 30px 31px 30px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 2;
     padding-bottom: 80px;
   }
@@ -3643,6 +3644,7 @@ body {
     margin: 0 auto 30px auto;
   }
   .say-box h3 {
+    font-size: 20px;
     height: 258px;
   }
   .say-box p {
@@ -3878,12 +3880,12 @@ body {
     padding: 67px 0 121px 0;
   }
   .lesson-title {
-    font-size: 31px;
+    font-size: 20px;
     margin: 89px auto 79px auto;
   }
   .lesson-word {
     margin: 76px 30px 31px 30px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 2;
     padding-bottom: 80px;
   }
