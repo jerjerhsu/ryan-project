@@ -1294,7 +1294,8 @@ body{
 		(
 			'#course-time':(
                 margin: 0 auto,
-                width: 285px
+                width: 0.5 * 285px,
+                height: auto
             )
 		)
 	)
@@ -1302,7 +1303,8 @@ body{
 		(
 			'#course-time':(
                 margin: 0 auto,
-                width: 285px
+                width: 0.5 * 285px,
+                height: auto
             )
 		)
 	)
