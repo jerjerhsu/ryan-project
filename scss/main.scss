@@ -865,32 +865,85 @@ body{
     top: 0;
     margin: 0 -15px;
 }
+#word-box-out{    
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+	@include L(
+		(
+			'#word-box-out':(
+            )
+		)
+	)
+	@include M(
+		(
+			'#word-box-out':(
+            )
+		)
+	)
+	@include S(
+		(
+			'#word-box-out':(
+            )
+		)
+    )
+}
+.word-box-shadow{    
+	@include L(
+		(
+			'.word-box-shadow':(
+            )
+		)
+	)
+	@include M(
+		(
+			'.word-box-shadow':(
+                position: absolute,
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                border-radius: 5px,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.25),
+                background-color: #fff,
+                margin: calc( 100% * ( 1 - 3 * ( 345 / 1200 ) ) / 6 ),
+                padding-bottom: 52px,
+                z-index: -1
+            )
+		)
+	)
+	@include S(
+		(
+			'.word-box-shadow':(
+            )
+		)
+    )
+}
 .word-box{
     position: relative;
     left: 0;
     top: 0;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
     font-family: $fontfamily;
     font-weight: 700;
-    background-color: #fff;
+    
 	@include L(
 		(
 			'.word-box':(
                 width: 352px,
                 height: 609px,
                 margin: ( 1200px - 3 * 352px ) / 6,
-                float: left
+                float: left,
+                background-color: #fff,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.25)
             )
 		)
 	)
 	@include M(
 		(
 			'.word-box':(
-                width: calc( 100% * ( 352 / 1200 ) ),
-                height: 609px,
-                margin: calc( 100% * ( 1 - 3 * ( 352 / 1200 ) ) / 6 ),
-                float: left
+                display: table-cell,
+                padding-bottom: 52px
             )
 		)
 	)
@@ -900,7 +953,9 @@ body{
                 width: 352px,
                 height: auto,
                 margin: 0 auto 30px auto,
-                padding: 24px 0
+                padding: 24px 0,
+                background-color: #fff,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.25)
             )
 		)
     )
@@ -955,7 +1010,8 @@ body{
             (
                 '.word-box p':(
                     font-size: #{$font-2-pc},
-                    padding: 0 32px
+                    padding: 0 32px,
+                    word-break: break-all
                 )
             )
         )
@@ -2899,7 +2955,7 @@ body{
         (
             '.light-frame':(
                 width: 1170px,
-                height: 1325px,
+                height: 1425px,
                 margin: 18px auto 100px auto
             )
         )
@@ -2908,7 +2964,7 @@ body{
         (
             '.light-frame':(
                 width: 352px,
-                height: 1600px,
+                height: 1625px,
                 margin: 18px auto 100px auto
             )
         )
@@ -2917,7 +2973,7 @@ body{
         (
             '.light-frame':(
                 width: 352px,
-                height: 1600px,
+                height: 1625px,
                 margin: 18px auto 100px auto
             )
         )
@@ -3070,13 +3126,12 @@ body{
 }
 #money-0{
     position: absolute;
-    cursor: pointer;
     @include L(
         (
             '#money-0':(
                 width: 0.5 * 650px,
                 left: 73px,
-                top: 975px
+                top: 1075px
             )
         )
     )
@@ -3087,7 +3142,7 @@ body{
                 left: 0,
                 right: 0,
                 margin: 0 auto,
-                top: 950px
+                top: 975px
             )
         )
     )
@@ -3098,20 +3153,19 @@ body{
                 left: 0,
                 right: 0,
                 margin: 0 auto,
-                top: 950px
+                top: 975px
             )
         )
     )
 }
 #money-1{
     position: absolute;
-    cursor: pointer;
     @include L(
         (
             '#money-1':(
                 width: 0.5 * 650px,
                 left: 423px,
-                top: 975px
+                top: 1100px
             )
         )
     )
@@ -3140,13 +3194,12 @@ body{
 }
 #money-2{
     position: absolute;
-    cursor: pointer;
     @include L(
         (
             '#money-2':(
                 width: 0.5 * 650px,
                 left: 771px,
-                top: 975px
+                top: 1100px
             )
         )
     )
@@ -3157,7 +3210,7 @@ body{
                 left: 0,
                 right: 0,
                 margin: 0 auto,
-                top: 1374px
+                top: 1399px
             )
         )
     )
@@ -3168,7 +3221,7 @@ body{
                 left: 0,
                 right: 0,
                 margin: 0 auto,
-                top: 1374px
+                top: 1399px
             )
         )
     )
