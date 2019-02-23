@@ -2391,7 +2391,7 @@ body{
         @include M(
             (
                 '.content-list li':(
-                    font-size: #{$font-2-m},
+                    font-size: #{$font-2-pc},
                     margin: auto auto 0px 0
                 )
             )
