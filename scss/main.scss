@@ -798,27 +798,6 @@ body{
             )
 		)
 	)
-	@include L(
-		(
-			'#main-title br':(
-                display: none
-            )
-		)
-	)
-	@include M(
-		(
-			'#main-title br':(
-                display: inline
-            )
-		)
-	)
-	@include S(
-		(
-			'#main-title br':(
-                display: inline
-            )
-		)
-	)
 }
 .float-box{
     position: relative;

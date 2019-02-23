@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 16:03:25 
+* date:    Sat Feb 23 2019 16:18:14 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2641,9 +2641,6 @@ body {
     font-size: 28px;
     margin: 118px auto 118px auto;
   }
-  #main-title br {
-    display: none;
-  }
   .float-box {
     width: 1200px;
   }
@@ -3073,9 +3070,6 @@ body {
   #main-title {
     font-size: 28px;
     margin: 118px auto 118px auto;
-  }
-  #main-title br {
-    display: inline;
   }
   .float-box {
     width: 100%;
@@ -3638,9 +3632,6 @@ body {
   #main-title {
     font-size: 20px;
     margin: 60px auto 60px auto;
-  }
-  #main-title br {
-    display: inline;
   }
   .float-box {
     width: auto;
