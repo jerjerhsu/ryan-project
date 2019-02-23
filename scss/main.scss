@@ -1139,7 +1139,7 @@ body{
                 '#ta-list':(
                     top: -9px,
                     width: calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px ),
-                    margin: 0 0 0 87px,
+                    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ) ),
                     float: left
                 )
             )
@@ -1271,7 +1271,7 @@ body{
                 '#syllabus-list':(
                     top: -9px,
                     width: calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px ),
-                    margin: 0 0 0 87px,
+                    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ) ),
                     float: left
                 )
             )
@@ -1348,7 +1348,7 @@ body{
 	@include M(
 		(
 			'#course-time':(
-                width: calc( 100% * ( 193 / 1200 ) ),
+                width: calc( 100% * ( 258 / 1200 ) ),
                 height: auto,
                 margin-left: 24px,
                 float: left
@@ -1380,8 +1380,8 @@ body{
         (
             '#course-box':(
                 top: -9px,
-                width: calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px ),
-                margin: 0 0 0 87px,
+                width: calc( 100% * ( 1 - ( 258 / 1200 ) ) - 24px - 87px - 24px ),
+                margin: 0 0 0 calc( 100vw * ( 87 / 1200 ) ),
                 padding: 0 24px 0 0,
                 float: left
             )
@@ -2058,7 +2058,7 @@ body{
                 '#faq-list':(
                     top: -9px,
                     width: calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px ),
-                    margin: 0 0 0 87px,
+                    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ) ),
                     padding: 0 24px 0 0,
                     float: left
                 )
@@ -2850,6 +2850,9 @@ body{
     position: fixed;
     cursor: pointer;
     z-index: 1;
+    &:hover{
+        opacity: 1;
+    }
     @include L(
         (
             '#cta-side-btn-box':(
@@ -2862,7 +2865,9 @@ body{
                 border-radius: 10px,
                 box-shadow: 0px 0px 10px rgba(0,0,0,0.45),
                 transform-origin: 100% 50%,
-                transform: scale(0.7)
+                transform: scale(0.7),
+                opacity: 0.22,
+                transition: opacity 0.2s 0s
             )
         )
     )
@@ -2878,7 +2883,9 @@ body{
                 border-radius: 10px,
                 box-shadow: 0px 0px 10px rgba(0,0,0,0.45),
                 transform-origin: 100% 50%,
-                transform: scale(0.7)
+                transform: scale(0.7),
+                opacity: 0.22,
+                transition: opacity 0.2s 0s
             )
         )
     )

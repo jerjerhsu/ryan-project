@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 16:18:14 
+* date:    Sat Feb 23 2019 16:29:25 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2287,6 +2287,10 @@ body {
   z-index: 1;
 }
 
+#cta-side-btn-box:hover {
+  opacity: 1;
+}
+
 .cta-side-btn {
   background: transparent;
   cursor: pointer;
@@ -2908,6 +2912,11 @@ body {
         -ms-transform: scale(0.7);
          -o-transform: scale(0.7);
             transform: scale(0.7);
+    opacity: 0.22;
+    -webkit-transition: opacity 0.2s 0s;
+    -o-transition: opacity 0.2s 0s;
+    -moz-transition: opacity 0.2s 0s;
+    transition: opacity 0.2s 0s;
   }
   .cta-side-btn {
     position: relative;
@@ -3130,7 +3139,9 @@ body {
     width: -webkit-calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px);
     width: -moz-calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px);
     width: calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px);
-    margin: 0 0 0 87px;
+    margin: 0 0 0 -webkit-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 -moz-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ));
     float: left;
   }
   #ta-list li {
@@ -3154,7 +3165,9 @@ body {
     width: -webkit-calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px);
     width: -moz-calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px);
     width: calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px);
-    margin: 0 0 0 87px;
+    margin: 0 0 0 -webkit-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 -moz-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ));
     float: left;
   }
   #syllabus-list li {
@@ -3162,19 +3175,21 @@ body {
     margin: auto auto 18px 72px;
   }
   #course-time {
-    width: -webkit-calc( 100% * ( 193 / 1200 ));
-    width: -moz-calc( 100% * ( 193 / 1200 ));
-    width: calc( 100% * ( 193 / 1200 ));
+    width: -webkit-calc( 100% * ( 258 / 1200 ));
+    width: -moz-calc( 100% * ( 258 / 1200 ));
+    width: calc( 100% * ( 258 / 1200 ));
     height: auto;
     margin-left: 24px;
     float: left;
   }
   #course-box {
     top: -9px;
-    width: -webkit-calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px);
-    width: -moz-calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px);
-    width: calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px);
-    margin: 0 0 0 87px;
+    width: -webkit-calc( 100% * ( 1 - ( 258 / 1200 ) ) - 24px - 87px - 24px);
+    width: -moz-calc( 100% * ( 1 - ( 258 / 1200 ) ) - 24px - 87px - 24px);
+    width: calc( 100% * ( 1 - ( 258 / 1200 ) ) - 24px - 87px - 24px);
+    margin: 0 0 0 -webkit-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 -moz-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ));
     padding: 0 24px 0 0;
     float: left;
   }
@@ -3291,7 +3306,9 @@ body {
     width: -webkit-calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px);
     width: -moz-calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px);
     width: calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px);
-    margin: 0 0 0 87px;
+    margin: 0 0 0 -webkit-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 -moz-calc( 100vw * ( 87 / 1200 ));
+    margin: 0 0 0 calc( 100vw * ( 87 / 1200 ));
     padding: 0 24px 0 0;
     float: left;
   }
@@ -3435,6 +3452,11 @@ body {
         -ms-transform: scale(0.7);
          -o-transform: scale(0.7);
             transform: scale(0.7);
+    opacity: 0.22;
+    -webkit-transition: opacity 0.2s 0s;
+    -o-transition: opacity 0.2s 0s;
+    -moz-transition: opacity 0.2s 0s;
+    transition: opacity 0.2s 0s;
   }
   .cta-side-btn {
     position: relative;
