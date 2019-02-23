@@ -2787,32 +2787,30 @@ body{
 .show-go-top{
     #go-top{
         visibility: initial;
-    }
-}
-.pc{
-    &.show-go-top{
         @include L(
             (
-                '.pc.show-go-top #go-top':(
+                '.show-go-top #go-top':(
                     opacity: 1
                 )
             )
         )
         @include M(
             (
-                '.pc.show-go-top #go-top':(
+                '.show-go-top #go-top':(
                     opacity: 0.22
                 )
             )
         )
         @include S(
             (
-                '.pc.show-go-top #go-top':(
+                '.show-go-top #go-top':(
                     opacity: 1
                 )
             )
         )
     }
+}
+.pc{
     #go-top{
         &:hover{
             opacity: 1 !important;
