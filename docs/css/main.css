@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 16:45:18 
+* date:    Sat Feb 23 2019 16:51:34 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2245,8 +2245,12 @@ body {
 }
 
 .show-go-top #go-top {
-  opacity: 1;
+  opacity: 0.22;
   visibility: initial;
+}
+
+.pc #go-top:hover {
+  opacity: 1 !important;
 }
 
 #go-top {
@@ -2281,14 +2285,14 @@ body {
   font-size: 22px;
 }
 
+.pc #cta-side-btn-box:hover {
+  opacity: 1;
+}
+
 #cta-side-btn-box {
   position: fixed;
   cursor: pointer;
   z-index: 1;
-}
-
-#cta-side-btn-box:hover {
-  opacity: 1;
 }
 
 .cta-side-btn {
@@ -2944,40 +2948,65 @@ body {
     top: 77px;
   }
   #pay-way-0 {
-    width: 554px;
-    left: 33px;
-    top: 140px;
+    width: -webkit-calc( 100% * ( 0.5 * 1108 / 1170 ));
+    width: -moz-calc( 100% * ( 0.5 * 1108 / 1170 ));
+    width: calc( 100% * ( 0.5 * 1108 / 1170 ));
+    margin: -webkit-calc( 100% * ( 140 / 1170 )) 0 0 -webkit-calc( 100% * ( 33 / 1170 ));
+    margin: -moz-calc( 100% * ( 140 / 1170 )) 0 0 -moz-calc( 100% * ( 33 / 1170 ));
+    margin: calc( 100% * ( 140 / 1170 )) 0 0 calc( 100% * ( 33 / 1170 ));
   }
   #pay-way-1 {
-    width: 554px;
-    left: 586px;
-    top: 140px;
+    width: -webkit-calc( 100% * ( 0.5 * 1108 / 1170 ));
+    width: -moz-calc( 100% * ( 0.5 * 1108 / 1170 ));
+    width: calc( 100% * ( 0.5 * 1108 / 1170 ));
+    margin: -webkit-calc( 100% * ( 140 / 1170 )) 0 0 -webkit-calc( 100% * ( 586 / 1170 ));
+    margin: -moz-calc( 100% * ( 140 / 1170 )) 0 0 -moz-calc( 100% * ( 586 / 1170 ));
+    margin: calc( 100% * ( 140 / 1170 )) 0 0 calc( 100% * ( 586 / 1170 ));
   }
   #course-info {
-    width: 485px;
-    left: 359px;
-    top: 592px;
+    width: -webkit-calc( 100% * ( 0.5 * 970 / 1170 ));
+    width: -moz-calc( 100% * ( 0.5 * 970 / 1170 ));
+    width: calc( 100% * ( 0.5 * 970 / 1170 ));
+    margin: -webkit-calc( 100% * ( 592 / 1170 )) 0 0 -webkit-calc( 100% * ( 359 / 1170 ));
+    margin: -moz-calc( 100% * ( 592 / 1170 )) 0 0 -moz-calc( 100% * ( 359 / 1170 ));
+    margin: calc( 100% * ( 592 / 1170 )) 0 0 calc( 100% * ( 359 / 1170 ));
   }
   #money-0 {
-    width: 325px;
-    left: 73px;
-    top: 1100px;
+    width: -webkit-calc( 100% * ( 0.5 * 650 / 1170 ));
+    width: -moz-calc( 100% * ( 0.5 * 650 / 1170 ));
+    width: calc( 100% * ( 0.5 * 650 / 1170 ));
+    margin: -webkit-calc( 100% * ( 1100 / 1170 )) 0 0 -webkit-calc( 100% * ( 73 / 1170 ));
+    margin: -moz-calc( 100% * ( 1100 / 1170 )) 0 0 -moz-calc( 100% * ( 73 / 1170 ));
+    margin: calc( 100% * ( 1100 / 1170 )) 0 0 calc( 100% * ( 73 / 1170 ));
   }
   #money-1 {
-    width: 325px;
-    left: 423px;
-    top: 1100px;
+    width: -webkit-calc( 100% * ( 0.5 * 650 / 1170 ));
+    width: -moz-calc( 100% * ( 0.5 * 650 / 1170 ));
+    width: calc( 100% * ( 0.5 * 650 / 1170 ));
+    margin: -webkit-calc( 100% * ( 1100 / 1170 )) 0 0 -webkit-calc( 100% * ( 423 / 1170 ));
+    margin: -moz-calc( 100% * ( 1100 / 1170 )) 0 0 -moz-calc( 100% * ( 423 / 1170 ));
+    margin: calc( 100% * ( 1100 / 1170 )) 0 0 calc( 100% * ( 423 / 1170 ));
   }
   #money-2 {
-    width: 325px;
-    left: 771px;
-    top: 1100px;
+    width: -webkit-calc( 100% * ( 0.5 * 650 / 1170 ));
+    width: -moz-calc( 100% * ( 0.5 * 650 / 1170 ));
+    width: calc( 100% * ( 0.5 * 650 / 1170 ));
+    margin: -webkit-calc( 100% * ( 1100 / 1170 )) 0 0 -webkit-calc( 100% * ( 771 / 1170 ));
+    margin: -moz-calc( 100% * ( 1100 / 1170 )) 0 0 -moz-calc( 100% * ( 771 / 1170 ));
+    margin: calc( 100% * ( 1100 / 1170 )) 0 0 calc( 100% * ( 771 / 1170 ));
   }
   .light-box-close {
-    width: 80px;
-    height: 80px;
-    right: 10px;
-    top: 10px;
+    width: -webkit-calc( 100% * ( 80 / 1170 ));
+    width: -moz-calc( 100% * ( 80 / 1170 ));
+    width: calc( 100% * ( 80 / 1170 ));
+    padding-bottom: -webkit-calc( 100% * ( 80 / 1170 ));
+    padding-bottom: -moz-calc( 100% * ( 80 / 1170 ));
+    padding-bottom: calc( 100% * ( 80 / 1170 ));
+    margin: -webkit-calc( 100% * ( 10 / 1170 )) -webkit-calc( 100% * ( 10 / 1170 )) 0 0;
+    margin: -moz-calc( 100% * ( 10 / 1170 )) -moz-calc( 100% * ( 10 / 1170 )) 0 0;
+    margin: calc( 100% * ( 10 / 1170 )) calc( 100% * ( 10 / 1170 )) 0 0;
+    right: 0;
+    top: 0;
   }
   #form-box {
     width: 1170px;
@@ -3423,6 +3452,10 @@ body {
         -ms-transform: scale(0.7);
          -o-transform: scale(0.7);
             transform: scale(0.7);
+    -webkit-transition: opacity 0.2s 0;
+    -o-transition: opacity 0.2s 0;
+    -moz-transition: opacity 0.2s 0;
+    transition: opacity 0.2s 0;
   }
   #cta-side-btn-box {
     width: 84px;
@@ -3789,7 +3822,7 @@ body {
   }
   .say-box p {
     font-size: 16px;
-    padding: 0 32px;
+    padding: 0 32px 230px 32px;
   }
   #faq {
     width: 142.5px;

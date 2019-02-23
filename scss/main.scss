@@ -1906,7 +1906,7 @@ body{
             (
                 '.say-box p':(
                     font-size: #{$font-2-m},
-                    padding: 0 32px
+                    padding: 0 32px 230px 32px
                 )
             )
         )
@@ -2786,8 +2786,15 @@ body{
 }
 .show-go-top{
     #go-top{
-        opacity: 1;
+        opacity: 0.22;
         visibility: initial;
+    }
+}
+.pc{
+    #go-top{
+        &:hover{
+            opacity: 1 !important;
+        }
     }
 }
 #go-top{
@@ -2821,7 +2828,8 @@ body{
                 right: 16px,
                 bottom: 16px,
                 transform-origin: 100% 100%,
-                transform: scale(0.7)
+                transform: scale(0.7),
+                transition: opacity 0.2s 0
             )
         )
     )
@@ -2846,13 +2854,17 @@ body{
         font-size: 22px;
     }
 }
+.pc{
+    #cta-side-btn-box{
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
 #cta-side-btn-box{
     position: fixed;
     cursor: pointer;
     z-index: 1;
-    &:hover{
-        opacity: 1;
-    }
     @include L(
         (
             '#cta-side-btn-box':(
@@ -3204,9 +3216,8 @@ body{
     @include L(
         (
             '#pay-way-0':(
-                width: 0.5 * 1108px,
-                left: 33px,
-                top: 140px
+                width: calc( 100% * ( 0.5 * 1108 / 1170 ) ),
+                margin: calc( 100% * ( 140 / 1170 ) ) 0 0 calc( 100% * ( 33 / 1170 ) )
             )
         )
     )
@@ -3239,9 +3250,8 @@ body{
     @include L(
         (
             '#pay-way-1':(
-                width: 0.5 * 1108px,
-                left: 586px,
-                top: 140px
+                width: calc( 100% * ( 0.5 * 1108 / 1170 ) ),
+                margin: calc( 100% * ( 140 / 1170 ) ) 0 0 calc( 100% * ( 586 / 1170 ) )
             )
         )
     )
@@ -3284,9 +3294,8 @@ body{
     @include L(
         (
             '#course-info':(
-                width: 0.5 * 970px,
-                left: 359px,
-                top: 592px
+                width: calc( 100% * ( 0.5 * 970 / 1170 ) ),
+                margin: calc( 100% * ( 592 / 1170 ) ) 0 0 calc( 100% * ( 359 / 1170 ) )
             )
         )
     )
@@ -3318,9 +3327,8 @@ body{
     @include L(
         (
             '#money-0':(
-                width: 0.5 * 650px,
-                left: 73px,
-                top: 1100px
+                width: calc( 100% * ( 0.5 * 650 / 1170 ) ),
+                margin: calc( 100% * ( 1100 / 1170 ) ) 0 0 calc( 100% * ( 73 / 1170 ) )
             )
         )
     )
@@ -3352,9 +3360,8 @@ body{
     @include L(
         (
             '#money-1':(
-                width: 0.5 * 650px,
-                left: 423px,
-                top: 1100px
+                width: calc( 100% * ( 0.5 * 650 / 1170 ) ),
+                margin: calc( 100% * ( 1100 / 1170 ) ) 0 0 calc( 100% * ( 423 / 1170 ) )
             )
         )
     )
@@ -3386,9 +3393,8 @@ body{
     @include L(
         (
             '#money-2':(
-                width: 0.5 * 650px,
-                left: 771px,
-                top: 1100px
+                width: calc( 100% * ( 0.5 * 650 / 1170 ) ),
+                margin: calc( 100% * ( 1100 / 1170 ) ) 0 0 calc( 100% * ( 771 / 1170 ) )
             )
         )
     )
@@ -3445,10 +3451,11 @@ body{
     @include L(
         (
             '.light-box-close':(
-                width: 80px,
-                height: 80px,
-                right: 10px,
-                top: 10px
+                width: calc( 100% * ( 80 / 1170 ) ),
+                padding-bottom: calc( 100% * ( 80 / 1170 ) ),
+                margin: calc( 100% * ( 10 / 1170 ) ) calc( 100% * ( 10 / 1170 ) ) 0 0,
+                right: 0,
+                top: 0
             )
         )
     )
