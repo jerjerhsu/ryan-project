@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 17:07:41 
+* date:    Sat Feb 23 2019 17:19:46 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2542,7 +2542,6 @@ body {
 
 .blue {
   color: #1e8993;
-  font-size: 28px;
 }
 
 .pc #lesson-cta-btn:hover {
@@ -3041,6 +3040,9 @@ body {
   }
   .lesson-word .full-x img {
     float: left;
+  }
+  .blue {
+    font-size: 24px;
   }
   #lesson-cta-btn {
     float: left;
@@ -3619,6 +3621,9 @@ body {
     line-height: 2;
     padding-bottom: 80px;
   }
+  .blue {
+    font-size: 24px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -3935,6 +3940,9 @@ body {
   #copyright-word p {
     text-align: center;
   }
+  .pc.show-go-top #go-top {
+    opacity: 1;
+  }
   #go-top {
     width: 84px;
     height: 84px;
@@ -4097,6 +4105,9 @@ body {
     font-size: 16px;
     line-height: 2;
     padding-bottom: 80px;
+  }
+  .blue {
+    font-size: 18px;
   }
   #lesson-cta-btn {
     -webkit-transform: scale(0.7);

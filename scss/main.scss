@@ -2808,6 +2808,7 @@ body{
         @include S(
             (
                 '.pc.show-go-top #go-top':(
+                    opacity: 1
                 )
             )
         )
@@ -3740,7 +3741,27 @@ body{
 }
 .blue{
     color: #1e8993;
-    font-size: 28px;
+    @include L(
+        (
+            '.blue':(
+                font-size: #{$font-1-pc}
+            )
+        )
+    )
+    @include M(
+        (
+            '.blue':(
+                font-size: #{$font-1-pc}
+            )
+        )
+    )
+    @include S(
+        (
+            '.blue':(
+                font-size: #{$font-1-m}
+            )
+        )
+    )
 }
 .pc{
     #lesson-cta-btn{
