@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 13:16:52 
+* date:    Sat Feb 23 2019 14:18:37 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -1928,12 +1928,8 @@ body {
   -webkit-border-radius: 5px;
      -moz-border-radius: 5px;
           border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-     -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   font-family: ‘微軟正黑體’, Arial, sans-serif;
   font-weight: 700;
-  background-color: #fff;
 }
 
 .say-box h3 {
@@ -1962,6 +1958,12 @@ body {
   color: #797979;
   line-height: 1.7;
   text-align: justify;
+}
+
+#say-box-out {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
 }
 
 .say-people {
@@ -2111,7 +2113,6 @@ body {
   color: #1e8993;
   text-align: center;
   line-height: 1.5;
-  font-size: 32px;
 }
 
 .interest-btn {
@@ -2141,10 +2142,6 @@ body {
 .interest-btn svg {
   position: relative;
   top: -3px;
-}
-
-.content-list {
-  position: relative;
 }
 
 .content-list li {
@@ -2288,8 +2285,6 @@ body {
   position: fixed;
   cursor: pointer;
   z-index: 1;
-  /******460px******/
-  /******352px******/
 }
 
 .cta-side-btn {
@@ -2769,9 +2764,14 @@ body {
   }
   .say-box {
     width: 352px;
-    height: 815px;
+    height: 609px;
     margin: 24px;
     float: left;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding-bottom: 767px;
   }
   .say-box h3 {
     font-size: 28px;
@@ -2807,11 +2807,15 @@ body {
     margin: 0 0 0 32px;
     float: left;
   }
+  .future-word {
+    font-size: 28px;
+  }
   .interest-btn {
     margin: 28px 0 0 64px;
     float: left;
   }
   .content-list {
+    position: relative;
     top: -9px;
     width: 738px;
     float: right;
@@ -3075,8 +3079,8 @@ body {
     margin-top: 147px;
   }
   #main-title {
-    font-size: 20px;
-    margin: 60px auto 60px auto;
+    font-size: 28px;
+    margin: 118px auto 118px auto;
   }
   #main-title br {
     display: inline;
@@ -3118,87 +3122,128 @@ body {
     word-break: break-all;
   }
   .sub-title {
-    font-size: 20px;
+    font-size: 28px;
     margin: 89px auto 79px auto;
   }
   #ta {
-    width: 142.5px;
+    width: -webkit-calc( 100% * ( 321 / 1200 ));
+    width: -moz-calc( 100% * ( 321 / 1200 ));
+    width: calc( 100% * ( 321 / 1200 ));
     height: auto;
-    margin: 0 auto;
+    margin-left: 24px;
+    float: left;
   }
   .hide-small {
     display: inline;
   }
   #ta-list {
     top: -9px;
-    margin: 50px auto 0 auto;
-    width: 285px;
+    width: -webkit-calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px);
+    width: -moz-calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px);
+    width: calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px);
+    margin: 0 0 0 87px;
+    float: left;
   }
   #ta-list li {
-    font-size: 16px;
-    margin: auto auto 10px 0px;
+    font-size: 20px;
+    margin: auto auto 18px 0px;
   }
   #dont-worry {
-    font-size: 18px;
+    font-size: 24px;
     margin: 67px auto 79px auto;
   }
   #syllabus {
-    width: 142.5px;
+    width: -webkit-calc( 100% * ( 254 / 1200 ));
+    width: -moz-calc( 100% * ( 254 / 1200 ));
+    width: calc( 100% * ( 254 / 1200 ));
     height: auto;
-    margin: 0 auto;
+    margin-left: 24px;
+    float: left;
   }
   #syllabus-list {
     top: -9px;
-    margin: 50px auto 0 auto;
-    width: 285px;
+    width: -webkit-calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px);
+    width: -moz-calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px);
+    width: calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px);
+    margin: 0 0 0 87px;
+    float: left;
   }
   #syllabus-list li {
-    font-size: 16px;
-    margin: auto auto 10px 0;
+    font-size: 20px;
+    margin: auto auto 18px 72px;
   }
   #course-time {
-    margin: 0 auto;
-    width: 142.5px;
+    width: -webkit-calc( 100% * ( 193 / 1200 ));
+    width: -moz-calc( 100% * ( 193 / 1200 ));
+    width: calc( 100% * ( 193 / 1200 ));
     height: auto;
+    margin-left: 24px;
+    float: left;
   }
   #course-box {
     top: -9px;
-    margin: 50px auto 18px auto;
-    width: 340px;
+    width: -webkit-calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px);
+    width: -moz-calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px);
+    width: calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px);
+    margin: 0 0 0 87px;
+    padding: 0 24px 0 0;
+    float: left;
   }
   .course-item {
     margin-bottom: 26px;
   }
   .course-title {
-    font-size: 16px;
+    font-size: 20px;
   }
   .course-content {
-    font-size: 16px;
+    font-size: 20px;
   }
   #teacher-box {
-    width: 352px;
-    padding: 0 0 42px 0;
+    width: -webkit-calc( 100% * (  1170 / 1200 ));
+    width: -moz-calc( 100% * (  1170 / 1200 ));
+    width: calc( 100% * (  1170 / 1200 ));
+    padding: 0 0 83px 0;
   }
   #teacher-0 {
-    margin: 76px 30px 31px 30px;
+    margin: 76px -webkit-calc( 100% * ( 106 / 1170 )) 31px -webkit-calc( 100% * ( 106 / 1170 ));
+    margin: 76px -moz-calc( 100% * ( 106 / 1170 )) 31px -moz-calc( 100% * ( 106 / 1170 ));
+    margin: 76px calc( 100% * ( 106 / 1170 )) 31px calc( 100% * ( 106 / 1170 ));
   }
   .teacher-word {
-    margin: 0 30px 15px 30px;
-    font-size: 16px;
-    line-height: 2;
+    float: left;
+    margin: 0 -webkit-calc( 100% * ( 106 / 1170 )) 31px -webkit-calc( 100% * ( 106 / 1170 ));
+    margin: 0 -moz-calc( 100% * ( 106 / 1170 )) 31px -moz-calc( 100% * ( 106 / 1170 ));
+    margin: 0 calc( 100% * ( 106 / 1170 )) 31px calc( 100% * ( 106 / 1170 ));
+    font-size: 20px;
+    line-height: 2.5;
   }
   .teacher-word:last-child {
-    width: -webkit-calc( 100% - 30px * 2);
-    width: -moz-calc( 100% - 30px * 2);
-    width: calc( 100% - 30px * 2);
+    width: -webkit-calc( 100% * ( ( 1170 - 106 * 2 ) / 1170 ));
+    width: -moz-calc( 100% * ( ( 1170 - 106 * 2 ) / 1170 ));
+    width: calc( 100% * ( ( 1170 - 106 * 2 ) / 1170 ));
+    margin: 0 -webkit-calc( 100% * ( 106 / 1170 ));
+    margin: 0 -moz-calc( 100% * ( 106 / 1170 ));
+    margin: 0 calc( 100% * ( 106 / 1170 ));
   }
   #sign {
-    bottom: -40px;
+    bottom: -56px;
   }
   #ryan {
-    width: 146px;
-    height: 146px;
-    margin: 0 auto 30px auto;
+    width: -webkit-calc( 100vw * ( 146 / 1200));
+    width: -moz-calc( 100vw * ( 146 / 1200));
+    width: calc( 100vw * ( 146 / 1200));
+    height: -webkit-calc( 100vw * ( 146 / 1200));
+    height: -moz-calc( 100vw * ( 146 / 1200));
+    height: calc( 100vw * ( 146 / 1200));
+    margin: 0 -webkit-calc( 100vw * ( 56 / 1200)) 0 0;
+    margin: 0 -moz-calc( 100vw * ( 56 / 1200)) 0 0;
+    margin: 0 calc( 100vw * ( 56 / 1200)) 0 0;
+    float: left;
+  }
+  #ryan-info {
+    width: -webkit-calc( 100vw * ( (  1170 - 2 * 106 ) / 1200 - ( ( 56 + 146 ) / 1200 ) )  - 2 * 6px);
+    width: -moz-calc( 100vw * ( (  1170 - 2 * 106 ) / 1200 - ( ( 56 + 146 ) / 1200 ) )  - 2 * 6px);
+    width: calc( 100vw * ( (  1170 - 2 * 106 ) / 1200 - ( ( 56 + 146 ) / 1200 ) )  - 2 * 6px);
   }
   #ryan-info h3 {
     font-size: 20px;
@@ -3208,59 +3253,115 @@ body {
   }
   #teacher-1 {
     top: -9px;
-    margin: 0 30px;
+    margin: 0 -webkit-calc( 100% * ( 106 / 1170 ));
+    margin: 0 -moz-calc( 100% * ( 106 / 1170 ));
+    margin: 0 calc( 100% * ( 106 / 1170 ));
     line-height: 2;
   }
   #teacher-1 li {
-    font-size: 16px;
-    margin: auto auto 10px 0px;
+    font-size: 20px;
+    margin: auto auto 18px 20px;
   }
   .say-box {
-    width: 352px;
-    height: 655px;
-    margin: 0 auto 30px auto;
+    display: table-cell;
+    padding-bottom: 252px;
   }
   .say-box h3 {
-    font-size: 20px;
+    font-size: 28px;
     height: 258px;
   }
   .say-box p {
-    font-size: 16px;
+    font-size: 20px;
     padding: 0 32px;
   }
+  .say-box-shadow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    margin: -webkit-calc( 100% * ( 1 - 3 * ( 345 / 1200 ) ) / 6);
+    margin: -moz-calc( 100% * ( 1 - 3 * ( 345 / 1200 ) ) / 6);
+    margin: calc( 100% * ( 1 - 3 * ( 345 / 1200 ) ) / 6);
+    padding-bottom: 52px;
+    z-index: -1;
+  }
   #faq {
-    width: 142.5px;
+    width: -webkit-calc( 100% * ( 250 / 1200 ));
+    width: -moz-calc( 100% * ( 250 / 1200 ));
+    width: calc( 100% * ( 250 / 1200 ));
     height: auto;
-    margin: 0 auto;
+    margin-left: 24px;
+    float: left;
   }
   #faq-list {
     top: -9px;
-    width: 285px;
-    margin: 50px auto 0 auto;
+    width: -webkit-calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px);
+    width: -moz-calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px);
+    width: calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px);
+    margin: 0 0 0 87px;
+    padding: 0 24px 0 0;
+    float: left;
   }
   #faq-list li {
-    font-size: 16px;
-    margin: auto auto 18px 0;
+    font-size: 20px;
+    margin: auto auto 18px 90px;
   }
   #more-q {
-    font-size: 18px;
+    font-size: 24px;
     margin: 67px auto 79px auto;
   }
   #now-state {
-    font-size: 18px;
+    font-size: 24px;
     margin: 67px auto 79px auto;
   }
   .future-class-box {
-    width: 382px;
-    margin: 0 auto;
+    width: 317px;
+    height: auto;
+    margin-left: 24px;
+    float: left;
+  }
+  .future-class-box svg {
+    width: -webkit-calc( 100% * ( 163 / 382 ));
+    width: -moz-calc( 100% * ( 163 / 382 ));
+    width: calc( 100% * ( 163 / 382 ));
+    height: auto;
+  }
+  .future-word {
+    font-size: 28px;
   }
   .interest-btn {
-    margin: 28px auto 0 auto;
+    margin: 28px 0 0 64px;
+    float: left;
+    clear: both;
+    -webkit-transform: scale(0.75);
+       -moz-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+         -o-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-transform-origin: 0% 0%;
+       -moz-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+         -o-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
   }
   .content-list {
     top: -9px;
-    width: 285px;
-    margin: 50px auto 0 auto;
+    width: -webkit-calc( 100% * ( 1 - ( 382 / 1200 ) ) - 24px - 87px - 24px);
+    width: -moz-calc( 100% * ( 1 - ( 382 / 1200 ) ) - 24px - 87px - 24px);
+    width: calc( 100% * ( 1 - ( 382 / 1200 ) ) - 24px - 87px - 24px);
+    margin: 0 0 0 87px;
+    padding: 0 24px 0 0;
+    float: right;
+    position: absolute;
+    right: 0;
   }
   .content-list li {
     font-size: 16px;
@@ -3272,18 +3373,19 @@ body {
   .future-box {
     margin: 0 0 120px 0;
   }
-  .footer {
-    padding-bottom: 63px;
-  }
   #fanpage {
-    margin: 51px auto 0 auto;
+    float: left;
+    margin: 51px 0 0 65px;
   }
   #footer-word {
-    width: 352px;
-    margin: 31px auto 0 auto;
-    padding: 0 30px;
-    line-height: 2;
-    font-size: 16px;
+    width: -webkit-calc( 100% - 340px - 65px - 15px - 59px);
+    width: -moz-calc( 100% - 340px - 65px - 15px - 59px);
+    width: calc( 100% - 340px - 65px - 15px - 59px);
+    float: left;
+    margin: 51px 0 0 59px;
+    padding: 0 15px 0 0;
+    line-height: 1.8;
+    font-size: 20px;
   }
   #footer-line {
     margin: 56px 15px 0 15px;
@@ -3320,58 +3422,42 @@ body {
             transform: scale(0.7);
   }
   #cta-side-btn-box {
-    width: 375px;
-    padding-bottom: -webkit-calc( 375px * ( 122 / 767 ));
-    padding-bottom: -moz-calc( 375px * ( 122 / 767 ));
-    padding-bottom: calc( 375px * ( 122 / 767 ));
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0 auto;
-  }
-  .cta-side-btn {
-    position: absolute;
-    width: 100%;
-  }
-  #cta-side-btn-box-0 {
-    width: 66.62321%;
-    height: -webkit-calc( 100% - 2px);
-    height: -moz-calc( 100% - 2px);
-    height: calc( 100% - 2px);
-    background-color: #1e916f;
-    -webkit-border-radius: 10px;
-       -moz-border-radius: 10px;
-            border-radius: 10px;
-    left: 1px;
-    top: 1px;
-  }
-  #cta-side-btn-box-1 {
-    width: 32.59452%;
-    height: -webkit-calc( 100% - 2px);
-    height: -moz-calc( 100% - 2px);
-    height: calc( 100% - 2px);
+    width: 84px;
+    height: 308px;
+    right: 16px;
+    top: 50%;
+    margin-top: -154px;
     background-color: #1e8993;
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
             border-radius: 10px;
-    right: 1px;
-    top: 1px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    -webkit-transform-origin: 100% 50%;
+       -moz-transform-origin: 100% 50%;
+        -ms-transform-origin: 100% 50%;
+         -o-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transform: scale(0.7);
+       -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+         -o-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  .cta-side-btn {
+    position: relative;
+    width: 100%;
+  }
+  #cta-side-btn-box-0 {
+    height: 146px;
+  }
+  #cta-side-btn-box-1 {
+    height: 158px;
   }
   .cta-side-btn span {
-    vertical-align: middle;
-    padding-left: 5px;
-    font-size: 16px;
-  }
-  .cta-side-btn svg + br {
-    display: none;
-  }
-  #cart {
-    vertical-align: middle;
-    width: 11.54599%;
-  }
-  #messenger {
-    vertical-align: middle;
-    width: 23.6%;
+    font-size: 22px;
+    padding-top: 6px;
   }
   .light-box {
     top: 67px;
@@ -3681,8 +3767,13 @@ body {
   }
   .say-box {
     width: 352px;
-    height: 655px;
+    height: auto;
     margin: 0 auto 30px auto;
+    padding: 24px 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+       -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   }
   .say-box h3 {
     font-size: 20px;
@@ -3718,10 +3809,14 @@ body {
     width: 382px;
     margin: 0 auto;
   }
+  .future-word {
+    font-size: 18px;
+  }
   .interest-btn {
     margin: 28px auto 0 auto;
   }
   .content-list {
+    position: relative;
     top: -9px;
     width: 285px;
     margin: 50px auto 0 auto;

@@ -791,8 +791,8 @@ body{
 	@include M(
 		(
 			'#main-title':(
-                font-size: #{$font-0-m},
-                margin: 60px auto 60px auto
+                font-size: #{$font-0-pc},
+                margin: 118px auto 118px auto
             )
 		)
 	)
@@ -926,7 +926,6 @@ body{
     border-radius: 5px;
     font-family: $fontfamily;
     font-weight: 700;
-    
 	@include L(
 		(
 			'.word-box':(
@@ -1043,7 +1042,7 @@ body{
 	@include M(
 		(
 			'.sub-title':(
-                font-size: #{$font-0-m},
+                font-size: #{$font-0-pc},
                 margin: 89px auto 79px auto
             )
 		)
@@ -1083,9 +1082,10 @@ body{
 	@include M(
 		(
 			'#ta':(
-                width: 0.5 * 285px,
+                width: calc( 100% * ( 321 / 1200 ) ),
                 height: auto,
-                margin: 0 auto
+                margin-left: 24px,
+                float: left
             )
 		)
 	)
@@ -1142,8 +1142,9 @@ body{
             (
                 '#ta-list':(
                     top: -9px,
-                    margin: 50px auto 0 auto,
-                    width: 285px
+                    width: calc( 100% * ( 1 - ( 321 / 1200 ) ) - 24px - 87px - 24px ),
+                    margin: 0 0 0 87px,
+                    float: left
                 )
             )
         )
@@ -1167,8 +1168,8 @@ body{
         @include M(
             (
                 '#ta-list li':(
-                    font-size: #{$font-2-m},
-                    margin: auto auto 10px 0px
+                    font-size: #{$font-2-pc},
+                    margin: auto auto 18px 0px
                 )
             )
         )
@@ -1207,7 +1208,7 @@ body{
 	@include M(
 		(
 			'#dont-worry':(
-                font-size: #{$font-1-m},
+                font-size: #{$font-1-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -1236,9 +1237,10 @@ body{
 	@include M(
 		(
 			'#syllabus':(
-                width: 0.5 * 285px,
+                width: calc( 100% * ( 254 / 1200 ) ),
                 height: auto,
-                margin: 0 auto
+                margin-left: 24px,
+                float: left
             )
 		)
 	)
@@ -1272,8 +1274,9 @@ body{
             (
                 '#syllabus-list':(
                     top: -9px,
-                    margin: 50px auto 0 auto,
-                    width: 285px
+                    width: calc( 100% * ( 1 - ( 254 / 1200 ) ) - 24px - 87px - 24px ),
+                    margin: 0 0 0 87px,
+                    float: left
                 )
             )
         )
@@ -1297,8 +1300,8 @@ body{
         @include M(
             (
                 '#syllabus-list li':(
-                    font-size: #{$font-2-m},
-                    margin: auto auto 10px 0
+                    font-size: #{$font-2-pc},
+                    margin: auto auto 18px 72px
                 )
             )
         )
@@ -1349,9 +1352,10 @@ body{
 	@include M(
 		(
 			'#course-time':(
-                margin: 0 auto,
-                width: 0.5 * 285px,
-                height: auto
+                width: calc( 100% * ( 193 / 1200 ) ),
+                height: auto,
+                margin-left: 24px,
+                float: left
             )
 		)
 	)
@@ -1380,8 +1384,10 @@ body{
         (
             '#course-box':(
                 top: -9px,
-                margin: 50px auto 18px auto,
-                width: 340px
+                width: calc( 100% * ( 1 - ( 193 / 1200 ) ) - 24px - 87px - 24px ),
+                margin: 0 0 0 87px,
+                padding: 0 24px 0 0,
+                float: left
             )
         )
     )
@@ -1433,7 +1439,7 @@ body{
     @include M(
         (
             '.course-title':(
-                font-size: #{$font-2-m}
+                font-size: #{$font-2-pc}
             )
         )
     )
@@ -1460,7 +1466,7 @@ body{
     @include M(
         (
             '.course-content':(
-                font-size: #{$font-2-m}
+                font-size: #{$font-2-pc}
             )
         )
     )
@@ -1490,8 +1496,8 @@ body{
     @include M(
         (
             '#teacher-box':(
-                width: 352px,
-                padding: 0 0 42px 0
+                width: calc( 100% * (  1170 / 1200 ) ),
+                padding: 0 0 83px 0
             )
         )
     )
@@ -1517,7 +1523,7 @@ body{
     @include M(
         (
             '#teacher-0':(
-                margin: 76px 30px 31px 30px
+                margin: 76px calc( 100% * ( 106 / 1170 ) ) 31px calc( 100% * ( 106 / 1170 ) )
             )
         )
     )
@@ -1552,9 +1558,10 @@ body{
     @include M(
         (
             '.teacher-word':(
-                margin: 0 30px 15px 30px,
-                font-size: #{$font-2-m},
-                line-height: 2
+                float: left,
+                margin: 0 calc( 100% * ( 106 / 1170 ) ) 31px calc( 100% * ( 106 / 1170 ) ),
+                font-size: #{$font-2-pc},
+                line-height: 2.5
             )
         )
     )
@@ -1578,7 +1585,8 @@ body{
         @include M(
             (
                 '.teacher-word:last-child':(
-                    width: calc( 100% - 30px * 2 )
+                    width: calc( 100% * ( ( 1170 - 106 * 2 ) / 1170 ) ),
+                    margin: 0 calc( 100% * ( 106 / 1170 ) )
                 )
             )
         )
@@ -1605,7 +1613,7 @@ body{
     @include M(
         (
             '#sign':(
-                bottom: -40px
+                bottom: -56px
             )
         )
     )
@@ -1636,9 +1644,10 @@ body{
     @include M(
         (
             '#ryan':(
-                width: 146px,
-                height: 146px,
-                margin: 0 auto 30px auto
+                width: calc( 100vw * ( 146 / 1200) ),
+                height: calc( 100vw * ( 146 / 1200) ),
+                margin: 0 calc( 100vw * ( 56 / 1200) ) 0 0,
+                float: left
             )
         )
     )
@@ -1655,6 +1664,25 @@ body{
 #ryan-info{
     position: relative;
     float: left;
+    @include L(
+        (
+            '#ryan-info':(
+            )
+        )
+    )
+    @include M(
+        (
+            '#ryan-info':(
+                width: calc( 100vw * ( (  1170 - 2 * 106 ) / 1200 - ( ( 56 + 146 ) / 1200 ) )  - 2 * 6px )
+            )
+        )
+    )
+    @include S(
+        (
+            '#ryan-info':(
+            )
+        )
+    )
     h3{
         font-family: $fontfamily;
         font-weight: 700;
@@ -1729,7 +1757,7 @@ body{
             (
                 '#teacher-1':(
                     top: -9px,
-                    margin: 0 30px,
+                    margin: 0 calc( 100% * ( 106 / 1170 ) ),
                     line-height: 2
                 )
             )
@@ -1754,8 +1782,8 @@ body{
         @include M(
             (
                 '#teacher-1 li':(
-                    font-size: #{$font-2-m},
-                    margin: auto auto 10px 0px
+                    font-size: #{$font-2-pc},
+                    margin: auto auto 18px 20px
                 )
             )
         )
@@ -1781,26 +1809,26 @@ body{
     left: 0;
     top: 0;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
     font-family: $fontfamily;
     font-weight: 700;
-    background-color: #fff;
 	@include L(
 		(
 			'.say-box':(
                 width: 352px,
-                height: 815px,
+                height: 609px,
                 margin: ( 1200px - 3 * 352px ) / 6,
-                float: left
+                float: left,
+                background-color: #fff,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.25),
+                padding-bottom: 767px
             )
 		)
 	)
 	@include M(
 		(
 			'.say-box':(
-                width: 352px,
-                height: 655px,
-                margin: 0 auto 30px auto
+                display: table-cell,
+                padding-bottom: 252px
             )
 		)
 	)
@@ -1808,8 +1836,11 @@ body{
 		(
 			'.say-box':(
                 width: 352px,
-                height: 655px,
-                margin: 0 auto 30px auto
+                height: auto,
+                margin: 0 auto 30px auto,
+                padding: 24px 0,
+                background-color: #fff,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.25)
             )
 		)
     )
@@ -1830,7 +1861,7 @@ body{
         @include M(
             (
                 '.say-box h3':(
-                    font-size: #{$font-0-m},
+                    font-size: #{$font-0-pc},
                     height: 258px
                 )
             )
@@ -1870,7 +1901,7 @@ body{
         @include M(
             (
                 '.say-box p':(
-                    font-size: #{$font-2-m},
+                    font-size: #{$font-2-pc},
                     padding: 0 32px
                 )
             )
@@ -1884,6 +1915,60 @@ body{
             )
         )
     }
+}
+#say-box-out{    
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+	@include L(
+		(
+			'#say-box-out':(
+            )
+		)
+	)
+	@include M(
+		(
+			'#say-box-out':(
+            )
+		)
+	)
+	@include S(
+		(
+			'#say-box-out':(
+            )
+		)
+    )
+}
+.say-box-shadow{    
+	@include L(
+		(
+			'.say-box-shadow':(
+            )
+		)
+	)
+	@include M(
+		(
+			'.say-box-shadow':(
+                position: absolute,
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0,
+                border-radius: 5px,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.25),
+                background-color: #fff,
+                margin: calc( 100% * ( 1 - 3 * ( 345 / 1200 ) ) / 6 ),
+                padding-bottom: 52px,
+                z-index: -1
+            )
+		)
+	)
+	@include S(
+		(
+			'.say-box-shadow':(
+            )
+		)
+    )
 }
 .say-people{
     position: absolute;
@@ -1934,9 +2019,10 @@ body{
 	@include M(
 		(
 			'#faq':(
-                width: 0.5 * 285px,
+                width: calc( 100% * ( 250 / 1200 ) ),
                 height: auto,
-                margin: 0 auto
+                margin-left: 24px,
+                float: left
             )
 		)
 	)
@@ -1975,8 +2061,10 @@ body{
             (
                 '#faq-list':(
                     top: -9px,
-                    width: 285px,
-                    margin: 50px auto 0 auto
+                    width: calc( 100% * ( 1 - ( 250 / 1200 ) ) - 24px - 87px - 24px ),
+                    margin: 0 0 0 87px,
+                    padding: 0 24px 0 0,
+                    float: left
                 )
             )
         )
@@ -2000,8 +2088,8 @@ body{
         @include M(
             (
                 '#faq-list li':(
-                    font-size: #{$font-2-m},
-                    margin: auto auto 18px 0
+                    font-size: #{$font-2-pc},
+                    margin: auto auto 18px 90px
                 )
             )
         )
@@ -2040,7 +2128,7 @@ body{
 	@include M(
 		(
 			'#more-q':(
-                font-size: #{$font-1-m},
+                font-size: #{$font-1-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -2105,7 +2193,7 @@ body{
 	@include M(
 		(
 			'#now-state':(
-                font-size: #{$font-1-m},
+                font-size: #{$font-1-pc},
                 margin: 67px auto 79px auto
             )
 		)
@@ -2133,8 +2221,10 @@ body{
 	@include M(
 		(
 			'.future-class-box':(
-                width: 382px,
-                margin: 0 auto
+                width: 317px,
+                height: auto,
+                margin-left: 24px,
+                float: left
             )
 		)
 	)
@@ -2150,6 +2240,26 @@ body{
         position: relative;
         display: block;
         margin: 0 auto;
+        @include L(
+            (
+                '.future-class-box svg':(
+                )
+            )
+        )
+        @include M(
+            (
+                '.future-class-box svg':(     
+                    width: calc( 100% * ( 163 / 382 ) ),
+                    height: auto   
+                )
+            )
+        )
+        @include S(
+            (
+                '.future-class-box svg':(
+                )
+            )
+        )
     }
 }
 .future-word{
@@ -2159,7 +2269,27 @@ body{
     color: #1e8993;
     text-align: center;
     line-height: 1.5;
-    font-size: 32px;
+    @include L(
+        (
+            '.future-word':(
+                font-size: #{$font-0-pc}
+            )
+        )
+    )
+    @include M(
+        (
+            '.future-word':(   
+                font-size: #{$font-0-pc}
+            )
+        )
+    )
+    @include S(
+        (
+            '.future-word':(
+                font-size: #{$font-1-m}
+            )
+        )
+    )
 }
 .interest-btn{
     position: relative;
@@ -2195,7 +2325,11 @@ body{
     @include M(
         (
             '.interest-btn':(
-                margin: 28px auto 0 auto
+                margin: 28px 0 0 64px,
+                float: left,
+                clear: both,
+                transform: scale( 0.75),
+                transform-origin: 0% 0%
             )
         )
     )
@@ -2208,7 +2342,6 @@ body{
     )
 }
 .content-list{
-    position: relative;
     li{
         font-family: $fontfamily;
         font-weight: normal;
@@ -2217,6 +2350,7 @@ body{
         @include L(
             (
                 '.content-list':(
+                    position: relative,
                     top: -9px,
                     width: 738px,
                     float: right
@@ -2227,14 +2361,19 @@ body{
             (
                 '.content-list':(
                     top: -9px,
-                    width: 285px,
-                    margin: 50px auto 0 auto
+                    width: calc( 100% * ( 1 - ( 382 / 1200 ) ) - 24px - 87px - 24px ),
+                    margin: 0 0 0 87px,
+                    padding: 0 24px 0 0,
+                    float: right,
+                    position: absolute,
+                    right: 0
                 )
             )
         )
         @include S(
             (
                 '.content-list':(
+                    position: relative,
                     top: -9px,
                     width: 285px,
                     margin: 50px auto 0 auto
@@ -2354,7 +2493,6 @@ body{
     @include M(
         (
             '.footer':(
-                padding-bottom: 63px
             )
         )
     )
@@ -2380,7 +2518,8 @@ body{
     @include M(
         (
             '#fanpage':(
-                margin: 51px auto 0 auto
+                float: left,
+                margin: 51px 0 0 65px
             )
         )
     )
@@ -2421,11 +2560,12 @@ body{
     @include M(
         (
             '#footer-word':(
-                width: 352px,
-                margin: 31px auto 0 auto,
-                padding: 0 30px,
-                line-height: 2,
-                font-size: #{$font-2-m}
+                width: calc( 100% - 340px - 65px - 15px - 59px ),
+                float: left,
+                margin: 51px 0 0 59px,
+                padding: 0 15px 0 0,
+                line-height: 1.8,
+                font-size: #{$font-2-pc}
             )
         )
     )
@@ -2668,20 +2808,22 @@ body{
             )
         )
     )
-    /******460px******/
     @include M(
         (
             '#cta-side-btn-box':(
-                width: 375px,
-                padding-bottom: calc( 375px * ( 122 / 767 ) ),
-                left: 0,
-                right: 0,
-                bottom: 0,
-                margin: 0 auto
+                width: 84px,
+                height: 308px,
+                right: 16px,
+                top: 50%,
+                margin-top: -0.5 * 308px,
+                background-color: #1e8993,
+                border-radius: 10px,
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.45),
+                transform-origin: 100% 50%,
+                transform: scale(0.7)
             )
         )
     )
-    /******352px******/
     @include S(
         (
             '#cta-side-btn-box':(
@@ -2724,7 +2866,7 @@ body{
     @include M(
         (
             '.cta-side-btn':(
-                position: absolute,
+                position: relative,
                 width: 100%
             )
         )
@@ -2747,12 +2889,7 @@ body{
     @include M(
         (
             '#cta-side-btn-box-0':(
-                width: 100% * ( 511 / 767 ),
-                height: calc( 100% - 2px ),
-                background-color: #1e916f,
-                border-radius: 10px,
-                left: 1px,
-                top: 1px
+                height: 146px
             )
         )
     )
@@ -2778,12 +2915,7 @@ body{
     @include M(
         (
             '#cta-side-btn-box-1':(
-                width: 100% * ( 250 / 767 ),
-                height: calc( 100% - 2px ),
-                background-color: #1e8993,
-                border-radius: 10px,
-                right: 1px,
-                top: 1px
+                height: 158px
             )
         )
     )
@@ -2817,9 +2949,8 @@ body{
         @include M(
             (
                 '.cta-side-btn span':(
-                    vertical-align: middle,
-                    padding-left: 5px,
-                    font-size: #{$font-2-m}
+                    font-size: 22px,
+                    padding-top: 6px
                 )
             )
         )
@@ -2842,7 +2973,6 @@ body{
     @include M(
         (
             '.cta-side-btn svg + br':(
-                display: none
             )
         )
     )
@@ -2864,8 +2994,6 @@ body{
     @include M(
         (
             '#cart':(
-                vertical-align: middle,
-                width: 100% * ( 59 / 511 ) 
             )
         )
     )
@@ -2888,8 +3016,6 @@ body{
     @include M(
         (
             '#messenger':(
-                vertical-align: middle,
-                width: 100% * ( 59 / 250 ) 
             )
         )
     )
