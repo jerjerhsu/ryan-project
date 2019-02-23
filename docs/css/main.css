@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 15:40:46 
+* date:    Sat Feb 23 2019 15:42:23 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2827,7 +2827,13 @@ body {
   .content-list > li > ul {
     padding-top: 18px;
   }
-  .future-box {
+  .future-box:nth-child(1) {
+    margin: 0 0 60px 0;
+  }
+  .future-box:nth-child(2) {
+    margin: 0 0 60px 0;
+  }
+  .future-box:nth-child(3) {
     margin: 0 0 60px 0;
   }
   #fanpage {
@@ -3366,8 +3372,14 @@ body {
   .content-list > li > ul {
     padding-top: 10px;
   }
-  .future-box {
+  .future-box:nth-child(1) {
+    margin: 0 0 220px 0;
+  }
+  .future-box:nth-child(2) {
     margin: 0 0 120px 0;
+  }
+  .future-box:nth-child(3) {
+    margin: 0 0 260px 0;
   }
   #fanpage {
     float: left;
@@ -3824,7 +3836,13 @@ body {
   .content-list > li > ul {
     padding-top: 10px;
   }
-  .future-box {
+  .future-box:nth-child(1) {
+    margin: 0 0 120px 0;
+  }
+  .future-box:nth-child(2) {
+    margin: 0 0 120px 0;
+  }
+  .future-box:nth-child(3) {
     margin: 0 0 120px 0;
   }
   .footer {
