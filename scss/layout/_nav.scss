@@ -43,7 +43,7 @@
 	@include M(
 		(
 			'#burger':(
-				display: block
+				display: none
 			)
 		)
 	)
@@ -143,7 +143,6 @@
 			@include M(
 				(
 					'#burger-check:checked ~#header-main #nav-list':(
-						top: calc( 67px + #{$header-top-1} )
 					)
 				)
 			)
