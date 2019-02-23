@@ -1,17 +1,22 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 12:17:22 
+* date:    Sat Feb 23 2019 12:36:04 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 'use strict';
+/*
+console.log('%cJERJER%c(\u2032\u309C\u03C9\u3002\u2035)...', 
+'color: rgba(5,137,62,1); font-size: 32px; vertical-align: baseline;' + 
+'font-family: "Luxia-Medium", Arial, "Noto Sans TC", "Microsoft JhengHei";' + 
+'margin: 10px 0px 5px 0; padding: 0px 5px;', 'font-size: 30px; color: rgba(5,137,62,1);');
+*/
 
 var _$$slick;
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-console.log("%cJERJER%c(\u2032\u309C\u03C9\u3002\u2035)...", 'color: rgba(5,137,62,1); font-size: 32px; vertical-align: baseline;' + 'font-family: "Luxia-Medium", Arial, "Noto Sans TC", "Microsoft JhengHei";' + 'margin: 10px 0px 5px 0; padding: 0px 5px;', 'font-size: 30px; color: rgba(5,137,62,1);');
-console.log('%cryan-project   ❙   2019-01   ❙   Copyright \xA9 2019 ', 'color: rgba(5,137,62,1); font-size: 12px; margin: 5px 0; font-family:Arial; font-weight: 600;');
+console.log('%cryan-project   ❙   2019-01   ❙   2019 \xA9 RyanEC CO. LTD. ALL RIGHTS RESERVED.', 'color: rgba(5,137,62,1); font-size: 12px; margin: 5px 0; font-family:Arial; font-weight: 600;');
 var PI = Math.PI,
     rad = Math.PI / 180,
     cos = Math.cos,
@@ -352,7 +357,7 @@ var ua = parseUserAgent(),
     url = getUrlData();
 
 if (ua.Device.PC) {
-  console.log('是電腦');
+  console.log('pc');
   $body.addClass('pc');
 
   if (ua.IE8 || ua.IE9) {
@@ -395,10 +400,8 @@ var introProgress = new LoadingProgress({
   textColor: '#fff',
   fontSize: 1
 });
-$body.imagesLoaded().then(function (instance, image) {
-  console.log('then');
-}).done(function () {
-  console.log('done');
+$body.imagesLoaded().then(function (instance, image) {// console.log( 'then' );
+}).done(function () {// console.log( 'done' );
 }).always(function () {
   loadend.img = true;
   loadend.ready = true;

@@ -2,7 +2,7 @@ let ua = parseUserAgent(),
 	url = getUrlData();
 
 if( ua.Device.PC ){
-	console.log( '是電腦' );
+	console.log( 'pc' );
 	$body.addClass( 'pc' );
 	if( ua.IE8 || ua.IE9 ){
 		loop = false;
@@ -48,10 +48,10 @@ let introProgress = new LoadingProgress({
 
 $body.imagesLoaded()
 .then(function( instance, image ){
-	console.log( 'then' );
+	// console.log( 'then' );
 })
 .done(function(){
-	console.log( 'done' );
+	// console.log( 'done' );
 })
 .always(function(){
 	loadend.img = true;
