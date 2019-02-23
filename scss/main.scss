@@ -921,9 +921,9 @@ body{
         @include M(
             (
                 '.word-box h3':(
-                    font-size: #{$font-0-m},
-                    height: auto,
-                    padding: 0 0 24px 0
+                    font-size: #{$font-0-pc},
+                    height: 166px,
+                    padding: 52px 0 24px 0
                 )
             )
         )
@@ -954,7 +954,7 @@ body{
         @include M(
             (
                 '.word-box p':(
-                    font-size: #{$font-2-m},
+                    font-size: #{$font-2-pc},
                     padding: 0 32px
                 )
             )
