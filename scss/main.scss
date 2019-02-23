@@ -847,7 +847,7 @@ body{
 	@include M(
 		(
 			'.float-box':(
-                width: auto
+                width: 100%
             )
 		)
 	)
@@ -887,10 +887,10 @@ body{
 	@include M(
 		(
 			'.word-box':(
-                width: 352px,
-                height: auto,
-                margin: 0 auto 30px auto,
-                padding: 24px 0
+                width: calc( 100% * ( 352 / 1200 ) ),
+                height: 609px,
+                margin: calc( 100% * ( 1 - 3 * ( 352 / 1200 ) ) / 6 ),
+                float: left
             )
 		)
 	)
@@ -1027,7 +1027,8 @@ body{
 	@include M(
 		(
 			'#ta':(
-                width: 285px,
+                width: 0.5 * 285px,
+                height: auto,
                 margin: 0 auto
             )
 		)
@@ -1035,7 +1036,8 @@ body{
 	@include S(
 		(
 			'#ta':(
-                width: 285px,
+                width: 0.5 * 285px,
+                height: auto,
                 margin: 0 auto
             )
 		)
@@ -1178,7 +1180,8 @@ body{
 	@include M(
 		(
 			'#syllabus':(
-                width: 285px,
+                width: 0.5 * 285px,
+                height: auto,
                 margin: 0 auto
             )
 		)
@@ -1186,7 +1189,8 @@ body{
 	@include S(
 		(
 			'#syllabus':(
-                width: 285px,
+                width: 0.5 * 285px,
+                height: auto,
                 margin: 0 auto
             )
 		)
@@ -1289,14 +1293,16 @@ body{
 	@include M(
 		(
 			'#course-time':(
-                margin: 0 auto
+                margin: 0 auto,
+                width: 285px
             )
 		)
 	)
 	@include S(
 		(
 			'#course-time':(
-                margin: 0 auto
+                margin: 0 auto,
+                width: 285px
             )
 		)
 	)
@@ -1870,8 +1876,8 @@ body{
 	@include M(
 		(
 			'#faq':(
-                display: none,
-                width: 285px,
+                width: 0.5 * 285px,
+                height: auto,
                 margin: 0 auto
             )
 		)
@@ -1879,8 +1885,8 @@ body{
 	@include S(
 		(
 			'#faq':(
-                display: none,
-                width: 285px,
+                width: 0.5 * 285px,
+                height: auto,
                 margin: 0 auto
             )
 		)
