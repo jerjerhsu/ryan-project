@@ -1093,6 +1093,29 @@ body{
 		)
 	)
 }
+.hide-medium{
+	@include L(
+		(
+			'.hide-medium':(
+                display: none
+            )
+		)
+	)
+	@include M(
+		(
+			'.hide-medium':(
+                display: inline
+            )
+		)
+	)
+	@include S(
+		(
+			'.hide-medium':(
+                display: inline
+            )
+		)
+	)
+}
 .hide-small{
 	@include L(
 		(
@@ -1104,7 +1127,7 @@ body{
 	@include M(
 		(
 			'.hide-small':(
-                display: inline
+                display: none
             )
 		)
 	)
@@ -2454,7 +2477,7 @@ body{
     @include M(
         (
             '.future-box:nth-child(1)':(
-                margin: 0 0 220px 0
+                margin: 0 0 280px 0
             )
         )
     )
@@ -2496,7 +2519,7 @@ body{
     @include M(
         (
             '.future-box:nth-child(3)':(
-                margin: 0 0 260px 0
+                margin: 0 0 350px 0
             )
         )
     )
