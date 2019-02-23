@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 21:17:07 
+* date:    Sat Feb 23 2019 21:38:35 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -3305,6 +3305,10 @@ body {
   .say-box h3 {
     font-size: 28px;
     height: 258px;
+  }
+  .say-box h3 svg {
+    width: 70%;
+    height: auto;
   }
   .say-box p {
     font-size: 20px;

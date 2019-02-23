@@ -1878,6 +1878,26 @@ body{
             bottom: 0px;
             margin: auto;
             display: block;
+            @include L(
+                (
+                    '.say-box h3 svg':(
+                    )
+                )
+            )
+            @include M(
+                (
+                    '.say-box h3 svg':(
+                        width: 70%,
+                        height: auto
+                    )
+                )
+            )
+            @include S(
+                (
+                    '.say-box h3 svg':(
+                    )
+                )
+            )
         }
     }
     p{
