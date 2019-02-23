@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 16:29:25 
+* date:    Sat Feb 23 2019 16:38:50 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -2912,11 +2912,6 @@ body {
         -ms-transform: scale(0.7);
          -o-transform: scale(0.7);
             transform: scale(0.7);
-    opacity: 0.22;
-    -webkit-transition: opacity 0.2s 0s;
-    -o-transition: opacity 0.2s 0s;
-    -moz-transition: opacity 0.2s 0s;
-    transition: opacity 0.2s 0s;
   }
   .cta-side-btn {
     position: relative;
