@@ -3113,8 +3113,8 @@ body{
     @include M(
         (
             '.light-box':(
-                top: $header-top-1 + 67px,
-                height: calc( 100% - #{$header-top-1} - 67px )
+                top: $header-top-0 + 97px,
+                height: calc( 100% - #{$header-top-0} - 97px )
             )
         )
     )

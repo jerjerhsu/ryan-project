@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 16:38:50 
+* date:    Sat Feb 23 2019 16:42:49 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -3468,10 +3468,10 @@ body {
     padding-top: 6px;
   }
   .light-box {
-    top: 67px;
-    height: -webkit-calc( 100% - 0px - 67px);
-    height: -moz-calc( 100% - 0px - 67px);
-    height: calc( 100% - 0px - 67px);
+    top: 97px;
+    height: -webkit-calc( 100% - 0px - 97px);
+    height: -moz-calc( 100% - 0px - 97px);
+    height: calc( 100% - 0px - 97px);
   }
   .light-frame {
     width: 352px;
