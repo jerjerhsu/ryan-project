@@ -75,7 +75,7 @@ function getRandomColor(){
 }
 
 $.fn.EventInIt = function(){
-    $body.on('click','#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"],#cta-btn',function(e){
+    $body.on('click','#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"],#cta-btn,.light-box,.light-frame,.header',function(e){
         var _self = $(e.currentTarget);
         switch(true){
             case _self.is('#go-top'):
@@ -107,6 +107,17 @@ $.fn.EventInIt = function(){
             case _self.is('[name="subscribe"]'):
                 window.location.href = './lesson.html';
             break;
+            case _self.is('.light-frame'):
+                e.stopPropagation();
+            break;
+            case _self.is('.light-box') || _self.is('.header'):
+                $body.removeClass('show-light-box');
+            break;
+        }
+    });
+    $body.on('keydown',function(e){
+        if($body.hasClass('pc') && $body.hasClass('show-light-box') && e.keyCode == 27){
+            $body.removeClass('show-light-box');
         }
     });
 }

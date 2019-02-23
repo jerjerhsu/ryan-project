@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 17:45:27 
+* date:    Sat Feb 23 2019 21:17:07 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 'use strict';
@@ -286,7 +286,7 @@ function getRandomColor() {
 }
 
 $.fn.EventInIt = function () {
-  $body.on('click', '#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"],#cta-btn', function (e) {
+  $body.on('click', '#go-top,.nav-item,#cta-side-btn-box-0,.light-box-close,[name="subscribe"],#cta-btn,.light-box,.light-frame,.header', function (e) {
     var _self = $(e.currentTarget);
 
     switch (true) {
@@ -319,6 +319,19 @@ $.fn.EventInIt = function () {
       case _self.is('[name="subscribe"]'):
         window.location.href = './lesson.html';
         break;
+
+      case _self.is('.light-frame'):
+        e.stopPropagation();
+        break;
+
+      case _self.is('.light-box') || _self.is('.header'):
+        $body.removeClass('show-light-box');
+        break;
+    }
+  });
+  $body.on('keydown', function (e) {
+    if ($body.hasClass('pc') && $body.hasClass('show-light-box') && e.keyCode == 27) {
+      $body.removeClass('show-light-box');
     }
   });
 };
