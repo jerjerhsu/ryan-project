@@ -1,7 +1,7 @@
 /*************************************************
 * client:  客戶
 * project: 專案
-* date:    Sat Feb 23 2019 17:19:46 
+* date:    Sat Feb 23 2019 17:30:50 
 * copyright (c) 2019  | jerjer.
  *************************************************/
 @charset "UTF-8";
@@ -3043,9 +3043,6 @@ body {
   }
   .blue {
     font-size: 24px;
-  }
-  #lesson-cta-btn {
-    float: left;
   }
 }
 
